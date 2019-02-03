@@ -18,8 +18,10 @@
 
 ### Linux
 [Download MR 64Bit Linux](https://revskills.de/MR_64Bit_Linux.zip)
+- Install python 3.6
 - Run ./MobileRevelator.sh in the Release Folder
 - Scripts are in the config folder
+
 
 ## Examples
 
