@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.samsung.android.sm.provider/databases/lowpowercontext-system-db" type="database">
+        <sql cmd="select rowid, package_name, class_name, start_time, (end_time-start_time) from usage_log;">
+            <type text="Samsung low power context" category="Usage"/>
+            <package field="{%1}"/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration field="{%4}"/>
+            <desc field="{%2}"/>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+        <sql cmd="select rowid,setting_id,time,value from settings_log;">
+            <type text="Samsung low power context (Settings)" category="Usage"/>
+            <package/>
+            <timestamp field="{%2}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="Action:{%1};"/>
+                <field addfields="Value:{%3}" replace="0=Disable;1=Enable;2=Stop"/>
+            </desc>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

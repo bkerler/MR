@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sonymobile.phoneusage/databases/applog" type="database">
+        <sql cmd="SELECT rowid, last_seen, foreground_runtime, package from apps;">
+            <type text="Sony Phone usage [apps]" category="Usage"/>
+            <package>
+                <field addfields="{%3}"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration field="{%2}" int="*1000"/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

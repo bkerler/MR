@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.tripadvisor.tripadvisor/databases/Timeline.db" type="database">
+        <sql cmd="SELECT rowid, _id, recordedDate, latitude, longitude, walking FROM ActivityLog;">
+            <type text="TripAdvisor [ActivityLog]" category="Locations"/>
+            <package>
+                <field addfields="Route:{%1}"/>
+            </package>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}" int=""/>
+                <field addfields="Walking: {%5}" replace="1=True;0=False"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

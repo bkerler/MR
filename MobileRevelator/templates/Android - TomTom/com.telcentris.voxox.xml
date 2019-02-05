@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.telcentris.voxox/databases/voxox_db" type="database">
+        <sql cmd="select message.rowid, message.direction, phone_number.name, phone_number.display_number, phone_number.label, message.from_did, message.to_did, message.contact_did, message.from_jid, message.to_jid, message.to_group_id, message.timestamp, message.body, message.translated, message.file_local from message LEFT OUTER JOIN phone_number ON message.contact_did = phone_number.number;">
+            <type text="Voxox message" category="Messenger">
+                <field addfields="[Type:{%1}]" replace="0=Received;1=Sent"/>
+            </type>
+            <package/>
+            <timestamp field="{%11}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Translated:{%13};"/>
+                <field addfields="From:{%5};"/>
+                <field addfields="To:{%6};"/>
+                <field addfields="From_Jid:{%8};"/>
+                <field addfields="To_Jid:{%9};"/>
+                <field addfields="Group_Jid:{%10}"/>
+                <field addfields="Attachment:{%14}"/>
+            </desc>
+            <message>
+                <field addfields="{%12}"/>
+            </message>
+            <contact_alias>
+                <field addfields="Name:&quot;{%2}&quot;;"/>
+                <field addfields="Number:&quot;{%3}&qout;;"/>
+                <field addfields="Label:&quot;{%4}&quot;"/>
+            </contact_alias>
+            <contact>
+                <field addfields="{%5}"/>
+            </contact>
+        </sql>
+</Timeline>    
+    
+<Timeline path="com.telcentris.voxox/databases/com.voxoxsip.db" type="database">
+        <sql cmd="SELECT rowid, number, type, date, name, duration, status_text FROM calllogs;">
+            <type text="Voxox sip" category="Calls">
+                <field addfields="[type:{%2}]" replace="1=Incoming;2=Sent;3=Missed;4=Voicemail;5=Rejected;6=Blocked"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration field="{%5}" int="*1000"/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%4}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Timeline>
+
+<Contacts path="com.telcentris.voxox/databases/voxox_db" type="database">
+        <sql cmd="select rowid, name, display_number, label, xmpp_jid from phone_number;">
+            <type text="Voxox"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="Label: {%3}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+                <field addfields=" [{%4}]"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+</Items>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.app.downloadmanager/databases/history.db" type="database">
+        <sql cmd="SELECT rowid, VISITED, VISITS, TITLE, URL FROM H_TABLE;">
+            <type text="Download Manager" category="Downloads">
+                <field addfields="[Visits:{%2}]"/>
+            </type>
+            <package>
+                <field addfields="&quot;{%3}&quot;"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%4}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

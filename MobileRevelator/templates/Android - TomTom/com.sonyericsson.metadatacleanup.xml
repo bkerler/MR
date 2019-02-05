@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sonyericsson.metadatacleanup/databases/mediaextra-external*.db" type="database">
+        <sql cmd="SELECT rowid, date_modified, _data FROM audio_info;">
+            <type text="Sony MediaExtra [Last modified]" category="Media"/>
+            <package/>
+            <timestamp field="{%1}" int=""/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

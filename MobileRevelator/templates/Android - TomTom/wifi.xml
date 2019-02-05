@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="misc/wifi/wpa_supplicant*.conf" type="raw">
+        <python run="android_wpa_supplicant.py">
+            <type text="Wifi Accounts"  category="Accounts"/>
+            <package>
+                <field addfields="{%4}"/>
+            </package>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <timestamp field="{%5}" int="/1000"/>
+            <duration field="{%11}" int=""/>
+            <contact>
+                <field addfields="{%6}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%7}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%8}"/>
+            </message>
+            <image>
+                <field addfields="{%9}"/>
+            </image>
+            <desc>
+                <field addfields="{%10}"/>
+            </desc>
+        </python>
+</Timeline>
+</Items>

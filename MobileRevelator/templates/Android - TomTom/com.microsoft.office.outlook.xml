@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template table="emails" name="Outlook.com" path="emails.db">
+      <column id="folder_id (int)" type="sqlcmd">
+         <r cmd="SELECT name FROM folders WHERE special_id=[%1];"/>
+      </column>
+      <column id="delivery_time (QString)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+      <column id="created (int)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+      <column id="modified (int)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+      <column id="has_attachments (QString)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+      <column id="is_unread (bool)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+</Template>
+</Items>

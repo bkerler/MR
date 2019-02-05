@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="/databases/MailDB.db" type="database" generic="true">
+        <sql cmd="select rowid, subject, from_column, to_column, date, body, textbody from mail;">
+            <type text="Generic Mail" category="EMails"/>
+            <package>
+                <field addfields="Subject:&quot;{%1}&quot;"/>
+            </package>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="From: {%2} "/>
+                <field addfields="To: {%3}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}" splitstart="&lt;" splitend="&gt;"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%5} "/>
+                <field addfields="{%6}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>

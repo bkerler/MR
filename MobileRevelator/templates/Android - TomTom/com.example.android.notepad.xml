@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.example.android.notepad/note_pad.db" type="database">
+        <sql cmd="select rowid, title, note, created from notes;">
+            <type text="NotePad" category="Documents"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Title:&quot;{%1}&quot;"/>
+            </desc>
+            <message>
+                <field addfields="{%2}"/>
+            </message>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.samsung.android.providers.context/databases/ContextDB.db" type="database">
+        <sql cmd="select rowid, package_name, class_name, last_access_time from app_usage;">
+            <type text="Samsung Context DB" category="Usage"/>
+            <package field="{%1}"/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc field="{%2}"/>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

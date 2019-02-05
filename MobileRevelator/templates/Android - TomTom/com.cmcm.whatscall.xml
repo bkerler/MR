@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.cmcm.whatscall/databases/call_marker.db" type="database">
+        <sql cmd="select rowid, tag, display_number, timestamp, location, call_type from call_log;">
+            <type text="WhatsCall Calllog" category="Calls">
+                <field addfields="[Type:{%5}]" replace="1=Incoming;2=Sent;3=Missed;4=Voicemail;5=Rejected;6=Blocked"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="User location:{%4}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Timeline>
+
+<Timeline path="com.cmcm.whatscall/databases/huanju.db" type="database">
+        <sql cmd="select rowid, cb_format_phone, date, duration, type from calls;">
+            <type text="WhatsCall Calllog" category="Calls">
+                <field addfields="[Type:{%4}]" replace="1=Incoming;2=Sent;3=Missed;4=Voicemail;5=Rejected;6=Blocked"/>
+            </type>
+            <package/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration field="{%3}" int="*1000"/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

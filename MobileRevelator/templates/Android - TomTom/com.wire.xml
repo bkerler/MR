@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.wire/databases/*" type="database">
+        <python run="android_wire.py">
+            <type text="Wire" category="Messenger">
+                <field addfields="[Type:{%10}]" replace="SENT=Incoming;DELIVERED=Sent"/>
+            </type>
+            <package/>
+            <filename/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Type:{%9}"/>
+                <field addfields="Expiry_Time:{%12}"/>
+                <field addfields="Expired:{%13}"/>
+            </desc>
+            <contact>
+                   <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                   <field addfields="{%3}"/>
+            </contact_alias>
+            <message>
+                   <field addfields="{%11}"/>
+            </message>
+            <image/>
+        </python>
+</Timeline>
+</Items>

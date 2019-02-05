@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sgiggle.mango/files/tc.db" type="database">
+        <attach database="com.sgiggle.mango/files/profilecache.db" alias="profile"/>
+        <python run="android_tango.py">
+            <type text="Tango Messages" category="Messenger">
+                <field addfields="[Type:{%3},"/>
+                <field addfields="{%7}]"/>
+            </type>
+            <package/>
+            <timestamp field="{%6}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="Media_Id: {%4};"/>
+                <field addfields="Share_Id: {%5};"/>
+                <field addfields="Url: {%10};"/>
+                <field addfields="Del_Status: {%12}" replace="0=False;1=True"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%9}"/>
+            </message>
+        </python>
+</Timeline>
+
+<Contacts path="com.sgiggle.mango/files/profilecache.db" type="database">
+        <sql cmd="SELECT rowid, itemUserId, itemFirstName, itemLastName, itemCity, itemStatus, itemLastActiveTime FROM profiletable;">
+            <type text="Tango Contacts"/>
+            <package/>
+            <timestamp field="{%6}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Location: {%4};"/>
+                <field addfields="Status: &quot;{%5}&quot;" unbase64="0"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2} " unbase64="0"/>
+                <field addfields="{%3}" unbase64="0"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+</Items>

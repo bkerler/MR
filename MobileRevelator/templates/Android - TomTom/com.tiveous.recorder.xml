@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.triveous.recorder/databases/voice_recorder.db" type="database">
+        <sql cmd="SELECT rowid, created, size, url, title, duration FROM audio;">
+            <type text="Triveous Audio Recorder" category="Media"/>
+            <package field="{%3}"/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration field="{%5}"/>
+            <desc>
+                <field addfields="Title:{%4}"/>
+                <field addfields="Filesize:{%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+<Timeline path="/media/*/AudioRecorder/*.wav" type="raw">
+        <python run="android_filename.py">
+            <type text="Triveous Audio Recorder Files" category="Media"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+</Items>

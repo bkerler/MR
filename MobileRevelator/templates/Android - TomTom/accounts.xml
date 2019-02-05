@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="system/users/*/accounts.db" type="database">
+        <sql cmd="select rowid, name, type, password, last_password_entry_time_millis_epoch from accounts;select rowid, name, type, password, '' from accounts;">
+            <type text="Google Accounts"  category="Accounts"/>
+            <package>
+                <field addfields="{%2}"/>
+            </package>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Account Name:&quot;{%1}&quot;;"/>
+                <field addfields="Password:&quot;{%3}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+
+<Timeline path="data/com.google.android.apps.authenticator2/databases/databases" type="database">
+        <sql cmd="select rowid, email, secret from accounts;">
+            <type text="Google Authenticator 2FA"  category="Accounts"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="Email/Info:&quot;{%1}&quot;;"/>
+                <field addfields="Secret:&quot;{%2}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+
+</Items>

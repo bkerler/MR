@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="pl.neptis.yanosik.mobi.android*yanosik_db_geocode" type="database">
+        <sql cmd="SELECT rowid, id, insert_time, latitude, longitude, elevation, city_name FROM geocode_history where latitude!=0;">
+            <type text="Yanosik Navigator [geocode_history]" category="Locations"/>
+            <package>
+                <field addfields="Route:{%1}"/>
+            </package>
+            <timestamp field="{%2}" int=""/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}"/>
+                <field addfields=";City name: &quot;{%6}&quot;;"/>
+                <field addfields="Elevation: {%5}"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, id, insert_time, latitude, longitude, elevation, city_name, name FROM geocode_favourite;">
+            <type text="Yanosik Navigator [geocode_favourite]" category="Locations"/>
+            <package>
+                <field addfields="Favorite:{%1}"/>
+            </package>
+            <timestamp field="{%2}" int=""/>
+            <duration/>
+            <desc>
+				<field addfields="Name: &quot;{%7}&quot;;"/>
+            </desc>
+            <location>
+                <field latitude="{%3}" longitude="{%4}" int=""/>
+                <field addfields=";City name: &quot;{%6}&quot;;"/>
+                <field addfields="Elevation: {%5}"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+<Timeline path="pl.neptis.yanosik.mobi.android/databases/yanosik_db_track*" type="database">
+        <sql cmd="SELECT rowid, _id, time, latitude, longitude, speed, meters_traveled FROM track;">
+            <type text="Yanosik Navigator Route [track]" category="Locations"/>
+            <package>
+                <field addfields="Route:{%1}"/>
+            </package>
+            <timestamp field="{%2}" int=""/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}"/>
+                <field addfields=";Speed: {%5};"/>
+                <field addfields="Meters traveled: {%6}"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

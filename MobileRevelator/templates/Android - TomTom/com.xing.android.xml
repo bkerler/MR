@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.xing.android/databases/conversations.db" type="database">
+        <attach database="com.xing.android/databases/users.db" alias="users"/>
+        <python run="android_xing.py">
+            <type text="Xing" category="Messenger"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Attachment:&quot;{%5}&quot;;"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+            <image/>
+        </python>
+</Timeline>
+</Items>

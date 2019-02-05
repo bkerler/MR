@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.google.android.googlequicksearchbox/databases/icingcorpora.db" type="database">
+        <sql cmd="SELECT rowid, updated_timestamp_ms, display_name, package_name, class_name FROM applications;SELECT rowid, created_timestamp_ms, display_name, package_name, class_name FROM applications;">
+            <type text="Google Quick Search Apps" category="Searches">
+                <field addfields="[{%2}]"/>
+            </type>
+            <package field="{%3}"/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%4}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+<Contacts path="com.google.android.googlequicksearchbox/databases/icingcorpora.db" type="database">
+        <sql cmd="select contacts.rowid, contacts.contact_id, contacts.display_name, contacts.times_contacted, contacts.emails, phones.phone from contacts LEFT OUTER JOIN phones ON contacts.contact_id = phones.contact_id;">
+            <type text="Google Quick Search Contacts"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="Times contacted:{%3};"/>
+                <field addfields="Emails:{%4};"/>
+            </desc>
+            <contact>
+                <field addfields="{%5}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+
+
+
+</Items>

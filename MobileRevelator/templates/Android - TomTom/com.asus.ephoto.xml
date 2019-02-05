@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.asus.ephoto/databases/ephoto.db" type="database">
+        <sql cmd="select rowid, image_name, image_path, image_date from face_image;">
+            <type text="Asus ePhoto Face" category="Media"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc field="{%2}"/>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

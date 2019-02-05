@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.dewmobile.kuaiya.play/databases/*emmsg.db" type="database">
+        <python run="android_zapya.py">
+            <type text="Zapya" category="Messenger">
+                <field addfields="[Type:{%6}]" replace="0=Sent;1=Received"/>
+            </type>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="From:{%2};"/>
+                <field addfields="FromAlias:{%3};"/>
+                <field addfields="To:{%4};"/>
+                <field addfields="ToAlias:{%5};"/>
+                <field addfields="Type:{%7};"/>
+                <field addfields="Description:{%9}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%8}"/>
+            </message>
+        </python>
+</Timeline>
+    
+<Timeline path="com.dewmobile.kuaiya.play/databases/transfer20.db" type="database">
+         <sql cmd="SELECT rowid, name, direction, createtime, url, path, category, totalbytes from transfer;">
+            <type text="Zapya Media Transfer" category="Media">
+                <field addfields="[Type:{%2}]" replace="0=Sent;1=Received"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Url:{%4};"/>
+                <field addfields="Path:{%5};"/>
+                <field addfields="Category:{%6};"/>
+                <field addfields="Totalbytes:{%7};"/>
+            </desc>
+            <contact/>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

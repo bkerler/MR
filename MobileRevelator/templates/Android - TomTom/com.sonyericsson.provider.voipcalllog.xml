@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sonyericsson.provider.voipcalllog/databases/voip.db" type="database">
+        <sql cmd="select rowid, name, numberlabel, date, duration, number, type from voiptable;">
+            <type text="Sony VoIP Call" category="Calls">
+                <field addfields="[Type:{%6}]" replace="1=Incoming;2=Sent;3=Missed;4=Voicemail;5=Rejected;6=Blocked"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int=""/>
+            <duration field="{%4}"/>
+            <desc/>
+            <contact>
+                <field addfields="{%5}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

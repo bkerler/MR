@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sec.imsservice/databases/rcsim.db" type="database">
+        <sql cmd="select rowid, direction, remote_uri, sender_alias, sent_timestamp, delivered_timestamp, body, thumbnail_path, file_path, file_size from message;">
+            <type text="Instant Messaging service" category="Messenger">
+                <field addfields="[Type:{%1}]" replace="1=Sent;0=Incoming"/>
+            </type>
+            <package/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Thumbnail_Path:{%7};"/>
+                <field addfields="File_Path:{%8}"/>
+                <field addfields="File_Size:{%9}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%6}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="/DCIM/*.jpg" type="raw">
+        <python run="android_thumbnail.py">
+            <type text="DCIM Pictures" category="Media"/>
+            <filename>
+                <field addfields="{%2}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%1}"/>
+            </image>
+        </python>
+</Timeline>
+
+<Timeline path="/DCIM/Camera/*.mp4" type="raw">
+        <python run="android_filename.py">
+            <type text="DCIM Videos" category="Media"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+</Items>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sonyericsson.video/databases/playhistory.db" type="database">
+        <sql cmd="select rowid, uri, file_size, duration, last_update from history;">
+            <type text="Sony Ericsson Video" category="Media"/>
+            <package/>
+            <timestamp field="{%4}" format="yyyy-MM-dd hh:mm"/>
+            <duration/>
+            <desc>
+                <field addfields="[Size:{%2}, "/>
+                <field addfields="Uri:{%1}, "/>
+                <field addfields="Duration:{%3}]"/>
+            </desc>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<Items>
+<Template table="message" name="Threema threema.db_dec.db" path="threema.db_dec.db">
+      <column id="postedAtUtc (QString)" type="sqlcmd">
+      <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>      
+      <column id="createdAtUtc (QString)" type="sqlcmd">         
+      <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>      
+      </column>
+      <column id="modifiedAtUtc (QString)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+       <column id="isSaved (QString)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+      <column id="isRead (QString)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+      <column id="outbox (QString)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+      <column id="identity (QString)" type="sqlcmd">
+         <r cmd="SELECT contacts.firstName FROM contacts WHERE contacts.identity=='[%1]';"/>
+      </column>
+</Template>
+<Timeline path="ch.threema.app*threema.db" prerun="threema_decrypt.py" type="database">
+        <sql cmd="select message.rowid,message.uid,message.outbox,contacts.firstName,contacts.lastName, contacts.publicNickName, contacts.verificationLevel, message.body,message.type,message.state,message.postedAtUtc,datetime(message.createdAtUtc/1000,'unixepoch'),datetime(message.modifiedAtUtc/1000,'unixepoch') from message LEFT OUTER JOIN contacts ON contacts.identity=message.identity;">
+            <type text="Threema message" category="Messenger">
+                <field addfields="[Type:{%2}]" replace="0=Received;1=Sent"/>
+            </type>
+            <package/>
+            <timestamp field="{%10}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="ContactVerificationLevel:{%6};"/>
+                <field addfields="MessageType:{%8};"/>
+                <field addfields="MessageState:{%9};"/>
+                <field addfields="MessageCreated:{%11};"/>
+                <field addfields="MessageModified:{%12}"/>
+            </desc>
+            <message>
+                <field addfields="{%7}"/>
+            </message>
+            <contact_alias>
+                <field addfields="{%3} "/>
+                <field addfields="{%4}"/>
+                <field addfields="&lt;{%5}&gt;"/>
+            </contact_alias>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+        </sql>
+</Timeline>
+<Contacts path="ch.threema.app*threema.db" prerun="threema_decrypt.py" type="database">
+        <sql cmd="select rowid, identity, firstName ||' '|| lastName, verificationLevel from contacts;">
+            <type text="Threema"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="ContactVerificationLevel:{%3};"/>
+            </desc>
+            <message/>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+        </sql>
+</Contacts>
+</Items>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.intsig.camscanner/databases/documents.db" type="database">
+        <sql cmd="SELECT rowid, _data, title, modified, thumb_data from Thumbnails;">
+            <type text="Intsig CamScanner" category="Media"/>
+            <package>
+                <field addfields="&quot;{%2}&quot;"/>
+            </package>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Path:&quot;{%1}/"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%4}"/>
+            </image>
+        </sql>
+</Timeline>
+</Items>

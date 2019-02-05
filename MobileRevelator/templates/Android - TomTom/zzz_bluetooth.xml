@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="/media/*/Bluetooth/*.jpg" type="raw" generic="true">
+        <python run="android_thumbnail.py">
+            <type text="Bluetooth Shared Pictures" category="Media"/>
+            <filename>
+                <field addfields="{%2}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%1}"/>
+            </image>
+        </python>
+</Timeline>
+</Items>

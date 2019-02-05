@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.skype.raider/files*main.db" type="database">
+        <sql cmd="select rowid, timestamp, from_dispname, author, type, body_xml, '', '' from Messages UNION ALL select rowid, timestamp, '', '', 'Video', '', duration_ltvgad2, device_path from Videos;select rowid, timestamp, from_dispname, author, type, body_xml,'','' from Messages;">
+            <type text="Skype Messages" category="Messenger">
+                <field addfields="[Type:{%4}]"/>
+            </type>
+            <package/>
+            <timestamp field="{%1}" int=""/>
+            <duration/>
+            <desc>
+                <field addfields="duration_ltvgad2:{%6}"/>
+                <field addfields="Device_Path:{%7}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%5}" unhtml="1"/>
+            </message>
+        </sql>
+        <sql cmd="select CallMembers.rowid,  Calls.begin_timestamp, CallMembers.identity, CallMembers.dispname, CallMembers.type, CallMembers.status from CallMembers left outer join Calls on CallMembers.call_db_id = Calls.id;">
+            <type text="Skype Calls" category="Calls">
+                <field addfields="[Type:{%4}]" replace="1=Incoming;2=Outgoing"/>
+            </type>
+            <package/>
+            <timestamp field="{%1}" int=""/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Timeline>
+<Contacts path="com.skype.raider/files*main.db" type="database">
+        <sql cmd="select rowid, creation_timestamp, identity, displayname, type from Conversations;select rowid, last_activity_timestamp, identity, displayname, type from Conversations;">
+            <type text="Skype">
+                <field addfields="[Type:{%4}]"/>
+            </type>
+            <package/>
+            <timestamp field="{%1}" int=""/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+</Items>

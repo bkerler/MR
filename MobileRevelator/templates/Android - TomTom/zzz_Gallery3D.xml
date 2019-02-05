@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="imgcach*.0" type="raw">
+        <python run="android_gallery3d.py">
+            <type text="Gallery3D Thumbnails" category="Media"/>
+            <filename>
+                <field addfields="{%2}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Org. Filename:&quot;{%3}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%1}"/>
+            </image>
+        </python>
+</Timeline>
+
+</Items>

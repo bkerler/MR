@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template table="messages" database="SELECT participants.full_name, author_chat_id, timestamp, text, type, attachment_name FROM messages INNER JOIN participants ON participants.chat_id = messages.author_chat_id;" name="Hangouts babel3.db" path="babel3.db">
+      <column id="type (int)" type="textreplace">
+        <r replace="2" with="received"/>
+        <r replace="1" with="sent"/>
+        <r replace="8" with="unknown"/>
+    </column>
+    <column id="timestamp (int)" type="sqlcmd">
+        <r cmd="SELECT datetime([%1]/1000000,'unixepoch','localtime') WHERE [%1]>0;"/>
+    </column>
+</Template>
+
+<Timeline path="com.google.android.talk/databases/babel1.db" type="database">
+        <sql cmd="SELECT messages.rowid, participants.full_name, author_chat_id, timestamp, text, type, attachment_name FROM messages INNER JOIN participants ON participants.chat_id = messages.author_chat_id;SELECT messages.rowid, participants.full_name, author_chat_id, timestamp, text, type, '' FROM messages INNER JOIN participants ON participants.chat_id = messages.author_chat_id;">
+            <type text="Google Hangouts - Babel1" category="Messenger">
+                <field addfields="[Type:{%5}]" replace="2=Incoming;1=Sent;8=Unknown"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000000"/>
+            <duration/>
+            <desc>
+                <field addfields="Attachment: {%6}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+        </sql>
+</Timeline>
+
+<Timeline path="com.google.android.talk/databases/babel3.db" type="database">
+        <sql cmd="SELECT messages.rowid, participants.full_name, author_chat_id, timestamp, text, type, attachment_name FROM messages INNER JOIN participants ON participants.chat_id = messages.author_chat_id;">
+            <type text="Google Hangouts - Babel3" category="Messenger">
+                <field addfields="[Type:{%5}]" replace="2=Incoming;1=Sent;8=Unknown"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000000"/>
+            <duration/>
+            <desc>
+                <field addfields="Attachment: {%6}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+        </sql>
+</Timeline>
+
+<Contacts path="com.google.android.talk/databases/babel1.db" type="database">
+        <sql cmd="SELECT rowid, chat_id, full_name, profile_photo_url from participants;">
+            <type text="Google Hangouts - Babel1"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="Photo url: {%3}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+
+<Contacts path="com.google.android.talk/databases/babel3.db" type="database">
+        <sql cmd="SELECT rowid, chat_id, full_name, profile_photo_url from participants;">
+            <type text="Google Hangouts - Babel3"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="Photo url: {%3}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+
+</Items>

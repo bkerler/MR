@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template table="btopp" name="Bluetooth Database" path="btopp.db">
+        <column id="timestamp (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="visibility (int)" type="textreplace">
+            <r replace="0" with="hidden"/>
+            <r replace="1" with="visible"/>
+        </column>
+        <column id="confirm (int)" type="textreplace">
+            <r replace="0" with="pending"/>
+            <r replace="1" with="confirmed"/>
+            <r replace="2" with="autoconfirmed"/>
+            <r replace="3" with="denied"/>
+            <r replace="4" with="timeout"/>
+        </column>
+        <column id="status (int)" type="textreplacerange">
+            <r from="200" to="299" with="success"/>
+            <r from="300" to="499" with="error"/>
+        </column>
+</Template>
+<Timeline path="com.android.bluetooth/databases/btopp.db" type="database">
+        <sql cmd="SELECT rowid, hint, _data, destination, total_bytes, timestamp FROM btopp;">
+            <type text="Bluetooth transfer" category="Bluetooth"/>
+            <package/>
+            <timestamp field="{%5}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="[Title:&quot;{%1}&quot;,"/>
+                <field addfields="Path:{%2},"/>
+                <field addfields="Size:{%4}]"/>
+            </desc>
+            <contact field="{%3}"/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

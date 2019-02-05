@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="de.cellular.ottohybrid/databases/suggestions.db" type="database">
+        <sql cmd="select rowid, display1,query,date from suggestions;">
+            <type text="Otto [Search]" category="Searches"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Search:&quot;{%2}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

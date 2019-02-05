@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.fast.translator/tradutor.sqlite" type="database">
+        <sql cmd="SELECT rowid, date, language_input, language_output, text_input, text_output from history;">
+            <type text="Fast translator" category="Other"/>
+            <package/>
+            <timestamp field="{%1}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="Translated [From:{%2},"/>
+                <field addfields="To:{%3}]"/>
+                <field addfields=": &quot;{%5}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

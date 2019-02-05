@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="cache_its.*" type="raw">
+        <python run="android_cachetiles.py">
+            <type text="Google Maps Cache" category="Locations"/>
+            <package/>
+            <filename>
+                <field addfields="{%5}"/>
+            </filename>
+            <timestamp field="{%3}" int=""/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%1}" longitude="{%2}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%4}"/>
+            </image>
+        </python>
+</Timeline>
+<Timeline path="com.google.android.apps.maps/*tts-*/*" type="raw">
+        <python run="android_filename.py">
+            <type text="Google Maps Navigation Audio" category="Media"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+<Timeline path="com.google.android.apps.maps/databases/gmm_myplaces.db" type="database">
+        <sql cmd="SELECT rowid, key_string, timestamp, latitude, longitude FROM sync_item where latitude!=0;">
+            <type text="Google Maps [MyPlaces]" category="Locations"/>
+            <package field="{%1}"/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}" int="/1000000"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+
+<Timeline path="com.google.android.apps.maps/databases/search_history.db" type="database">
+        <sql cmd="SELECT rowid, data1, displayQuery, timestamp, latitude, longitude FROM suggestions where latitude!=0;SELECT rowid, data1, displayQuery, '', latitude, longitude FROM suggestions where latitude!=0;">
+            <type text="Google Maps [History]" category="Locations"/>
+            <package field="{%1}"/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Query: &qout;{%2};"/>
+            </desc>
+            <location>
+                <field latitude="{%3}" longitude="{%4}" int="/1000000"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

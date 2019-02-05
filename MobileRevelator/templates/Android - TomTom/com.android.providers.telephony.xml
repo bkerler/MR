@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template table="sms" deletemissingfields="true" name="SMS (SMS)" path="mmssms.db">
+        <!--<column id="body (QString)" type="regex">
+            <r query="(\d+)" minimal="false" minimalpos="0" casesensitivity="false"/>
+        </column>-->
+        <column id="_id (int)"/>
+        <column id="body (QString)"/>
+        <column id="address (QString)"/>
+        <column id="person (int)"/>
+        <column id="date (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="date_sent (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="protocol (int)" type="textreplace">
+            <r replace="0" with="sms"/>
+            <r replace="1" with="mms"/>
+            <r replace="4" with="transport failure"/>
+            <r replace="2" with="error: sms transient"/>
+            <r replace="3" with="error: mms transient"/>
+            <r replace="10" with="error: generic permanent"/>
+            <r replace="11" with="error: sms permanent"/>
+            <r replace="12" with="error: mms permanent"/>
+        </column>
+        <column id="type (int)" type="textreplace">
+            <r replace="0" with="all"/>
+            <r replace="1" with="inbox"/>
+            <r replace="2" with="sent"/>
+            <r replace="3" with="draft"/>
+            <r replace="4" with="outbox"/>
+            <r replace="5" with="failed"/>
+            <r replace="6" with="queued"/>
+        </column>
+        <column id="date2 (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="cs_timestamp (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="report_date (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="service_center (QString)"/>
+        
+        <column id="locked (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+        <column id="seen (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+        <column id="status (int)" type="textreplace">
+            <r replace="-1" with="none"/>
+            <r replace="0" with="complete"/>
+            <r replace="64" with="pending"/>
+            <r replace="128" with="failed"/>
+        </column>
+        <column id="reply_path_present (int)" type="textreplace">
+            <r replace="0" with="false"/>
+            <r replace="1" with="true"/>
+        </column>
+        <column id="read (int)" type="textreplace">
+            <r replace="0" with="false"/>
+            <r replace="1" with="true"/>
+        </column>
+</Template>
+
+<Template table="addr" name="SMS (addr)" path="mmssms.db">
+        <column id="type (int)" type="textreplace">
+            <r replace="129" with="BCC"/>
+            <r replace="130" with="CC"/>
+            <r replace="137" with="FROM"/>
+            <r replace="150" with="SUBJECT"/>
+            <r replace="151" with="TO"/>
+        </column>
+</Template>
+
+<Template table="threads" name="SMS (Threads)" path="mmssms.db">
+        <column id="type (int)" type="textreplace">
+            <r replace="0" with="all"/>
+            <r replace="1" with="inbox"/>
+            <r replace="2" with="sent"/>
+            <r replace="3" with="draft"/>
+            <r replace="4" with="outbox"/>
+            <r replace="5" with="failed"/>
+            <r replace="6" with="queued"/>
+        </column>
+        <column id="read (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+        <column id="has_attachment (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+        <column id="date (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+</Template>
+
+<Template table="raw" name="SMS (Raw)" path="mmssms.db">
+        <column id="date (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+</Template>
+
+<Template table="rate" name="SMS (Rate)" path="mmssms.db">
+        <column id="date (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+</Template>
+    
+<Template table="pdu" name="SMS (PDU)" path="mmssms.db">
+        <column id="date (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="date_sent (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+</Template>
+
+<Timeline path="com.android.providers.telephony/databases/mmssms.db" type="database">
+        <sql cmd="SELECT rowid, date, address, type, body FROM sms;">
+            <type text="SMS" category="Messenger">
+                <field addfields="[type:{%3}]" replace="1=Received;2=Sent;3=Draft"/>
+            </type>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias/>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>

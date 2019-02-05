@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.nyxcore.chalang/databases/app.db" type="database">
+        <sql cmd="select rowid, time, from_xx, to_xx, from_txt, to_txt from chat;">
+            <type text="Conversation Translator Nyxcore" category="Other"/>
+            <package/>
+            <timestamp field="{%1}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="Translated [From:{%2},"/>
+                <field addfields="Translated To:{%3}]"/>	
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message>
+                <field addfields="Translated From Text:{%4}"/>
+                <field addfields="Translated To Text:{%5};"/>
+            </message>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,272 @@
+﻿<?xml version='1.0' encoding='UTF-8' ?>
+<Database>
+	<intcode id="01" country="Canada"/>
+	<intcode id="01" country="United States, including United States territories"/>
+	<intcode id="01340" country="United States Virgin Islands"/>
+	<intcode id="01670" country="Northern Mariana Islands"/>
+	<intcode id="01671" country="Guam"/>
+	<intcode id="01684" country="American Samoa"/>
+	<intcode id="01787" country="Puerto Rico"/>
+	<intcode id="01" country="Caribbean British Overseas Territories"/>
+	<intcode id="01242" country="Bahamas"/>
+	<intcode id="01246" country="Barbados"/>
+	<intcode id="01264" country="Anguilla"/>
+	<intcode id="01268" country="Antigua and Barbuda"/>
+	<intcode id="01284" country="British Virgin Islands"/>
+	<intcode id="01345" country="Cayman Islands"/>
+	<intcode id="01441" country="Bermuda"/>
+	<intcode id="01473" country="Grenada"/>
+	<intcode id="01649" country="Turks and Caicos Islands"/>
+	<intcode id="01664" country="Montserrat"/>
+	<intcode id="01721" country="Sint Maarten"/>
+	<intcode id="01758" country="Saint Lucia"/>
+	<intcode id="01767" country="Dominica"/>
+	<intcode id="01784" country="Saint Vincent and the Grenadines"/>
+	<intcode id="01809" country="Dominican Republic"/>
+	<intcode id="01868" country="Trinidad and Tobago"/>
+	<intcode id="01869" country="Saint Kitts and Nevis"/>
+	<intcode id="01876" country="Jamaica"/>
+	<intcode id="20" country="Egypt"/>
+	<intcode id="211" country="South Sudan"/>
+	<intcode id="212" country="Morocco"/>
+	<intcode id="2125288" country="Western Sahara"/>
+	<intcode id="213" country="Algeria"/>
+	<intcode id="216" country="Tunisia"/>
+	<intcode id="218" country="Libya"/>
+	<intcode id="220" country="Gambia"/>
+	<intcode id="221" country="Senegal"/>
+	<intcode id="222" country="Mauritania"/>
+	<intcode id="223" country="Mali"/>
+	<intcode id="224" country="Guinea"/>
+	<intcode id="225" country="Côte d'Ivoire"/>
+	<intcode id="226" country="Burkina Faso"/>
+	<intcode id="227" country="Niger"/>
+	<intcode id="228" country="Togo"/>
+	<intcode id="229" country="Benin"/>
+	<intcode id="230" country="Mauritius"/>
+	<intcode id="231" country="Liberia"/>
+	<intcode id="232" country="Sierra Leone"/>
+	<intcode id="233" country="Ghana"/>
+	<intcode id="234" country="Nigeria"/>
+	<intcode id="235" country="Chad"/>
+	<intcode id="236" country="Central African Republic"/>
+	<intcode id="237" country="Cameroon"/>
+	<intcode id="238" country="Cape Verde"/>
+	<intcode id="239" country="São Tomé and Príncipe"/>
+	<intcode id="240" country="Equatorial Guinea"/>
+	<intcode id="241" country="Gabon"/>
+	<intcode id="242" country="Republic of the Congo"/>
+	<intcode id="243" country="Democratic Republic of the Congo"/>
+	<intcode id="244" country="Angola"/>
+	<intcode id="245" country="Guinea-Bissau"/>
+	<intcode id="246" country="British Indian Ocean Territory"/>
+	<intcode id="247" country="Ascension Island"/>
+	<intcode id="248" country="Seychelles"/>
+	<intcode id="249" country="Sudan"/>
+	<intcode id="250" country="Rwanda"/>
+	<intcode id="251" country="Ethiopia"/>
+	<intcode id="252" country="Somalia"/>
+	<intcode id="253" country="Djibouti"/>
+	<intcode id="254" country="Kenya"/>
+	<intcode id="255" country="Tanzania"/>
+	<intcode id="25524" country="Zanzibar"/>
+	<intcode id="256" country="Uganda"/>
+	<intcode id="257" country="Burundi"/>
+	<intcode id="258" country="Mozambique"/>
+	<intcode id="260" country="Zambia"/>
+	<intcode id="261" country="Madagascar"/>
+	<intcode id="262" country="Réunion"/>
+	<intcode id="262269" country="Mayotte"/>
+	<intcode id="263" country="Zimbabwe"/>
+	<intcode id="264" country="Namibia"/>
+	<intcode id="265" country="Malawi"/>
+	<intcode id="266" country="Lesotho"/>
+	<intcode id="267" country="Botswana"/>
+	<intcode id="268" country="Swaziland"/>
+	<intcode id="269" country="Comoros"/>
+	<intcode id="27" country="South Africa"/>
+	<intcode id="290" country="Saint Helena"/>
+	<intcode id="2908" country="Tristan da Cunha"/>
+	<intcode id="291" country="Eritrea"/>
+	<intcode id="297" country="Aruba"/>
+	<intcode id="298" country="Faroe Islands"/>
+	<intcode id="299" country="Greenland"/>
+	<intcode id="30" country="Greece"/>
+	<intcode id="31" country="Netherlands"/>
+	<intcode id="32" country="Belgium"/>
+	<intcode id="33" country="France"/>
+	<intcode id="34" country="Spain"/>
+	<intcode id="350" country="Gibraltar"/>
+	<intcode id="351" country="Portugal"/>
+	<intcode id="352" country="Luxembourg"/>
+	<intcode id="353" country="Ireland"/>
+	<intcode id="354" country="Iceland"/>
+	<intcode id="355" country="Albania"/>
+	<intcode id="356" country="Malta"/>
+	<intcode id="357" country="Cyprus"/>
+	<intcode id="358" country="Finland"/>
+	<intcode id="35818" country="Åland Islands"/>
+	<intcode id="359" country="Bulgaria"/>
+	<intcode id="36" country="Hungary"/>
+	<intcode id="370" country="Lithuania"/>
+	<intcode id="371" country="Latvia"/>
+	<intcode id="372" country="Estonia"/>
+	<intcode id="373" country="Moldova"/>
+	<intcode id="3732" country="Transnistria"/>
+	<intcode id="374" country="Armenia"/>
+	<intcode id="37447" country="Nagorno-Karabakh"/>
+	<intcode id="375" country="Belarus"/>
+	<intcode id="376" country="Andorra"/>
+	<intcode id="377" country="Monaco"/>
+	<intcode id="37744" country="Kosovo"/>
+	<intcode id="378" country="San Marino"/>
+	<intcode id="379" country="Vatican City"/>
+	<intcode id="380" country="Ukraine"/>
+	<intcode id="381" country="Serbia"/>
+	<intcode id="38128" country="Kosovo"/>
+	<intcode id="382" country="Montenegro"/>
+	<intcode id="385" country="Croatia"/>
+	<intcode id="386" country="Slovenia"/>
+	<intcode id="38643" country="Kosovo (mobile phone networks)"/>
+	<intcode id="387" country="Bosnia and Herzegovina"/>
+	<intcode id="389" country="Macedonia"/>
+	<intcode id="39" country="Italy"/>
+	<intcode id="3906698" country="Vatican City"/>
+	<intcode id="40" country="Romania"/>
+	<intcode id="41" country="Switzerland"/>
+	<intcode id="420" country="Czech Republic"/>
+	<intcode id="421" country="Slovakia"/>
+	<intcode id="423" country="Liechtenstein"/>
+	<intcode id="43" country="Austria"/>
+	<intcode id="44" country="United Kingdom"/>
+	<intcode id="441481" country="Guernsey"/>
+	<intcode id="441534" country="Jersey"/>
+	<intcode id="441624" country="Isle of Man"/>
+	<intcode id="45" country="Denmark"/>
+	<intcode id="46" country="Sweden"/>
+	<intcode id="47" country="Norway"/>
+	<intcode id="4779" country="Svalbard"/>
+	<intcode id="4779" country="Jan Mayen"/>
+	<intcode id="48" country="Poland"/>
+	<intcode id="49" country="Germany"/>
+	<intcode id="500" country="Falkland Islands"/>
+	<intcode id="500" country="South Georgia and the South Sandwich Islands"/>
+	<intcode id="501" country="Belize"/>
+	<intcode id="502" country="Guatemala"/>
+	<intcode id="503" country="El Salvador"/>
+	<intcode id="504" country="Honduras"/>
+	<intcode id="505" country="Nicaragua"/>
+	<intcode id="506" country="Costa Rica"/>
+	<intcode id="507" country="Panama"/>
+	<intcode id="508" country="Saint-Pierre and Miquelon"/>
+	<intcode id="509" country="Haiti"/>
+	<intcode id="51" country="Peru"/>
+	<intcode id="52" country="Mexico"/>
+	<intcode id="53" country="Cuba"/>
+	<intcode id="54" country="Argentina"/>
+	<intcode id="55" country="Brazil"/>
+	<intcode id="56" country="Chile"/>
+	<intcode id="57" country="Colombia"/>
+	<intcode id="58" country="Venezuela"/>
+	<intcode id="590" country="Guadeloupe (including Saint Barthélemy, Saint Martin)"/>
+	<intcode id="591" country="Bolivia"/>
+	<intcode id="592" country="Guyana"/>
+	<intcode id="593" country="Ecuador"/>
+	<intcode id="594" country="French Guiana"/>
+	<intcode id="595" country="Paraguay"/>
+	<intcode id="596" country="Martinique"/>
+	<intcode id="597" country="Suriname"/>
+	<intcode id="598" country="Uruguay"/>
+	<intcode id="5993" country="Sint Eustatius"/>
+	<intcode id="5994" country="Saba"/>
+	<intcode id="5997" country="Bonaire"/>
+	<intcode id="5999" country="Curaçao"/>
+	<intcode id="60" country="Malaysia"/>
+	<intcode id="61" country="Australia"/>
+	<intcode id="6189162" country="Cocos Islands"/>
+	<intcode id="6189164" country="Christmas Island"/>
+	<intcode id="62" country="Indonesia"/>
+	<intcode id="63" country="Philippines"/>
+	<intcode id="64" country="New Zealand"/>
+	<intcode id="64" country="Pitcairn Islands"/>
+	<intcode id="65" country="Singapore"/>
+	<intcode id="66" country="Thailand"/>
+	<intcode id="670" country="East Timor"/>
+	<intcode id="672" country="Australian External Territories"/>
+	<intcode id="6721" country="Australian Antarctic Territory"/>
+	<intcode id="6723" country="Norfolk Island"/>
+	<intcode id="673" country="Brunei"/>
+	<intcode id="674" country="Nauru"/>
+	<intcode id="675" country="Papua New Guinea"/>
+	<intcode id="676" country="Tonga"/>
+	<intcode id="677" country="Solomon Islands"/>
+	<intcode id="678" country="Vanuatu"/>
+	<intcode id="679" country="Fiji"/>
+	<intcode id="680" country="Palau"/>
+	<intcode id="681" country="Wallis and Futuna"/>
+	<intcode id="682" country="Cook Islands"/>
+	<intcode id="683" country="Niue"/>
+	<intcode id="685" country="Samoa"/>
+	<intcode id="686" country="Kiribati"/>
+	<intcode id="687" country="New Caledonia"/>
+	<intcode id="688" country="Tuvalu"/>
+	<intcode id="689" country="French Polynesia"/>
+	<intcode id="690" country="Tokelau"/>
+	<intcode id="691" country="Federated States of Micronesia"/>
+	<intcode id="692" country="Marshall Islands"/>
+	<intcode id="07" country="Russia"/>
+	<intcode id="07" country="Kazakhstan"/>
+	<intcode id="07840" country="Abkhazia"/>
+	<intcode id="800" country="International Freephone (UIFN)"/>
+	<intcode id="81" country="Japan"/>
+	<intcode id="82" country="South Korea"/>
+	<intcode id="84" country="Vietnam"/>
+	<intcode id="850" country="North Korea"/>
+	<intcode id="852" country="Hong Kong"/>
+	<intcode id="853" country="Macau"/>
+	<intcode id="855" country="Cambodia"/>
+	<intcode id="856" country="Laos"/>
+	<intcode id="86" country="China"/>
+	<intcode id="870" country="Inmarsat SNAC service"/>
+	<intcode id="878" country="Universal Personal Telecommunications services"/>
+	<intcode id="880" country="Bangladesh"/>
+	<intcode id="881" country="Global Mobile Satellite System"/>
+	<intcode id="882" country="International Networks"/>
+	<intcode id="886" country="Taiwan"/>
+	<intcode id="888" country="Telecommunications for Disaster Relief by OCHA"/>
+	<intcode id="90" country="Turkey"/>
+	<intcode id="90392" country="Northern Cyprus"/>
+	<intcode id="91" country="India"/>
+	<intcode id="92" country="Pakistan"/>
+	<intcode id="93" country="Afghanistan"/>
+	<intcode id="94" country="Sri Lanka"/>
+	<intcode id="95" country="Burma"/>
+	<intcode id="960" country="Maldives"/>
+	<intcode id="961" country="Lebanon"/>
+	<intcode id="962" country="Jordan"/>
+	<intcode id="963" country="Syria"/>
+	<intcode id="964" country="Iraq"/>
+	<intcode id="965" country="Kuwait"/>
+	<intcode id="966" country="Saudi Arabia"/>
+	<intcode id="967" country="Yemen"/>
+	<intcode id="968" country="Oman"/>
+	<intcode id="970" country="Palestinian territories"/>
+	<intcode id="971" country="United Arab Emirates"/>
+	<intcode id="972" country="Israel"/>
+	<intcode id="973" country="Bahrain"/>
+	<intcode id="974" country="Qatar"/>
+	<intcode id="975" country="Bhutan"/>
+	<intcode id="976" country="Mongolia"/>
+	<intcode id="977" country="Nepal"/>
+	<intcode id="979" country="International Premium Rate Service"/>
+	<intcode id="98" country="Iran"/>
+	<intcode id="991" country="International Telecommunications Public Correspondence Service trial (ITPCS)"/>
+	<intcode id="992" country="Tajikistan"/>
+	<intcode id="993" country="Turkmenistan"/>
+	<intcode id="994" country="Azerbaijan"/>
+	<intcode id="995" country="Georgia"/>
+	<intcode id="99534" country="South Ossetia"/>
+	<intcode id="99544" country="Abkhazia (2)"/>
+	<intcode id="996" country="Kyrgyzstan"/>
+	<intcode id="998" country="Uzbekistan"/>
+</Database>

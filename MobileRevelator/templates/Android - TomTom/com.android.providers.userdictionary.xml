@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.android.providers.userdictionary/databases/user_dict.db" type="database">
+        <sql cmd="SELECT rowid, word from words;">
+            <type text="Google UserDictionary" category="Dictionary"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="&quot;{%1}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

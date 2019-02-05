@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.google.android.apps.translate/databases/*db_sql" type="database">
+        <sql cmd="SELECT rowid, input, translation, created, sl, tl FROM entries;">
+            <type text="Google Translate" category="Other"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Translated [From ({%4}):"/>
+                <field addfields="&quot;{%1}&quot; - "/>
+                <field addfields="To ({%5}):"/>
+                <field addfields="&quot;{%2}&quot;]"/>
+            </desc>
+            <message>
+                <field addfields="{%1}"/>
+            </message>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

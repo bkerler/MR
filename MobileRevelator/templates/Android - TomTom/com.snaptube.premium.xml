@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.snaptube.premium/databases/downloads.db" type="database">
+        <sql cmd="select rowid, _data, source, title from downloads;">
+            <type text="SnapTube Downloads" category="Downloads"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+				<field addfields="Title: {%3};"/>
+                <field addfields=" Source: {%1};"/>
+				<field addfields=" Destination: {%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+<Timeline path="com.snaptube.premium/databases/snaptube.db" type="database">
+        <sql cmd="select rowid, type, title, createdTime, filePath, referer from taskinfo;">
+            <type text="SnapTube Media" category="Media">
+				 <field addfields="[Type:{%2}]"/>
+			</type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Title: {%2};"/>
+				<field addfields=" Source: {%4};"/>
+				<field addfields=" Destination: {%5}]"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

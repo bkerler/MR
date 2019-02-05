@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.cleanmaster.security/databases/wifi_record.db" type="database">
+        <sql cmd="select wifi_connection.rowid, wifi_connection.TIME_STAMP, wifi_connection.SSID, ssid_bssid_mapping.BSSID from wifi_connection LEFT OUTER JOIN ssid_bssid_mapping ON wifi_connection.SSID == ssid_bssid_mapping.SSID where ssid_bssid_mapping.BSSID!='';">
+            <type text="Cleanmaster WIFI Records"  category="Locations"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="SSID:&quot;{%2}&quot;;"/>
+                <field addfields="BSSID:&quot;{%3}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

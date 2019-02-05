@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+<Template database="select ABPerson.CreationDate, ABPerson.ModificationDate, ABPerson.prefix,ABPerson.suffix, ABPerson.first,ABPerson.middle,ABPerson.last, ABMultiValue.value, ABPerson.note, ABPerson.nickname, ABPerson.organization, ABPerson.department, ABPerson.jobtitle, ABPerson.birthday from ABPerson,ABMultiValue where ABMultiValue.record_id=ABPerson.ROWID" name="AddressBook" path="AddressBook.sqlitedb">
+        <column id="CreationDate (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ModificationDate (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+</Template>
+
+<Template database="SELECT ABPerson.ROWID, ABPerson.CreationDate, ABPerson.ModificationDate, ABPerson.Prefix, ABPerson.First, ABPerson.Middle, ABPerson.Last, ABPerson.Suffix, ABPerson.Nickname, ABPerson.DisplayName, ABPerson.Birthday, ABPerson.Kind, ABPerson.Note, ABPerson.Organization, ABPerson.Department, ABPerson.Jobtitle, ABPerson.ImageURI, ABMultiValue.label, ABMultiValueLabel.value , ABMultiValue.value, ABMultiValueEntry.key, ABMultiValueEntryKey.value, ABMultiValueEntry.value FROM ((((ABPerson  LEFT JOIN ABMultiValue ON ABPerson.ROWID = ABMultiValue.record_id) LEFT JOIN ABMultiValueLabel ON ABMultiValue.label = ABMultiValueLabel.rowid) LEFT JOIN ABMultiValueEntry ON ABMultiValue.UID = ABMultiValueEntry.parent_id) LEFT JOIN ABMultiValueEntryKey ON ABMultiValueEntry.key = ABMultiValueEntryKey.rowid) Order by ABPerson.ROWID, ABMultiValue.label, ABMultiValueEntry.key" name="AddressBook 2 - alles" path="AddressBook.sqlitedb">
+        <column id="CreationDate (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ModificationDate (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="Birthday (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]!=0;"/>
+        </column>
+        <column id="value (QString)" type="textreplace">
+            <r replace="_$!&lt;Home&gt;!$_" with="Privat"/>
+            <r replace="_$!&lt;HomeFAX&gt;!$_" with="Privat FAX"/>
+            <r replace="_$!&lt;HomePage&gt;!$_" with="Homepage"/>
+            <r replace="_$!&lt;Main&gt;!$_" with="iPhone"/>
+            <r replace="_$!&lt;Mobile&gt;!$_" with="Mobil"/>
+            <r replace="_$!&lt;Other&gt;!$_" with="Andere"/>
+            <r replace="_$!&lt;Work&gt;!$_" with="Arbeit"/>
+            <r replace="_$!&lt;WorkFAX&gt;!$_" with="Arbeit FAX"/>
+            <r replace="_$!&lt;Pager&gt;!$_" with="Pager"/>
+            <r replace="_$!&lt;Headquarters&gt;!$_" with="Zentrale"/>
+        </column>
+</Template>
+
+<Template database="SELECT ABPerson.ROWID, ABPerson.CreationDate, ABPerson.ModificationDate, ABPerson.Prefix, ABPerson.First, ABPerson.Last, ABPerson.Suffix, ABPerson.Organization, ABMultiValue.label, ABMultiValueLabel.value as LabelValue, ABMultiValue.value, ABMultiValueEntry.key, ABMultiValueEntryKey.value as KeyValue, ABMultiValueEntry.value FROM ((((ABPerson  LEFT JOIN ABMultiValue ON ABPerson.ROWID = ABMultiValue.record_id) LEFT JOIN ABMultiValueLabel ON ABMultiValue.label = ABMultiValueLabel.rowid) LEFT JOIN ABMultiValueEntry ON ABMultiValue.UID = ABMultiValueEntry.parent_id) LEFT JOIN ABMultiValueEntryKey ON ABMultiValueEntry.key = ABMultiValueEntryKey.rowid) Order by ABPerson.ROWID, ABMultiValue.label, ABMultiValueEntry.key" name="AddressBook 2 - kurz" path="AddressBook.sqlitedb">
+        <column id="CreationDate (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]=!0;"/>
+        </column>
+        <column id="ModificationDate (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]!=0;"/>
+        </column>
+            <column id="Birthday (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]!=0;"/>
+        </column>
+        <column id="value (QString)" type="textreplace">
+            <r replace="_$!&lt;Home&gt;!$_" with="Privat"/>
+            <r replace="_$!&lt;HomeFAX&gt;!$_" with="Privat FAX"/>
+            <r replace="_$!&lt;HomePage&gt;!$_" with="Homepage"/>
+            <r replace="_$!&lt;Main&gt;!$_" with="iPhone"/>
+            <r replace="_$!&lt;Mobile&gt;!$_" with="Mobil"/>
+            <r replace="_$!&lt;Other&gt;!$_" with="Andere"/>
+            <r replace="_$!&lt;Work&gt;!$_" with="Arbeit"/>
+            <r replace="_$!&lt;WorkFAX&gt;!$_" with="Arbeit FAX"/>
+            <r replace="_$!&lt;Pager&gt;!$_" with="Pager"/>
+            <r replace="_$!&lt;Headquarters&gt;!$_" with="Zentrale"/>
+        </column>
+</Template>
+</Items>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.fsck.k9/databases/*.db" type="database">
+        <sql cmd="select messages.rowid, messages.subject, messages_fulltext.fulltext, messages.date, messages.sender_list, messages.to_list, messages.cc_list, messages.bcc_list from messages OUTER LEFT JOIN messages_fulltext ON messages.rowid=messages_fulltext.rowid WHERE messages.message_part_id not null;
+">
+            <type text="K9 Mail" category="EMails"/>
+            <package>
+                <field addfields="Subject:&quot;{%1}&quot;"/>
+            </package>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="From: {%4};"/>
+                <field addfields="To: {%5};"/>
+                <field addfields="CC: {%6};"/>
+                <field addfields="BCC: {%7}"/>
+            </desc>
+            <contact>
+                <field addfields="{%4}" splitstart="" splitend=";"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%4}" splitstart=";" splitend=""/>
+            </contact_alias>
+            <message>
+                <field addfields="{%2}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>

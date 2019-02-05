@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="foodquiz.guessthefood/databases/data.db" type="database">
+        <sql cmd="SELECT rowid, timestamp, type from Ips_track;">
+            <type text="Foodquiz Network Connections [lps_track]" category="Usage"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Type: {%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, timestamp, ip from Ips;">
+            <type text="Foodquiz IP Connections [lps]" category="Usage"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="IP: {%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, start, (end-start), name from Apps;">
+            <type text="Foodquiz App Usage [Apps]" category="Usage"/>
+            <package>
+                <field addfields="{%3}"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration field="{%2}" int=""/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

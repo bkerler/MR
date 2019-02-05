@@ -1,0 +1,2235 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Database> <!-- Copyright B. Kerler RevSkills -->
+	<MCC id="412" name="Afghanistan" size="2">
+		<MNC name="AWCC" id="01"/>
+		<MNC name="Roshan" id="20"/>
+		<MNC name="Areeba Afghanistan" id="40"/>
+		<MNC name="Etisalat" id="50"/>
+		<MNC name="Afghan Telecom" id="80"/>
+		<MNC name="Afghan Telecom" id="88"/>
+	</MCC>
+	<MCC id="276" name="Albania" size="2">
+		<MNC name="Albanian Mobile Communications (AMC)" id="01"/>
+		<MNC name="Vodafone Albania" id="02"/>
+		<MNC name="Eagle Mobile" id="03"/>
+		<MNC name="Mobile 4 AL" id="04"/>
+	</MCC>
+	<MCC id="603" name="Algeria" size="2">
+		<MNC name="Algérie Telecom" id="01"/>
+		<MNC name="Orascom Telecom Algérie" id="02"/>
+	</MCC>
+	<MCC id="213" name="Andorra" size="2">
+		<MNC name="Mobiland" id="03"/>
+	</MCC>
+	<MCC id="631" name="Angola" size="2">
+		<MNC name="Unitel" id="02"/>
+		<MNC name="Movicel" id="04"/>
+	</MCC>
+	<MCC id="365" name="Anguilla" size="3">
+		<MNC name="Weblinks Limited" id="010"/>
+		<MNC name="Cable and Wireless (Anguilla) Ltd trading as Lime" id="840"/>
+	</MCC>
+	<MCC id="344" name="Antigua and Barbuda" size="3">
+		<MNC name="APUA PCS" id="030"/>
+		<MNC name="Cable &amp; Wireless (Antigua) trading as Lime" id="920"/>
+		<MNC name="AT&amp;T Wireless (Antigua)" id="930"/>
+	</MCC>
+	<MCC id="722" name="Argentina" size="3">
+		<MNC name="Compañia de Radiocomunicaciones Moviles S.A." id="010"/>
+		<MNC name="Nextel Argentina srl" id="020"/>
+		<MNC name="Telefónica Comunicaciones Personales S.A." id="070"/>
+		<MNC name="CTI PCS S.A." id="310"/>
+		<MNC name="Compañia de Telefonos del Interior Norte S.A." id="320"/>
+		<MNC name="Compañia de Telefonos del Interior S.A." id="330"/>
+		<MNC name="Telecom Personal S.A." id="341"/>
+	</MCC>
+	<MCC id="363" name="Aruba" size="2">
+		<MNC name="SETAR N.V." id="01"/>
+		<MNC name="DIGICEL ARUBA" id="02"/>
+	</MCC>
+	<MCC id="505" name="Australia" size="2">
+		<MNC name="Telstra Corporation Ltd." id="01"/>
+		<MNC name="Optus Mobile Pty. Ltd." id="02"/>
+		<MNC name="Vodafone Network Pty. Ltd." id="03"/>
+		<MNC name="Department of Defence" id="04"/>
+		<MNC name="The Ozitel Network Pty. Ltd." id="05"/>
+		<MNC name="Hutchison 3G Australia Pty. Ltd." id="06"/>
+		<MNC name="Vodafone Network Pty. Ltd." id="07"/>
+		<MNC name="One.Tel GSM 1800 Pty. Ltd." id="08"/>
+		<MNC name="Airnet Commercial Australia Ltd." id="09"/>
+		<MNC name="Norfolk Telecom" id="10"/>
+		<MNC name="Telstra Corporation Ltd." id="11"/>
+		<MNC name="Hutchison Telecommunications (Australia) Pty. Ltd." id="12"/>
+		<MNC name="Railcorp" id="13"/>
+		<MNC name="AAPT Ltd" id="14"/>
+		<MNC name="3GIS Pty Ltd. (Telstra &amp; Hutchison 3G)" id="15"/>
+		<MNC name="Victorian Rail Track" id="16"/>
+		<MNC name="Vivid Wireless Pty Ltd" id="17"/>
+		<MNC name="Pactel International Pty Ltd" id="18"/>
+		<MNC name="Lycamobile Pty Ltd" id="19"/>
+		<MNC name="Ausgrid Corporation" id="20"/>
+		<MNC name="Queensland Rail Limited" id="21"/>
+		<MNC name="iiNet Ltd" id="22"/>
+		<MNC name="Challenge Networks Pty Ltd" id="23"/>
+		<MNC name="Advanced Communications Technologies Pty. Ltd." id="24"/>
+		<MNC name="Pilbara Iron Company Services Pty Ltd" id="25"/>
+		<MNC name="Dialogue Communications Pty Ltd" id="26"/>
+		<MNC name="Nexium Telecommunications" id="27"/>
+		<MNC name="RCOM International Pty Ltd" id="28"/>
+		<MNC name="Compatel Limited" id="30"/>
+		<MNC name="BHP Billiton" id="31"/>
+		<MNC name="Thales Australia" id="32"/>
+		<MNC name="CLX Networks Pty Ltd" id="33"/>
+		<MNC name="Santos Ltd" id="34"/>
+		<MNC name="MessageBird Pty Ltd" id="35"/>
+		<MNC name="Optus Mobile Pty. Ltd." id="36"/>
+		<MNC name="Yancoal Australia Ltd" id="37"/>
+		<MNC name="Truphone Pty Ltd" id="38"/>
+		<MNC name="Telstra Corporation Ltd." id="39"/>
+		<MNC name="NBNCo Limited" id="62"/>
+		<MNC name="NBNCo Limited" id="68"/>
+		<MNC name="Telstra Corporation Ltd." id="71"/>
+		<MNC name="Telstra Corporation Ltd." id="72"/>
+		<MNC name="Localstar Holding Pty. Ltd." id="88"/>
+		<MNC name="Optus Ltd." id="90"/>
+		<MNC name="One.Tel GSM 1800 Pty. Ltd." id="99"/>
+	</MCC>
+	<MCC id="232" name="Austria" size="2">
+		<MNC name="A1 Telekom Austria AG" id="01"/>
+		<MNC name="A1 Telekom Austria AG" id="02"/>
+		<MNC name="T-Mobile Austria GmbH" id="03"/>
+		<MNC name="T-Mobile Austria GmbH" id="04"/>
+		<MNC name="Hutchison Drei Austria GmbH" id="05"/>
+		<MNC name="T-Mobile Austria GmbH" id="07"/>
+		<MNC name="Lycamobile Austria Ltd" id="08"/>
+		<MNC name="A1 Telekom Austria AG" id="09"/>
+		<MNC name="Hutchison Drei Austria GmbH" id="10"/>
+		<MNC name="A1 Telekom Austria AG" id="11"/>
+		<MNC name="A1 Telekom Austria AG" id="12"/>
+		<MNC name="UPC Austria Services GmbH" id="13"/>
+		<MNC name="Hutchison Drei Austria GmbH" id="14"/>
+		<MNC name="Mundio Mobile (Austria) Ltd" id="15"/>
+		<MNC name="Hutchison Drei Austria GmbH" id="16"/>
+		<MNC name="MASS Response Service GmbH" id="17"/>
+		<MNC name="smartspace GmbH" id="18"/>
+		<MNC name="Tele2 Telecommunication GmbH" id="19"/>
+		<MNC name="Mtel Austrija GmbH" id="20"/>
+		<MNC name="ÖBB - Infrastruktur AG" id="91"/>
+	</MCC>
+	<MCC id="400" name="Azerbaijan" size="2">
+		<MNC name="Azercell Telecom LLC" id="01"/>
+		<MNC name="Bakcell LLC" id="02"/>
+		<MNC name="Catel LLC" id="03"/>
+		<MNC name="Azerfon LLC" id="04"/>
+		<MNC name="Special State Protection Service of the Republic of Azerbaijan" id="05"/>
+		<MNC name="Nakhtel LLC" id="06"/>
+	</MCC>
+	<MCC id="364" name="Bahamas" size="2">
+		<MNC name="NEWCO2015" id="49"/>
+	</MCC>
+	<MCC id="426" name="Bahrain" size="2">
+		<MNC name="Bahrain Telecommunications Company (BATELCO)" id="01"/>
+		<MNC name="Zain Bahrain" id="02"/>
+		<MNC name="Civil Aviation Authority" id="03"/>
+		<MNC name="STC Bahrain" id="04"/>
+		<MNC name="Royal Court" id="05"/>
+	</MCC>
+	<MCC id="470" name="Bangladesh" size="2">
+		<MNC name="GramenPhone" id="01"/>
+		<MNC name="Aktel" id="02"/>
+		<MNC name="Mobile 2000" id="03"/>
+	</MCC>
+	<MCC id="342" name="Barbados" size="3">
+		<MNC name="Cable &amp; Wireless (Barbados) Ltd. trading as Lime" id="600"/>
+		<MNC name="Sunbeach Communications" id="820"/>
+	</MCC>
+	<MCC id="257" name="Belarus" size="2">
+		<MNC name="MDC Velcom" id="01"/>
+		<MNC name="MTS" id="02"/>
+		<MNC name="BelCel Joint Venture (JV)" id="03"/>
+		<MNC name="Closed joint-stock company Belarusian telecommunication network" id="04"/>
+		<MNC name="Republican Unitary Telecommunication Enterprise (RUE) Beltelecom (National Telecommunications Operator of the Republic of Belarus)" id="05"/>
+		<MNC name="Belorussian Cloud Technologies" id="06"/>
+	</MCC>
+	<MCC id="206" name="Belgium" size="2">
+		<MNC name="Proximus" id="00"/>
+		<MNC name="Proximus" id="01"/>
+		<MNC name="N.M.B.S" id="02"/>
+		<MNC name="Telenet nv" id="05"/>
+		<MNC name="Lycamobile sprl" id="06"/>
+		<MNC name="Mundio Mobile Belgium nv" id="07"/>
+		<MNC name="Mobistar sa" id="10"/>
+		<MNC name="Base Company nv" id="20"/>
+		<MNC name="Join Experience (Belgium)" id="40"/>
+	</MCC>
+	<MCC id="702" name="Belize" size="2">
+		<MNC name="Belize Telecommunications Ltd., GSM 1900" id="67"/>
+		<MNC name="SMART/Speednet Communications Ltd." id="69"/>
+	</MCC>
+	<MCC id="616" name="Benin" size="2">
+		<MNC name="Libercom" id="01"/>
+		<MNC name="Telecel" id="02"/>
+		<MNC name="Spacetel Benin" id="03"/>
+	</MCC>
+	<MCC id="350" name="Bermuda" size="3">
+		<MNC name="Bermuda Digital Communications Ltd (CellOne)" id="000"/>
+	</MCC>
+	<MCC id="402" name="Bhutan" size="2">
+		<MNC name="Bhutan Telecom Ltd" id="11"/>
+		<MNC name="B-Mobile of Bhutan Telecom" id="17"/>
+	</MCC>
+	<MCC id="736" name="Bolivia (Plurinational State of)" size="2">
+		<MNC name="Nuevatel S.A." id="01"/>
+		<MNC name="ENTEL S.A." id="02"/>
+		<MNC name="Telecel S.A." id="03"/>
+	</MCC>
+	<MCC id="218" name="Bosnia and Herzegovina" size="2">
+		<MNC name="Eronet Mobile Communications Ltd." id="03"/>
+		<MNC name="MOBI'S (Mobilina Srpske)" id="05"/>
+		<MNC name="GSMBIH" id="90"/>
+	</MCC>
+	<MCC id="652" name="Botswana" size="2">
+		<MNC name="Mascom Wireless (Pty) Ltd" id="01"/>
+		<MNC name="Orange Botswana (Pty) Ltd" id="02"/>
+		<MNC name="Botswana Telecommunications Corporation (BTC)" id="04"/>
+	</MCC>
+	<MCC id="724" name="Brazil" size="2">
+		<MNC name="NEXTEL" id="00"/>
+		<MNC name="SISTEER DO BRASIL TELECOMUNICAÇÔES (MVNO)" id="01"/>
+		<MNC name="TIM REGIÂO I" id="02"/>
+		<MNC name="TIM REGIÂO III" id="03"/>
+		<MNC name="TIM REGIÂO III" id="04"/>
+		<MNC name="CLARO" id="05"/>
+		<MNC name="VIVO REGIÂO II" id="06"/>
+		<MNC name="VIVO REGIÂO III" id="10"/>
+		<MNC name="VIVO REGIÂO I" id="11"/>
+		<MNC name="SERCOMTEL" id="15"/>
+		<MNC name="BRT CELULAR" id="16"/>
+		<MNC name="DATORA (MVNO)" id="18"/>
+		<MNC name="TELEMIG CELULAR" id="23"/>
+		<MNC name="AMAZONIA CELULAR" id="24"/>
+		<MNC name="TNL PCS Oi" id="30"/>
+		<MNC name="TNL PCS Oi" id="31"/>
+		<MNC name="CTBC CELULAR R III" id="32"/>
+		<MNC name="CTBC CELULAR R II" id="33"/>
+		<MNC name="CTBC CELULAR R I" id="34"/>
+		<MNC name="TELCOM" id="35"/>
+		<MNC name="OPTIONS" id="36"/>
+		<MNC name="UNICEL" id="37"/>
+		<MNC name="CLARO" id="38"/>
+		<MNC name="NEXTEL (SMP)" id="39"/>
+		<MNC name="PORTO SEGURO TELECOMUNICAÇÔES (MVNO)" id="54"/>
+		<MNC name="LOCAL (STFC)" id="99"/>
+	</MCC>
+	<MCC id="348" name="British Virgin Islands" size="3">
+		<MNC name="Cable &amp; Wireless (BVI) Ltd trading as lime" id="170"/>
+		<MNC name="BVI Cable TV Ltd" id="370"/>
+		<MNC name="Caribbean Cellular Telephone Ltd." id="570"/>
+		<MNC name="Digicel (BVI) Ltd" id="770"/>
+	</MCC>
+	<MCC id="528" name="Brunei Darussalam" size="2">
+		<MNC name="DST Com" id="11"/>
+	</MCC>
+	<MCC id="284" name="Bulgaria" size="2">
+		<MNC name="Mobiltel EAD" id="01"/>
+		<MNC name="Globul" id="05"/>
+	</MCC>
+	<MCC id="613" name="Burkina Faso" size="2">
+		<MNC name="Celtel" id="02"/>
+		<MNC name="Telecel" id="03"/>
+	</MCC>
+	<MCC id="642" name="Burundi" size="2">
+		<MNC name="Econet" id="01"/>
+		<MNC name="Africell" id="02"/>
+		<MNC name="ONAMOB" id="03"/>
+		<MNC name="LACELL" id="07"/>
+		<MNC name="U.COM" id="82"/>
+	</MCC>
+	<MCC id="625" name="Cabo Verde" size="2">
+		<MNC name="Cabo Verde Telecom" id="01"/>
+		<MNC name="T+Telecomunicações" id="02"/>
+	</MCC>
+	<MCC id="456" name="Cambodia" size="2">
+		<MNC name="Mobitel (Cam GSM)" id="01"/>
+		<MNC name="Hello" id="02"/>
+		<MNC name="S Telecom (CDMA)" id="03"/>
+		<MNC name="Cadcomms" id="04"/>
+		<MNC name="Starcell" id="05"/>
+		<MNC name="Smart" id="06"/>
+		<MNC name="Viettel" id="08"/>
+		<MNC name="Mfone" id="18"/>
+	</MCC>
+	<MCC id="624" name="Cameroon" size="2">
+		<MNC name="Mobile Telephone Networks Cameroon" id="01"/>
+		<MNC name="Orange Cameroun" id="02"/>
+		<MNC name="NEXTTEL (ex VIETTEL CAMEROON)" id="04"/>
+	</MCC>
+	<MCC id="302" name="Canada" size="3">
+		<MNC name="Telus Mobility" id="220"/>
+		<MNC name="Telus Mobility" id="221"/>
+		<MNC name="Telus Mobility" id="222"/>
+		<MNC name="ALO Mobile Inc" id="250"/>
+		<MNC name="Bragg Communications" id="270"/>
+		<MNC name="Airtel Wireless" id="290"/>
+		<MNC name="ECOTEL inc." id="300"/>
+		<MNC name="Dave Wireless" id="320"/>
+		<MNC name="Execulink" id="340"/>
+		<MNC name="Telus Mobility" id="360"/>
+		<MNC name="Microcell" id="370"/>
+		<MNC name="Dryden Mobility" id="380"/>
+		<MNC name="Dryden Mobility" id="390"/>
+		<MNC name="Globalive Wireless" id="490"/>
+		<MNC name="Videotron Ltd" id="500"/>
+		<MNC name="Videotron Ltd" id="510"/>
+		<MNC name="Keewatinook Okimacinac" id="530"/>
+		<MNC name="Lynx Mobility" id="560"/>
+		<MNC name="Light Squared" id="570"/>
+		<MNC name="Quadro Communication" id="590"/>
+		<MNC name="Bell Mobility" id="610"/>
+		<MNC name="Ice Wireless" id="620"/>
+		<MNC name="Aliant Mobility" id="630"/>
+		<MNC name="Bell Mobility" id="640"/>
+		<MNC name="Tbay Mobility" id="656"/>
+		<MNC name="MTS Mobility" id="660"/>
+		<MNC name="CityTel Mobility" id="670"/>
+		<MNC name="Sask Tel Mobility" id="680"/>
+		<MNC name="Bell Mobility" id="690"/>
+		<MNC name="Globalstar" id="710"/>
+		<MNC name="Rogers Wireless" id="720"/>
+		<MNC name="TerreStar Solutions" id="730"/>
+		<MNC name="Shaw Telecom G.P." id="740"/>
+		<MNC name="Public Mobile Inc" id="760"/>
+		<MNC name="Rural Com" id="770"/>
+		<MNC name="Sask Tel Mobility" id="780"/>
+		<MNC name="Telus Mobility" id="860"/>
+		<MNC name="Telus/Bell shared" id="880"/>
+		<MNC name="Wightman Telecom" id="940"/>
+		<MNC name="Test" id="990"/>
+	</MCC>
+	<MCC id="346" name="Cayman Islands" size="3">
+		<MNC name="Cable &amp; Wireless (Cayman) trading as Lime" id="140"/>
+	</MCC>
+	<MCC id="623" name="Central African Rep." size="2">
+		<MNC name="Centrafrique Telecom Plus (CTP)" id="01"/>
+		<MNC name="Telecel Centrafrique (TC)" id="02"/>
+		<MNC name="Celca (Socatel)" id="03"/>
+	</MCC>
+	<MCC id="622" name="Chad" size="2">
+		<MNC name="Celtel" id="01"/>
+		<MNC name="Tchad Mobile" id="02"/>
+	</MCC>
+	<MCC id="730" name="Chile" size="2">
+		<MNC name="Entel Telefónica Móvil" id="01"/>
+		<MNC name="Telefónica Móvil" id="02"/>
+		<MNC name="Smartcom" id="03"/>
+		<MNC name="Centennial Cayman Corp. Chile S.A." id="04"/>
+		<MNC name="Multikom S.A." id="05"/>
+		<MNC name="Blue Two Chile SA" id="06"/>
+		<MNC name="Telefónica Móviles Chile S.A." id="07"/>
+		<MNC name="VTR Móvil S.A." id="08"/>
+		<MNC name="Centennial Cayman Corp. Chile S.A." id="09"/>
+		<MNC name="Entel" id="10"/>
+		<MNC name="Celupago S.A." id="11"/>
+		<MNC name="Telestar Móvil S.A." id="12"/>
+		<MNC name="TRIBE Mobile Chile SPA" id="13"/>
+		<MNC name="Netline Telefónica Móvil Ltda" id="14"/>
+		<MNC name="CIBELES TELECOM S.A." id="15"/>
+		<MNC name="Nomade Telecomunicaciones S.A." id="16"/>
+		<MNC name="COMPATEL Chile Limitada" id="17"/>
+		<MNC name="Empresas Bunker S.A." id="18"/>
+		<MNC name="Sociedad Falabella Móvil SPA" id="19"/>
+	</MCC>
+	<MCC id="460" name="China" size="2">
+		<MNC name="China Mobile" id="00"/>
+		<MNC name="China Unicom" id="01"/>
+		<MNC name="China Unicom CDMA" id="03"/>
+		<MNC name="China Satellite Global Star Network" id="04"/>
+	</MCC>
+	<MCC id="732" name="Colombia" size="3">
+		<MNC name="Colombia Telecomunicaciones S.A. - Telecom" id="001"/>
+		<MNC name="Edatel S.A." id="002"/>
+		<MNC name="Emtelsa" id="020"/>
+		<MNC name="Emcali" id="099"/>
+		<MNC name="Comcel S.A. Occel S.A./Celcaribe" id="101"/>
+		<MNC name="Bellsouth Colombia S.A." id="102"/>
+		<MNC name="Colombia Móvil S.A." id="103"/>
+		<MNC name="Colombia Móvil S.A." id="111"/>
+		<MNC name="Telefónica Móviles Colombia S.A." id="123"/>
+		<MNC name="Avantel" id="130"/>
+	</MCC>
+	<MCC id="654" name="Comoros" size="2">
+		<MNC name="HURI / Comores Telecom" id="01"/>
+		<MNC name="TELMA / TELCO SA" id="02"/>
+	</MCC>
+	<MCC id="629" name="Congo" size="2">
+		<MNC name="Celtel" id="01"/>
+		<MNC name="Libertis Telecom" id="10"/>
+	</MCC>
+	<MCC id="548" name="Cook Islands" size="2">
+		<MNC name="Telecom Cook" id="01"/>
+	</MCC>
+	<MCC id="712" name="Costa Rica" size="2">
+		<MNC name="Instituto Costarricense de Electricidad - ICE" id="01"/>
+		<MNC name="Instituto Costarricense de Electricidad - ICE" id="02"/>
+		<MNC name="CLARO CR Telecomunicaciones S.A." id="03"/>
+		<MNC name="Telefónica de Costa Rica TC, S.A." id="04"/>
+		<MNC name="Virtualis" id="20"/>
+	</MCC>
+	<MCC id="612" name="Côte d'Ivoire" size="2">
+		<MNC name="Atlantique Cellulaire" id="02"/>
+		<MNC name="Orange Côte d'Ivoire" id="03"/>
+		<MNC name="Comium Côte d'Ivoire" id="04"/>
+		<MNC name="Loteny Telecom" id="05"/>
+		<MNC name="Oricel Côte d'Ivoire" id="06"/>
+		<MNC name="Aircomm Côte d'Ivoire" id="07"/>
+	</MCC>
+	<MCC id="219" name="Croatia" size="2">
+		<MNC name="T-Mobile Hrvatska d.o.o./T-Mobile Croatia LLC" id="01"/>
+		<MNC name="Tele2/Tele2 d.o.o." id="02"/>
+		<MNC name="VIPnet/VIPnet d.o.o." id="10"/>
+	</MCC>
+	<MCC id="368" name="Cuba" size="2">
+		<MNC name="ETECSA" id="01"/>
+	</MCC>
+	<MCC id="362" name="Curaçao" size="2">
+		<MNC name="TELCELL GSM" id="51"/>
+		<MNC name="CT GSM" id="69"/>
+		<MNC name="SETEL GSM" id="91"/>
+	</MCC>
+	<MCC id="280" name="Cyprus" size="2">
+		<MNC name="CYTA" id="01"/>
+		<MNC name="Scancom (Cyprus) Ltd." id="10"/>
+		<MNC name="PrimeTel PLC" id="20"/>
+		<MNC name="Lemontel Ltd" id="22"/>
+		<MNC name="Mundio Mobile Cyprus Ltd" id="23"/>
+	</MCC>
+	<MCC id="230" name="Czech Rep." size="2">
+		<MNC name="T-Mobile Czech Republic a.s." id="01"/>
+		<MNC name="Telefónica O2 Czech Republic a.s." id="02"/>
+		<MNC name="Vodafone Czech Republic a.s." id="03"/>
+		<MNC name="Air Telecom a.s." id="04"/>
+		<MNC name="Compatel s.r.o" id="08"/>
+		<MNC name="Mundio Distribution Czech Republic s.r.o." id="09"/>
+		<MNC name="Sprava Zeleznicni Dopravni Cesty" id="98"/>
+	</MCC>
+	<MCC id="630" name="Dem. Rep. of the Congo" size="2">
+		<MNC name="Vodacom Congo RDC sprl" id="01"/>
+		<MNC name="AIRTEL sprl" id="02"/>
+		<MNC name="Supercell Sprl" id="05"/>
+		<MNC name="Congo-Chine Telecom s.a.r.l." id="86"/>
+		<MNC name="YOZMA TIMETURNS sprl" id="88"/>
+		<MNC name="OASIS sprl" id="89"/>
+		<MNC name="Africell RDC" id="90"/>
+	</MCC>
+	<MCC id="238" name="Denmark" size="2">
+		<MNC name="TDC Mobil" id="01"/>
+		<MNC name="Sonofon" id="02"/>
+		<MNC name="MIGway A/S" id="03"/>
+		<MNC name="NextGen Mobile Ltd T/A CardBoardFish" id="04"/>
+		<MNC name="Hi3G" id="06"/>
+		<MNC name="Mundio Mobile (Denmark) Limited" id="07"/>
+		<MNC name="Nordisk Mobiltelefon Danmark A/S" id="08"/>
+		<MNC name="TDC Mobil" id="10"/>
+		<MNC name="Dansk Beredskabskommunikation A/S" id="11"/>
+		<MNC name="Lycamobile Denmark" id="12"/>
+		<MNC name="Compatel Limited" id="13"/>
+		<MNC name="Ice Danmark ApS" id="15"/>
+		<MNC name="Tismi B.V." id="16"/>
+		<MNC name="Naka AG" id="17"/>
+		<MNC name="Cubic Telecom" id="18"/>
+		<MNC name="Telia" id="20"/>
+		<MNC name="CoolTEL" id="28"/>
+		<MNC name="Interactive Digital Media GmbH" id="30"/>
+		<MNC name="Brandtel ApS" id="42"/>
+		<MNC name="MobiWeb Limited" id="43"/>
+		<MNC name="TT-Netvaerket P/S" id="66"/>
+		<MNC name="Tele2" id="77"/>
+	</MCC>
+	<MCC id="638" name="Djibouti" size="2">
+		<MNC name="Evatis" id="01"/>
+	</MCC>
+	<MCC id="366" name="Dominica" size="3">
+		<MNC name="Cable &amp; Wireless Dominica Ltd trading as Lime" id="110"/>
+	</MCC>
+	<MCC id="370" name="Dominican Rep." size="2">
+		<MNC name="Orange Dominicana, S.A." id="01"/>
+		<MNC name="Verizon Dominicana S.A." id="02"/>
+		<MNC name="Tricom S.A." id="03"/>
+		<MNC name="CentennialDominicana" id="04"/>
+	</MCC>
+	<MCC id="740" name="Ecuador" size="2">
+		<MNC name="Otecel S.A. - Bellsouth" id="00"/>
+		<MNC name="Porta GSM" id="01"/>
+		<MNC name="Telecsa S.A." id="02"/>
+	</MCC>
+	<MCC id="602" name="Egypt" size="2">
+		<MNC name="Mobinil" id="01"/>
+		<MNC name="Vodafone" id="02"/>
+		<MNC name="Etisalat" id="03"/>
+	</MCC>
+	<MCC id="706" name="El Salvador" size="2">
+		<MNC name="CTE Telecom Personal, S.A. de C.V." id="01"/>
+		<MNC name="Digicel, S.A. de C.V." id="02"/>
+		<MNC name="Telemóvil El Salvador, S.A." id="03"/>
+	</MCC>
+	<MCC id="627" name="Equatorial Guinea" size="2">
+		<MNC name="Guinea Ecuatorial de Telecomunicaciones Sociedad Anónima (GETESA)" id="01"/>
+	</MCC>
+	<MCC id="248" name="Estonia" size="2">
+		<MNC name="AS Eesti Telekom" id="01"/>
+		<MNC name="RLE" id="02"/>
+		<MNC name="Tele2" id="03"/>
+		<MNC name="OY Top Connect" id="04"/>
+		<MNC name="Televõrgu AS" id="07"/>
+		<MNC name="Vivex OÜ" id="08"/>
+		<MNC name="Siseministeerium (Ministry of Interior)" id="71"/>
+	</MCC>
+	<MCC id="636" name="Ethiopia" size="2">
+		<MNC name="ETH MTN" id="01"/>
+	</MCC>
+	<MCC id="750" name="Falkland Islands (Malvinas)" size="3">
+		<MNC name="Touch" id="001"/>
+	</MCC>
+	<MCC id="274" name="Faroe Islands" size="2">
+		<MNC name="P/F Kall, reg. No 2868 (Vodafone FO)" id="02"/>
+		<MNC name="Faroese Telecom - GSM" id="01"/>
+		<MNC name="Kall GSM" id="02"/>
+	</MCC>
+	<MCC id="542" name="Fiji" size="2">
+		<MNC name="Vodafone (Fiji) Ltd" id="01"/>
+		<MNC name="Digicel (Fiji) Ltd" id="02"/>
+		<MNC name="Telecom Fiji Ltd (CDMA)" id="03"/>
+	</MCC>
+	<MCC id="244" name="Finland" size="2">
+		<MNC name="DNA Oy" id="03"/>
+		<MNC name="DNA Oy" id="04"/>
+		<MNC name="Elisa Oyj" id="05"/>
+		<MNC name="Elisa Oyj" id="06"/>
+		<MNC name="Nokia Solutions and Networks Oy" id="07"/>
+		<MNC name="Nokia Solutions and Networks Oy" id="08"/>
+		<MNC name="Nokia Solutions and Networks Oy" id="09"/>
+		<MNC name="Viestintävirasto" id="10"/>
+		<MNC name="Viestintävirasto" id="11"/>
+		<MNC name="DNA Oy" id="12"/>
+		<MNC name="DNA Oy" id="13"/>
+		<MNC name="Ålands Telekommunikation Ab" id="14"/>
+		<MNC name="Satakunnan ammattikorkeakoulu Oy" id="15"/>
+		<MNC name="Liikennevirasto" id="17"/>
+		<MNC name="Elisa Oyj" id="21"/>
+		<MNC name="EXFO Oy" id="22"/>
+		<MNC name="EXFO Oy" id="23"/>
+		<MNC name="TTY-säätiö" id="24"/>
+		<MNC name="Compatel Limited" id="26"/>
+		<MNC name="Teknologian tutkimuskeskus VTT Oy" id="27"/>
+		<MNC name="Kuiri Mobile Oy" id="31"/>
+		<MNC name="Voxbone S.A." id="32"/>
+		<MNC name="Virve Tuotteet ja Palvelut Oy" id="33"/>
+		<MNC name="Bittium Wireless Oy" id="34"/>
+		<MNC name="Ukkoverkot Oy" id="35"/>
+		<MNC name="TeliaSonera Finland Oyj" id="36"/>
+		<MNC name="Tismi BV" id="37"/>
+		<MNC name="Nokia Solutions and Networks Oy" id="38"/>
+		<MNC name="Nokia Solutions and Networks Oy" id="39"/>
+		<MNC name="Nokia Solutions and Networks Oy" id="40"/>
+		<MNC name="Nokia Solutions and Networks Oy" id="41"/>
+		<MNC name="TeliaSonera Finland Oyj" id="91"/>
+		<MNC name="TeliaSonera Finland Oyj" id="92"/>
+	</MCC>
+	<MCC id="208" name="France" size="2">
+		<MNC name="Orange" id="01"/>
+		<MNC name="Orange" id="02"/>
+		<MNC name="MobiquiThings" id="03"/>
+		<MNC name="Sisteer" id="04"/>
+		<MNC name="Globalstar Europe" id="05"/>
+		<MNC name="Globalstar Europe" id="06"/>
+		<MNC name="Globalstar Europe" id="07"/>
+		<MNC name="Completel" id="08"/>
+		<MNC name="S.F.R." id="09"/>
+		<MNC name="Société Française du Radiotéléphone" id="10"/>
+		<MNC name="S.F.R." id="11"/>
+		<MNC name="Hewlett-Packard France" id="12"/>
+		<MNC name="S.F.R." id="13"/>
+		<MNC name="RFF" id="14"/>
+		<MNC name="Free Mobile" id="15"/>
+		<MNC name="Free Mobile" id="16"/>
+		<MNC name="Legos" id="17"/>
+		<MNC name="Voxbone" id="18"/>
+		<MNC name="Bouygues Telecom" id="20"/>
+		<MNC name="Bouygues Telecom" id="21"/>
+		<MNC name="Transatel" id="22"/>
+		<MNC name="Omea Telecom" id="23"/>
+		<MNC name="MobiquiThings" id="24"/>
+		<MNC name="Lycamobile" id="25"/>
+		<MNC name="Euro-Information telecom" id="26"/>
+		<MNC name="Afone" id="27"/>
+		<MNC name="Airbus defense ans space SAS" id="28"/>
+		<MNC name="Symacom" id="30"/>
+		<MNC name="Mundio Mobile" id="31"/>
+		<MNC name="Bouygues Telecom" id="88"/>
+		<MNC name="Images &amp; Réseaux" id="90"/>
+		<MNC name="Orange" id="91"/>
+		<MNC name="Plate-forme telecom" id="92"/>
+		<MNC name="Halys" id="94"/>
+	</MCC>
+	<MCC id="647" name="French Departments and Territories in the Indian Ocean" size="2">
+		<MNC name="Orange La Réunion" id="00"/>
+		<MNC name="BJT Partners" id="01"/>
+		<MNC name="Telco OI" id="02"/>
+		<MNC name="Société Réunionnaise du Radiotéléphone" id="10"/>
+	</MCC>
+	<MCC id="340" name="French Guiana" size="2">
+		<MNC name="Guyane Téléphone Mobile" id="11"/>
+	</MCC>
+	<MCC id="547" name="French Polynesia" size="2">
+		<MNC name="VITI" id="05"/>
+		<MNC name="Mara Telecom" id="10"/>
+		<MNC name="Pacific Mobile Telecom" id="15"/>
+		<MNC name="Tikiphone" id="20"/>
+	</MCC>
+	<MCC id="628" name="Gabon" size="2">
+		<MNC name="LIBERTIS" id="01"/>
+		<MNC name="MOOV" id="02"/>
+		<MNC name="CELTEL" id="03"/>
+		<MNC name="USAN GABON" id="04"/>
+		<MNC name="Réseau de l’Administration Gabonaise (RAG)" id="05"/>
+	</MCC>
+	<MCC id="607" name="Gambia" size="2">
+		<MNC name="Gamcel" id="01"/>
+		<MNC name="Africell" id="02"/>
+		<MNC name="COMIUM" id="03"/>
+		<MNC name="Qcell" id="04"/>
+		<MNC name="GAMTEL-Ecowan" id="05"/>
+		<MNC name="NETPAGE" id="06"/>
+	</MCC>
+	<MCC id="282" name="Georgia" size="2">
+		<MNC name="Geocell Ltd." id="01"/>
+		<MNC name="Magti GSM Ltd." id="02"/>
+		<MNC name="Iberiatel Ltd." id="03"/>
+		<MNC name="Mobitel Ltd." id="04"/>
+		<MNC name="Silknet JSC" id="05"/>
+		<MNC name="JSC Compatel" id="06"/>
+		<MNC name="GLOBALCELL  LTD" id="07"/>
+		<MNC name="Silknet GSC" id="08"/>
+		<MNC name="Gmobile LTD" id="09"/>
+	</MCC>
+	<MCC id="262" name="Germany" size="2">
+		<MNC name="Telekom Deutschland GmbH" id="01"/>
+		<MNC name="Vodafone GmbH" id="02"/>
+		<MNC name="E-Plus Mobilfunk GmbH &amp; Co. KG" id="03"/>
+		<MNC name="Vodafone GmbH" id="04"/>
+		<MNC name="E-Plus Mobilfunk GmbH &amp; Co. KG" id="05"/>
+		<MNC name="Telekom Deutschland GmbH" id="06"/>
+		<MNC name="Telefonica Germany GmbH &amp; Co. oHG" id="07"/>
+		<MNC name="Telefonica Germany GmbH &amp; Co. oHG" id="08"/>
+		<MNC name="Vodafone GmbH" id="09"/>
+		<MNC name="DB Netz AG" id="10"/>
+		<MNC name="Telefonica Germany GmbH &amp; Co. oHG" id="11"/>
+		<MNC name="E-Plus Mobilfunk GmbH &amp; Co. KG" id="12"/>
+		<MNC name="AirData AG" id="15"/>
+		<MNC name="E-Plus Mobilfunk GmbH &amp; Co. KG" id="16"/>
+		<MNC name="E-Plus Mobilfunk GmbH &amp; Co. KG" id="17"/>
+		<MNC name="NetCologne Gesellschaft für Telekommunikation mbH" id="18"/>
+		<MNC name="Inquam Deutschland GmbH" id="19"/>
+		<MNC name="E-Plus Mobilfunk GmbH &amp; Co. KG" id="20"/>
+		<MNC name="Multiconnect GmbH" id="21"/>
+		<MNC name="sipgate Wireless GmbH" id="22"/>
+		<MNC name="Vodafone GmbH" id="42"/>
+		<MNC name="Vodafone GmbH" id="43"/>
+		<MNC name="Ericsson GmbH" id="72"/>
+		<MNC name="Xantaro Deutschland GmbH" id="73"/>
+		<MNC name="Qualcomm CDMA Technologies GmbH" id="74"/>
+		<MNC name="Core Network Dynamics GmbH" id="75"/>
+		<MNC name="E-Plus Mobilfunk GmbH &amp; Co. KG" id="77"/>
+		<MNC name="Telekom Deutschland GmbH" id="78"/>
+	</MCC>
+	<MCC id="620" name="Ghana" size="2">
+		<MNC name="Spacefon" id="01"/>
+		<MNC name="Ghana Telecom Mobile" id="02"/>
+		<MNC name="Mobitel" id="03"/>
+		<MNC name="Kasapa Telecom Ltd." id="04"/>
+		<MNC name="Netafriques Dot Com Ltd" id="11"/>
+	</MCC>
+	<MCC id="266" name="Gibraltar" size="2">
+		<MNC name="Gibtelecom GSM" id="01"/>
+		<MNC name="Eazi Telecom Limited" id="09"/>
+	</MCC>
+	<MCC id="202" name="Greece" size="2">
+		<MNC name="Cosmote AE" id="01"/>
+		<MNC name="Cosmote AE" id="02"/>
+		<MNC name="OTE AE" id="03"/>
+		<MNC name="OTE AE" id="04"/>
+		<MNC name="Vodafone - Panafon" id="05"/>
+		<MNC name="AMD TELECOM AE" id="07"/>
+		<MNC name="WIND HELLAS TELECOMMUNICATIONS" id="09"/>
+		<MNC name="WIND HELLAS TELECOMMUNICATIONS" id="10"/>
+		<MNC name="INTERCONNECT" id="11"/>
+		<MNC name="YUBOTO" id="12"/>
+		<MNC name="COMPATEL LIMITED" id="13"/>
+		<MNC name="CYTA (HELLAS)" id="14"/>
+		<MNC name="BWS" id="15"/>
+		<MNC name="INTER TELECOM" id="16"/>
+	</MCC>
+	<MCC id="290" name="Greenland" size="2">
+		<MNC name="Tele Greenland" id="01"/>
+		<MNC name="inu:it a/s" id="02"/>
+	</MCC>
+	<MCC id="352" name="Grenada" size="3">
+		<MNC name="Cable &amp; Wireless Grenada ltd trading as lime" id="110"/>
+	</MCC>
+	<MCC id="340" name="Guadeloupe" size="2">
+		<MNC name="Orange Caraïbe" id="01"/>
+		<MNC name="Outremer Telecom" id="02"/>
+		<MNC name="United telecommunications services Caraïbe" id="03"/>
+		<MNC name="Dauphin Telecom" id="08"/>
+		<MNC name="Guadeloupe Téléphone Mobile" id="10"/>
+		<MNC name="Bouygues Telecom" id="20"/>
+	</MCC>
+	<MCC id="704" name="Guatemala" size="2">
+		<MNC name="Servicios de Comunicaciones Personales Inalámbricas, S.A. (SERCOM, S.A" id="01"/>
+		<MNC name="Comunicaciones Celulares S.A." id="02"/>
+		<MNC name="Telefónica Centroamérica Guatemala S.A." id="03"/>
+	</MCC>
+	<MCC id="611" name="Guinea" size="2">
+		<MNC name="Orange Guinée" id="01"/>
+		<MNC name="Sotelgui" id="02"/>
+		<MNC name="Cellcom Guinée SA" id="05"/>
+	</MCC>
+	<MCC id="632" name="Guinea-Bissau" size="2">
+		<MNC name="Guinétel S.A." id="01"/>
+		<MNC name="Spacetel Guiné-Bissau S.A." id="02"/>
+	</MCC>
+	<MCC id="738" name="Guyana" size="3">
+		<MNC name="Guyana Telephone &amp; Telegraph Company Limited (Cellink)" id="002"/>
+		<MNC name="Quark Communications Inc." id="003"/>
+		<MNC name="U-Mobile (Cellular) Inc." id="01"/>
+		<MNC name="eGovernment Unit, Ministry of the Presidency" id="05"/>
+	</MCC>
+	<MCC id="372" name="Haiti" size="2">
+		<MNC name="Comcel" id="01"/>
+		<MNC name="Digicel" id="02"/>
+		<MNC name="Rectel" id="03"/>
+	</MCC>
+	<MCC id="708" name="Honduras" size="3">
+		<MNC name="Megatel" id="001"/>
+		<MNC name="Celtel" id="002"/>
+		<MNC name="Digicel Honduras" id="040"/>
+	</MCC>
+	<MCC id="454" name="Hong Kong, China" size="2">
+		<MNC name="Hong Kong Telecommunications (HKT) Ltd" id="00"/>
+		<MNC name="CITIC Telecom International Ltd" id="01"/>
+		<MNC name="Hong Kong Telecommunications (HKT) Ltd" id="02"/>
+		<MNC name="Hutchison Telephone Company Ltd" id="03"/>
+		<MNC name="Hutchison Telephone Company Ltd" id="04"/>
+		<MNC name="Hutchison Telephone Company Ltd" id="05"/>
+		<MNC name="SmarTone Mobile Communications Ltd" id="06"/>
+		<MNC name="China Unicom (Hong Kong) Operations Ltd" id="07"/>
+		<MNC name="Truphone (Hong Kong) Ltd" id="08"/>
+		<MNC name="China Motion Telecom (HK) Ltd" id="09"/>
+		<MNC name="Hong Kong Telecommunications (HKT) Ltd" id="10"/>
+		<MNC name="China-Hongkong Telecom Ltd" id="11"/>
+		<MNC name="China Mobile Hong Kong Co Ltd" id="12"/>
+		<MNC name="China Mobile Hong Kong Co Ltd" id="13"/>
+		<MNC name="Hutchison Telephone Company Ltd" id="14"/>
+		<MNC name="SmarTone Mobile Communications Ltd" id="15"/>
+		<MNC name="Hong Kong Telecommunications (HKT) Ltd" id="16"/>
+		<MNC name="SmarTone Mobile Communications Ltd" id="17"/>
+		<MNC name="Hong Kong Telecommunications (HKT) Ltd" id="18"/>
+		<MNC name="Hong Kong Telecommunications (HKT) Ltd" id="19"/>
+		<MNC name="Hong Kong Telecommunications (HKT) Ltd" id="20"/>
+		<MNC name="21Vianet Mobile Ltd" id="21"/>
+		<MNC name="Delcom (HK) Ltd" id="22"/>
+		<MNC name="Lycamobile Hong Kong Ltd" id="23"/>
+		<MNC name="Public Mobile Networks/Reserved" id="24"/>
+		<MNC name="Public Mobile Networks/Reserved" id="25"/>
+		<MNC name="Public Mobile Networks/Reserved" id="26"/>
+		<MNC name="Government use" id="27"/>
+		<MNC name="Government use" id="28"/>
+		<MNC name="Hong Kong Telecommunications (HKT) Ltd" id="29"/>
+	</MCC>
+	<MCC id="216" name="Hungary" size="2">
+		<MNC name="Telenor Hungary Ltd" id="01"/>
+		<MNC name="MVM NET Ltd." id="02"/>
+		<MNC name="DIGI Telecommunication Ltd." id="03"/>
+		<MNC name="Magyar Telecom Plc" id="30"/>
+		<MNC name="Vodafone" id="70"/>
+		<MNC name="UPC Hungary Ltd" id="71"/>
+		<MNC name="MÁV Co." id="99"/>
+	</MCC>
+	<MCC id="274" name="Iceland" size="2">
+		<MNC name="Iceland Telecom Ltd." id="01"/>
+		<MNC name="Og fjarskipti hf (Vodafone Iceland)" id="02"/>
+		<MNC name="Og fjarskipti hf (Vodafone Iceland)" id="03"/>
+		<MNC name="IMC Islande ehf" id="04"/>
+		<MNC name="IceCell ehf" id="07"/>
+	</MCC>
+	<MCC id="404" name="India" size="2">
+		<MNC name="Dishnet Wireless Ltd, Madhya Pradesh" id="00"/>
+		<MNC name="Aircell Digilink India Ltd., Haryana" id="01"/>
+		<MNC name="Bharti Airtel Ltd., Punjab" id="02"/>
+		<MNC name="Bharti Airtel Ltd., H.P." id="03"/>
+		<MNC name="Idea Cellular Ltd., Delhi" id="04"/>
+		<MNC name="Fascel Ltd., Gujarat" id="05"/>
+		<MNC name="Bharti Airtel Ltd., Karnataka" id="06"/>
+		<MNC name="Idea Cellular Ltd., Andhra Pradesh" id="07"/>
+		<MNC name="Reliance Telecom Ltd., Assam" id="09"/>
+		<MNC name="Bharti Airtel Ltd., Delhi" id="10"/>
+		<MNC name="Hutchison Essar Mobile Services Ltd, Delhi" id="11"/>
+		<MNC name="Idea Mobile Communications Ltd., Haryana" id="12"/>
+		<MNC name="Hutchison Essar South Ltd., Andhra Pradesh" id="13"/>
+		<MNC name="Spice Communications PVT Ltd., Punjab" id="14"/>
+		<MNC name="Aircell Digilink India Ltd., UP (East)" id="15"/>
+		<MNC name="Bharti Airtel Ltd, North East" id="16"/>
+		<MNC name="Dishnet Wireless Ltd, West Bengal" id="17"/>
+		<MNC name="Reliance Telecom Ltd., H.P." id="18"/>
+		<MNC name="Idea Mobile Communications Ltd., Kerala" id="19"/>
+		<MNC name="Hutchison Essar Ltd, Mumbai" id="20"/>
+		<MNC name="BPL Mobile Communications Ltd., Mumbai" id="21"/>
+		<MNC name="Idea Cellular Ltd., Maharashtra" id="22"/>
+		<MNC name="Idea Cellular Ltd, Maharashtra" id="23"/>
+		<MNC name="Idea Cellular Ltd., Gujarat" id="24"/>
+		<MNC name="Dishnet Wireless Ltd, Bihar" id="25"/>
+		<MNC name="Hutchison Essar Cellular Ltd., Maharashtra" id="27"/>
+		<MNC name="Dishnet Wireless Ltd, Assam" id="29"/>
+		<MNC name="Hutchison Telecom East Ltd, Kolkata" id="30"/>
+		<MNC name="Bharti Airtel Ltd., Kolkata" id="31"/>
+		<MNC name="Dishnet Wireless Ltd, North East" id="33"/>
+		<MNC name="BSNL, Haryana" id="34"/>
+		<MNC name="Dishnet Wireless Ltd, Himachal Pradesh" id="35"/>
+		<MNC name="Reliance Telecom Ltd., Bihar" id="36"/>
+		<MNC name="Dishnet Wireless Ltd, J&amp;K" id="37"/>
+		<MNC name="BSNL, Assam" id="38"/>
+		<MNC name="Bharti Airtel Ltd., Chennai" id="40"/>
+		<MNC name="Aircell Cellular Ltd, Chennai" id="41"/>
+		<MNC name="Aircel Ltd., Tamil Nadu" id="42"/>
+		<MNC name="Hutchison Essar Cellular Ltd., Tamil Nadu" id="43"/>
+		<MNC name="Spice Communications PVT Ltd., Karnataka" id="44"/>
+		<MNC name="Hutchison Essar Cellular Ltd., Kerala" id="46"/>
+		<MNC name="Dishnet Wireless Ltd, UP (West)" id="48"/>
+		<MNC name="Bharti Airtel Ltd., Andra Pradesh" id="49"/>
+		<MNC name="Reliance Telecom Ltd., North East" id="50"/>
+		<MNC name="BSNL, H.P." id="51"/>
+		<MNC name="Reliance Telecom Ltd., Orissa" id="52"/>
+		<MNC name="BSNL, Punjab" id="53"/>
+		<MNC name="BSNL, UP (West)" id="54"/>
+		<MNC name="BSNL, UP (East)" id="55"/>
+		<MNC name="Idea Mobile Communications Ltd., UP (West)" id="56"/>
+		<MNC name="BSNL, Gujarat" id="57"/>
+		<MNC name="BSNL, Madhya Pradesh" id="58"/>
+		<MNC name="BSNL, Rajasthan" id="59"/>
+		<MNC name="Aircell Digilink India Ltd., Rajasthan" id="60"/>
+		<MNC name="Dishnet Wireless Ltd, Punjab" id="61"/>
+		<MNC name="BSNL, J&amp;K" id="62"/>
+		<MNC name="Dishnet Wireless Ltd, Haryana" id="63"/>
+		<MNC name="BSNL, Chennai" id="64"/>
+		<MNC name="Dishnet Wireless Ltd, UP (East)" id="65"/>
+		<MNC name="BSNL, Maharashtra" id="66"/>
+		<MNC name="Reliance Telecom Ltd., Madhya Pradesh" id="67"/>
+		<MNC name="MTNL, Delhi" id="68"/>
+		<MNC name="MTNL, Mumbai" id="69"/>
+		<MNC name="Bharti Hexacom Ltd, Rajasthan" id="70"/>
+		<MNC name="BSNL, Karnataka" id="71"/>
+		<MNC name="BSNL, Kerala" id="72"/>
+		<MNC name="BSNL, Andhra Pradesh" id="73"/>
+		<MNC name="BSNL, West Bengal" id="74"/>
+		<MNC name="BSNL, Bihar" id="75"/>
+		<MNC name="BSNL, Orissa" id="76"/>
+		<MNC name="BSNL, North East" id="77"/>
+		<MNC name="BTA Cellcom Ltd., Madhya Pradesh" id="78"/>
+		<MNC name="BSNL, Andaman &amp; Nicobar" id="79"/>
+		<MNC name="BSNL, Tamil Nadu" id="80"/>
+		<MNC name="BSNL, Kolkata" id="81"/>
+		<MNC name="Idea Telecommunications Ltd, H.P." id="82"/>
+		<MNC name="Reliable Internet Services Ltd., Kolkata" id="83"/>
+		<MNC name="Hutchison Essar South Ltd., Chennai" id="84"/>
+		<MNC name="Reliance Telecom Ltd., W.B. &amp; A.N." id="85"/>
+		<MNC name="Hutchison Essar South Ltd., Karnataka" id="86"/>
+		<MNC name="Idea Telecommunications Ltd, Rajasthan" id="87"/>
+		<MNC name="Hutchison Essar South Ltd, Punjab" id="88"/>
+		<MNC name="Idea Telecommunications Ltd, UP (East)" id="89"/>
+		<MNC name="Bharti Airtel Ltd., Maharashtra" id="90"/>
+		<MNC name="Dishnet Wireless Ltd, Kolkata" id="91"/>
+		<MNC name="Bharti Airtel Ltd., Mumbai" id="92"/>
+		<MNC name="Bharti Airtel Ltd., Madhya Pradesh" id="93"/>
+		<MNC name="Bharti Airtel Ltd., Tamil Nadu" id="94"/>
+		<MNC name="Bharti Airtel Ltd., Kerala" id="95"/>
+		<MNC name="Bharti Airtel Ltd., Haryana" id="96"/>
+		<MNC name="Bharti Airtel Ltd., UP (West)" id="97"/>
+		<MNC name="Bharti Airtel Ltd., Gujarat" id="98"/>
+		<MNC name="Dishnet Wireless Ltd, Kerala" id="99"/>
+		<MNC name="Shyam Telelink Ltd, Rajasthan" id="000"/>
+		<MNC name="Reliance Communications Ltd/GSM, Delhi" id="005"/>
+		<MNC name="Reliance Communications Ltd/GSM, Gujarat" id="006"/>
+		<MNC name="Reliance Communications Ltd/GSM, Haryana" id="007"/>
+		<MNC name="Reliance Communications Ltd/GSM, J&amp;K" id="009"/>
+		<MNC name="Reliance Communications Ltd,/GSM Karnataka" id="010"/>
+		<MNC name="Reliance Communications Ltd/GSM, Kerala" id="011"/>
+		<MNC name="Reliance Infocomm Ltd, Andhra Pradesh" id="012"/>
+		<MNC name="Reliance Communications Ltd/GSM, Maharashtra" id="013"/>
+		<MNC name="Reliance Communications Ltd/GSM, Madhya Pradesh" id="014"/>
+		<MNC name="Reliance Communications Ltd/GSM, Punjab" id="018"/>
+		<MNC name="Reliance Communications Ltd/GSM, Tamilnadu" id="020"/>
+		<MNC name="Reliance Communications Ltd/GSM, UP (East)" id="021"/>
+		<MNC name="Reliance Communications Ltd/GSM, UP (West)" id="022"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Andhra Pradesh" id="025"/>
+		<MNC name="Tata Teleservices Ltd,/GSM Bihar" id="027"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Delhi" id="029"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Gujarat" id="030"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Haryana" id="031"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Himachal Pradesh" id="032"/>
+		<MNC name="Reliance Infocomm Ltd, Bihar" id="033"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Kamataka" id="034"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Kerala" id="035"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Kolkata" id="036"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Maharashtra" id="037"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Madhya Pradesh" id="038"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Mumbai" id="039"/>
+		<MNC name="Reliance Infocomm Ltd, Chennai" id="040"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Orissa" id="041"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Punjab" id="042"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Rajasthan" id="043"/>
+		<MNC name="Tata Teleservices Ltd/GSM, Tamilnadu" id="044"/>
+		<MNC name="Tata Teleservices Ltd/GSM, UP (East)" id="045"/>
+		<MNC name="Tata Teleservices Ltd/GSM, UP (West)" id="046"/>
+		<MNC name="Tata Teleservices Ltd/GSM, West Bengal" id="047"/>
+		<MNC name="Reliance Infocomm Ltd, Himachal Pradesh" id="08"/>
+		<MNC name="Reliance Infocomm Ltd, Kolkata" id="12"/>
+		<MNC name="Reliance Infocomm Ltd, Mumbai" id="15"/>
+		<MNC name="Reliance Infocomm Ltd, Orissa" id="17"/>
+		<MNC name="Reliance Infocomm Ltd, West bengal" id="23"/>
+		<MNC name="Tata Teleservices Ltd, Chennai" id="28"/>
+		<MNC name="Bharti Airtel Ltd, Bihar" id="52"/>
+		<MNC name="Bharti Airtel Ltd, Orissa" id="53"/>
+		<MNC name="Bharti Airtel Ltd, UP (East)" id="54"/>
+		<MNC name="Bharti Airtel Ltd, J&amp;K" id="55"/>
+		<MNC name="Bharti Airtel Ltd, Assam" id="56"/>
+		<MNC name="Hutchison Essar South Ltd, UP (West)" id="66"/>
+		<MNC name="Hutchison Essar South Ltd, Orissa" id="67"/>
+		<MNC name="Vodaphone/Hutchison, Madhya Pradesh" id="68"/>
+		<MNC name="Aditya Birla Telecom Ltd, Bihar" id="70"/>
+		<MNC name="Essar Spacetel Ltd, Himachal Pradesh" id="71"/>
+		<MNC name="Essar Spacetel Ltd, North East" id="72"/>
+		<MNC name="Essar Spacetel Ltd, Assam" id="73"/>
+		<MNC name="Essar Spacetel Ltd, J&amp;K" id="74"/>
+		<MNC name="Vodafone Essar Spacetel Ltd, J&amp;K" id="750"/>
+		<MNC name="Vodafone Essar Spacetel Ltd, Assam" id="751"/>
+		<MNC name="Vodafone Essar Spacetel Ltd, Bihar" id="752"/>
+		<MNC name="Vodafone Essar Spacetel Ltd, Orissa" id="753"/>
+		<MNC name="Vodafone Essar Spacetel Ltd, Himachal Pradesh" id="754"/>
+		<MNC name="Vodafone Essar Spacetel Ltd, North East" id="755"/>
+		<MNC name="Essar Spacetel Ltd, Orissa" id="76"/>
+		<MNC name="Essar Spacetel Ltd, Maharashtra" id="77"/>
+		<MNC name="Idea Cellular Ltd, MUMBAI" id="799"/>
+		<MNC name="Aircell Ltd, Delhi" id="800"/>
+		<MNC name="Aircell Ltd, Andhra Pradesh" id="801"/>
+		<MNC name="Aircell Ltd, Gujarat" id="802"/>
+		<MNC name="Aircell Ltd, Kamataka" id="803"/>
+		<MNC name="Aircell Ltd, Maharashtra" id="804"/>
+		<MNC name="Aircell Ltd, Mumbai" id="805"/>
+		<MNC name="Aircell Ltd, Rajasthan" id="806"/>
+		<MNC name="Dishnet Wireless Ltd, Haryana" id="807"/>
+		<MNC name="Dishnet Wireless Ltd, Madhya Pradesh" id="808"/>
+		<MNC name="Dishnet Wireless Ltd, Kerala" id="809"/>
+		<MNC name="Aircell Ltd, Delhi" id="81"/>
+		<MNC name="Aircell Ltd, Andhra Pradesh" id="82"/>
+		<MNC name="Aircell Ltd, Gujarat" id="83"/>
+		<MNC name="Aircell Ltd, Maharashtra" id="84"/>
+		<MNC name="Aircell Ltd, Mumbai" id="85"/>
+		<MNC name="Aircell Ltd, Rajasthan" id="86"/>
+	</MCC>
+	<MCC id="510" name="Indonesia" size="2">
+		<MNC name="PSN" id="00"/>
+		<MNC name="Satelindo" id="01"/>
+		<MNC name="Natrindo (Lippo Telecom)" id="08"/>
+		<MNC name="Telkomsel" id="10"/>
+		<MNC name="Excelcomindo" id="11"/>
+		<MNC name="Indosat - M3" id="21"/>
+		<MNC name="Komselindo" id="28"/>
+	</MCC>
+	<MCC id="432" name="Iran (Islamic Republic of)" size="2">
+		<MNC name="Telecommunication Company of Iran (TCI)" id="11"/>
+		<MNC name="Telecommunication Kish Co. (KIFZO)" id="14"/>
+		<MNC name="Telecommunication Company of Iran (TCI) - Isfahan Celcom GSM" id="19"/>
+	</MCC>
+	<MCC id="418" name="Iraq" size="2">
+		<MNC name="Asia Cell" id="05"/>
+		<MNC name="Zain Iraq (previously Atheer)" id="20"/>
+		<MNC name="Zain Iraq (previously Iraqna)" id="30"/>
+		<MNC name="Korek Telecom" id="40"/>
+		<MNC name="Iraq Central Cooperative Association for Communication and Transportation" id="47"/>
+		<MNC name="ITC Fanoos" id="48"/>
+		<MNC name="Iraqtel" id="49"/>
+		<MNC name="Itisaluna" id="62"/>
+		<MNC name="Kalimat" id="70"/>
+		<MNC name="Iraqi Telecommunications &amp; Post Company (ITPC)" id="80"/>
+		<MNC name="ITPC (Al-Mazaya)" id="81"/>
+		<MNC name="ITPC (Sader Al-Iraq)" id="83"/>
+		<MNC name="ITPC (Eaamar Albasrah)" id="84"/>
+		<MNC name="ITPC (Anwar Yagotat Alkhalee)" id="85"/>
+		<MNC name="ITPC (Furatfone)" id="86"/>
+		<MNC name="ITPC (Al-Seraj)" id="87"/>
+		<MNC name="ITPC (High Link)" id="88"/>
+		<MNC name="ITPC (Al-Shams)" id="89"/>
+		<MNC name="ITPC (Belad Babel)" id="91"/>
+		<MNC name="ITPC (Al Nakheel)" id="92"/>
+		<MNC name="ITPC (Iraqcell)" id="93"/>
+		<MNC name="ITPC (Shaly)" id="94"/>
+	</MCC>
+	<MCC id="272" name="Ireland" size="2">
+		<MNC name="Vodafone Ireland Plc" id="01"/>
+		<MNC name="Telefonica Ltd" id="02"/>
+		<MNC name="Meteor Mobile Communications Ltd." id="03"/>
+		<MNC name="Eircom" id="07"/>
+		<MNC name="Clever Communications Ltd." id="09"/>
+	</MCC>
+	<MCC id="425" name="Israel" size="2">
+		<MNC name="Partner Communications Co. Ltd." id="01"/>
+		<MNC name="Cellcom Israel Ltd" id="02"/>
+		<MNC name="Pelephone Communications Ltd" id="03"/>
+		<MNC name="Globalsim Ltd" id="04"/>
+		<MNC name="Wataniya" id="06"/>
+		<MNC name="Mirs Ltd" id="07"/>
+		<MNC name="Golan Telecom Ltd" id="08"/>
+		<MNC name="365 Telecom (MVNO)" id="11"/>
+		<MNC name="Free Telecom (MVNO)" id="12"/>
+		<MNC name="Ituran Cellular Communications" id="13"/>
+		<MNC name="Alon Cellular Ltd." id="14"/>
+		<MNC name="Home Cellular (MVNO)" id="15"/>
+		<MNC name="Rami Levi (MVNO)" id="16"/>
+		<MNC name="Gale Phone (MVNO)" id="17"/>
+		<MNC name="Cellact Communications Ltd (MVNO)" id="18"/>
+		<MNC name="Azi Communications Ltd" id="19"/>
+		<MNC name="Bezeq Ltd" id="20"/>
+		<MNC name="B.I.P Communications Ltd." id="21"/>
+		<MNC name="Beezz Communication Solutions Ltd." id="23"/>
+		<MNC name="012 Telecom Ltd." id="24"/>
+		<MNC name="IMOD" id="25"/>
+		<MNC name="PHI Networks" id="28"/>
+	</MCC>
+	<MCC id="222" name="Italy" size="2">
+		<MNC name="Telecom Italia Mobile (TIM)" id="01"/>
+		<MNC name="Elsacom" id="02"/>
+		<MNC name="Omnitel Pronto Italia (OPI)" id="10"/>
+		<MNC name="IPSE 2000" id="77"/>
+		<MNC name="Wind" id="88"/>
+		<MNC name="Blu" id="98"/>
+		<MNC name="H3G" id="99"/>
+	</MCC>
+	<MCC id="338" name="Jamaica" size="3">
+		<MNC name="Cable &amp; Wireless Jamaica Ltd." id="020"/>
+		<MNC name="Digicel (Jamaica) Ltd." id="050"/>
+		<MNC name="Cable &amp; Wireless Jamaica Ltd." id="110"/>
+	</MCC>
+	<MCC id="440" name="Japan" size="2">
+		<MNC name="SoftBank Corp." id="00"/>
+		<MNC name="UQ Communications Inc." id="01"/>
+		<MNC name="Hanshin Cable Engineering Co.,Ltd." id="02"/>
+		<MNC name="Wireless City Planning Inc." id="05"/>
+		<MNC name="NTT DOCOMO, INC." id="10"/>
+		<MNC name="SoftBank Corp." id="20"/>
+		<MNC name="SoftBank Corp." id="21"/>
+		<MNC name="KDDI Corporation" id="50"/>
+		<MNC name="KDDI Corporation" id="51"/>
+		<MNC name="KDDI Corporation" id="52"/>
+		<MNC name="KDDI Corporation" id="53"/>
+		<MNC name="KDDI Corporation" id="54"/>
+		<MNC name="KDDI Corporation" id="70"/>
+		<MNC name="KDDI Corporation" id="71"/>
+		<MNC name="KDDI Corporation" id="72"/>
+		<MNC name="KDDI Corporation" id="73"/>
+		<MNC name="KDDI Corporation" id="74"/>
+		<MNC name="KDDI Corporation" id="75"/>
+		<MNC name="KDDI Corporation" id="76"/>
+		<MNC name="Okinawa Cellular Telephone Company" id="78"/>
+		<MNC name="Wireless City Planning Inc." id="00"/>
+		<MNC name="SoftBank Corp." id="01"/>
+		<MNC name="UQ Communications Inc." id="10"/>
+	</MCC>
+	<MCC id="416" name="Jordan" size="2">
+		<MNC name="Fastlink" id="01"/>
+		<MNC name="Xpress" id="02"/>
+		<MNC name="Umniah" id="03"/>
+		<MNC name="MobileCom" id="77"/>
+	</MCC>
+	<MCC id="401" name="Kazakhstan" size="2">
+		<MNC name="Kar-Tel llc" id="01"/>
+		<MNC name="TSC Kazak Telecom" id="02"/>
+	</MCC>
+	<MCC id="639" name="Kenya" size="2">
+		<MNC name="Safaricom Limited" id="02"/>
+		<MNC name="Kencell Communications Ltd." id="03"/>
+	</MCC>
+	<MCC id="450" name="Korea (Rep. of)" size="2">
+		<MNC name="KT Freetel" id="02"/>
+		<MNC name="SK Telecom" id="03"/>
+		<MNC name="LG UPLUS" id="06"/>
+	</MCC>
+	<MCC id="419" name="Kuwait" size="2">
+		<MNC name="ZAIN" id="02"/>
+		<MNC name="Wataniya Telecom" id="03"/>
+		<MNC name="Viva" id="04"/>
+	</MCC>
+	<MCC id="437" name="Kyrgyzstan" size="2">
+		<MNC name="Bitel GSM" id="01"/>
+	</MCC>
+	<MCC id="457" name="Lao P.D.R." size="2">
+		<MNC name="Lao Telecommunications" id="01"/>
+		<MNC name="ETL Mobile" id="02"/>
+		<MNC name="Millicom" id="08"/>
+	</MCC>
+	<MCC id="247" name="Latvia" size="2">
+		<MNC name="Latvijas Mobilais Telefons SIA" id="01"/>
+		<MNC name="Tele2" id="02"/>
+		<MNC name="Telekom Baltija" id="03"/>
+		<MNC name="Beta Telecom" id="04"/>
+		<MNC name="Bite Mobile" id="05"/>
+		<MNC name="Rigatta" id="06"/>
+		<MNC name="Master Telecom" id="07"/>
+		<MNC name="IZZI" id="08"/>
+		<MNC name="SIA Camel Mobile" id="09"/>
+	</MCC>
+	<MCC id="415" name="Lebanon" size="2">
+		<MNC name="Ogero Telecom" id="05"/>
+		<MNC name="Cellis" id="32"/>
+		<MNC name="Cellis" id="33"/>
+		<MNC name="Cellis" id="34"/>
+		<MNC name="Cellis" id="35"/>
+		<MNC name="Libancell" id="36"/>
+		<MNC name="Libancell" id="37"/>
+		<MNC name="Libancell" id="38"/>
+		<MNC name="Libancell" id="39"/>
+	</MCC>
+	<MCC id="651" name="Lesotho" size="2">
+		<MNC name="Vodacom Lesotho (pty) Ltd." id="01"/>
+		<MNC name="Econet Ezin-cel" id="02"/>
+	</MCC>
+	<MCC id="618" name="Liberia" size="2">
+		<MNC name="Comium Liberia" id="04"/>
+	</MCC>
+	<MCC id="228" name="Liechtenstein" size="2">
+		<MNC name="Swisscom Schweiz AG" id="01"/>
+		<MNC name="Swisscom Schweiz AG" id="01"/>
+		<MNC name="Salt (Liechtenstein) AG" id="02"/>
+		<MNC name="Telecom Liechtenstein AG" id="05"/>
+		<MNC name="Cubic AG" id="06"/>
+		<MNC name="First Mobile AG" id="07"/>
+		<MNC name="Emnify GmbH" id="09"/>
+		<MNC name="SORACOM LI, LTD." id="10"/>
+	</MCC>
+	<MCC id="246" name="Lithuania" size="2">
+		<MNC name="Omnitel" id="01"/>
+		<MNC name="Bité GSM" id="02"/>
+		<MNC name="Tele2" id="03"/>
+	</MCC>
+	<MCC id="270" name="Luxembourg" size="2">
+		<MNC name="P&amp;T Luxembourg" id="01"/>
+		<MNC name="MTX Connect S.à r.l." id="02"/>
+		<MNC name="BLUE COMMUNICATIONS" id="10"/>
+		<MNC name="Tango" id="77"/>
+		<MNC name="Interactive Digital Media (IDM)" id="78"/>
+		<MNC name="Voxmobile S.A." id="99"/>
+	</MCC>
+	<MCC id="455" name="Macao, China" size="2">
+		<MNC name="SmarTone – Comunicações Móveis, S.A." id="00"/>
+		<MNC name="Companhia de Telecomunicações de Macau, S.A.R.L." id="01"/>
+		<MNC name="China Telecom (Macau) Limitada" id="02"/>
+		<MNC name="Hutchison – Telefone (Macau), Limitada" id="03"/>
+		<MNC name="Companhia de Telecomunicações de Macau, S.A.R.L." id="04"/>
+		<MNC name="Hutchison – Telefone (Macau), Limitada" id="05"/>
+		<MNC name="SmarTone – Comunicações Móveis, S.A." id="06"/>
+		<MNC name="China Telecom (Macau) Limitada" id="07"/>
+	</MCC>
+	<MCC id="646" name="Madagascar" size="2">
+		<MNC name="Celtel Madagascar (Zain), GSM" id="01"/>
+		<MNC name="Orange Madagascar, GSM" id="02"/>
+		<MNC name="Telecom Malagasy Mobile, GSM" id="04"/>
+	</MCC>
+	<MCC id="650" name="Malawi" size="2">
+		<MNC name="Telekom Network Ltd." id="01"/>
+		<MNC name="Celtel ltd." id="10"/>
+	</MCC>
+	<MCC id="502" name="Malaysia" size="2">
+		<MNC name="DIGI Telecommunications" id="10"/>
+		<MNC name="Malaysian Mobile Services Sdn Bhd" id="12"/>
+		<MNC name="Celcom (Malaysia) Berhad" id="13"/>
+		<MNC name="Telekom Malaysia Berhad" id="14"/>
+		<MNC name="DIGI Telecommunications" id="16"/>
+		<MNC name="Malaysian Mobile Services Sdn Bhd" id="17"/>
+		<MNC name="U Mobile Sdn. Bhd." id="18"/>
+		<MNC name="Celcom (Malaysia) Berhad" id="19"/>
+		<MNC name="Electcoms Wireless Sdn Bhd" id="20"/>
+	</MCC>
+	<MCC id="472" name="Maldives" size="2">
+		<MNC name="DhiMobile" id="01"/>
+	</MCC>
+	<MCC id="610" name="Mali" size="2">
+		<MNC name="Malitel" id="01"/>
+	</MCC>
+	<MCC id="278" name="Malta" size="2">
+		<MNC name="Vodafone Malta" id="01"/>
+		<MNC name="YOM" id="11"/>
+		<MNC name="go mobile" id="21"/>
+		<MNC name="GO Mobile" id="30"/>
+		<MNC name="3G Telecommunications Ltd" id="77"/>
+	</MCC>
+	<MCC id="340" name="Martinique" size="2">
+		<MNC name="Martinique Téléphone Mobile" id="12"/>
+	</MCC>
+	<MCC id="609" name="Mauritania" size="2">
+		<MNC name="Mattel S.A." id="01"/>
+		<MNC name="Chinguitel S.A." id="02"/>
+		<MNC name="Mauritel Mobiles" id="10"/>
+	</MCC>
+	<MCC id="617" name="Mauritius" size="2">
+		<MNC name="Cellplus" id="01"/>
+		<MNC name="Mahanagar Telephone (Mauritius) Ltd." id="02"/>
+		<MNC name="Mahanagar Telephone (Mauritius) Ltd." id="03"/>
+		<MNC name="Emtel" id="10"/>
+	</MCC>
+	<MCC id="334" name="Mexico" size="3">
+		<MNC name="COMUNICACIONES DIGITALES DEL NORTE, S.A. DE C.V" id="001"/>
+		<MNC name="NII DIGITAL, S. DE R.L. DE C.V." id="010"/>
+		<MNC name="RADIOMOVIL DIPSA, S.A. DE C.V." id="020"/>
+		<MNC name="PEGASO COMUNICACIONES Y SISTEMAS, S.A. DE C.V." id="030"/>
+		<MNC name="IUSACELL PCS DE MEXICO, S.A. DE  C.V." id="040"/>
+		<MNC name="5 operators: 1-COMUNICACIONES CELULARES DE OCCIDENTE, S.A. DE C.V.| 2-SISTEMAS TELEFÓNICOS PORTÁTILES CELULARES, S.A. DE C.V.| 3-TELECOMUNICACIONES DEL GOLFO, S.A. DE C.V.| 4-SOS TELECOMUNICACIONES, S.A. DE C.V.| 5-PORTATEL DEL SURESTE, S.A. DE C.V." id="050"/>
+		<MNC name="SERVICIOS DE ACCESO INALAMBRICO, S.A DE C.V." id="060"/>
+		<MNC name="TELÉFONOS DE MÉXICO, S.A.B. DE C.V" id="066"/>
+		<MNC name="OPERADORA UNEFON, S. A. DE C.V." id="070"/>
+		<MNC name="OPERADORA UNEFON, S. A. DE C.V." id="080"/>
+		<MNC name="NII DIGITAL, S. DE R.L. DE C.V." id="090"/>
+	</MCC>
+	<MCC id="550" name="Micronesia" size="2">
+		<MNC name="FSM Telecom" id="01"/>
+	</MCC>
+	<MCC id="259" name="Moldova (Republic of)" size="2">
+		<MNC name="Orange Moldova GSM" id="01"/>
+		<MNC name="Moldcell GSM" id="02"/>
+		<MNC name="J.S.C. Moldtelecom/3G UMTS (W-CDMA)" id="05"/>
+		<MNC name="J.S.C. Moldtelecom" id="99"/>
+	</MCC>
+	<MCC id="208" name="Monaco" size="2">
+		<MNC name="Orange/Monaco Télécom" id="01"/>
+		<MNC name="Société Française du Radiotéléphone" id="10"/>
+		<MNC name="Bouygues Telecom" id="20"/>
+	</MCC>
+	<MCC id="428" name="Mongolia" size="2">
+		<MNC name="Mobicom" id="99"/>
+	</MCC>
+	<MCC id="297" name="Montenegro" size="2">
+		<MNC name="Telenor Montenegro" id="01"/>
+		<MNC name="Crnogorski Telekom" id="02"/>
+		<MNC name="Mtel Montenegro" id="03"/>
+	</MCC>
+	<MCC id="354" name="Montserrat" size="3">
+		<MNC name="Cable &amp; Wireless (West Indies) Ltd trading as Lime" id="860"/>
+	</MCC>
+	<MCC id="604" name="Morocco" size="2">
+		<MNC name="Méditélécom (GSM)" id="00"/>
+		<MNC name="Ittissalat Al Maghrid" id="01"/>
+	</MCC>
+	<MCC id="643" name="Mozambique" size="2">
+		<MNC name="T.D.M. GSM" id="01"/>
+		<MNC name="Movitel" id="03"/>
+		<MNC name="VM Sarl" id="04"/>
+	</MCC>
+	<MCC id="414" name="Myanmar" size="2">
+		<MNC name="Myanmar Post and Telecommunication" id="01"/>
+	</MCC>
+	<MCC id="649" name="Namibia" size="2">
+		<MNC name="Mobile Telecommunications Ltd." id="01"/>
+		<MNC name="Telecom Namibia" id="02"/>
+		<MNC name="Powercom Pty Ltd (leo)" id="03"/>
+		<MNC name="Paratus Telecommunications (Pty)" id="04"/>
+		<MNC name="Demshi Investments CC" id="05"/>
+	</MCC>
+	<MCC id="542" name="Nauru" size="2">
+		<MNC name="Digicel (Fiji) Ltd" id="02"/>
+	</MCC>
+	<MCC id="429" name="Nepal" size="2">
+		<MNC name="Nepal Telecommunications" id="01"/>
+	</MCC>
+	<MCC id="204" name="Netherlands" size="2">
+		<MNC name="RadioAccess Network Services B.V." id="01"/>
+		<MNC name="Tele2 Nederland B.V." id="02"/>
+		<MNC name="Voiceworks B.V." id="03"/>
+		<MNC name="Vodafone Libertel B.V." id="04"/>
+		<MNC name="Elephant Talk Communications Premium Rate Services" id="05"/>
+		<MNC name="Mundio Mobile (Netherlands) Ltd" id="06"/>
+		<MNC name="Teleena holding B.V." id="07"/>
+		<MNC name="KPN Mobile The Netherlands B.V." id="08"/>
+		<MNC name="Lycamobile Netherlands Limited" id="09"/>
+		<MNC name="KPN B.V." id="10"/>
+		<MNC name="KPN B.V." id="12"/>
+		<MNC name="Unica Installatietechniek B.V." id="13"/>
+		<MNC name="Ziggo B.V." id="15"/>
+		<MNC name="T-Mobile Netherlands B.V." id="16"/>
+		<MNC name="Intercity Mobile Communications B.V." id="17"/>
+		<MNC name="UPC Nederland B.V." id="18"/>
+		<MNC name="Mixe Communication Solutions B.V." id="19"/>
+		<MNC name="T-Mobile Netherlands B.V." id="20"/>
+		<MNC name="ProRail B.V." id="21"/>
+		<MNC name="Ministerie van Defensie" id="22"/>
+		<MNC name="ASpider Solutions Nederland B.V." id="23"/>
+		<MNC name="Private Mobility Nederland B.V." id="24"/>
+		<MNC name="CAPX B.V." id="25"/>
+		<MNC name="SpeakUp B.V." id="26"/>
+		<MNC name="Lancelot B.V." id="28"/>
+		<MNC name="Private Mobile Ltd" id="29"/>
+		<MNC name="Nextgen Mobile Ltd" id="60"/>
+		<MNC name="BodyTrace Netherlands B.V." id="61"/>
+		<MNC name="Zetacom B.V." id="64"/>
+		<MNC name="AGMS Netherlands B.V." id="65"/>
+		<MNC name="Utility Connect B.V." id="66"/>
+		<MNC name="RadioAccess B.V." id="67"/>
+		<MNC name="Roamware (Netherlands) B.V." id="68"/>
+		<MNC name="KPN Mobile The Netherlands B.V." id="69"/>
+	</MCC>
+	<MCC id="546" name="New Caledonia" size="2">
+		<MNC name="OPT Mobilis" id="01"/>
+	</MCC>
+	<MCC id="530" name="New Zealand" size="2">
+		<MNC name="Reserved for AMPS MIN based IMSI's" id="00"/>
+		<MNC name="Vodafone New Zealand GSM Network" id="01"/>
+		<MNC name="Teleom New Zealand CDMA Network" id="02"/>
+		<MNC name="Woosh Wireless - CDMA Network" id="03"/>
+		<MNC name="TelstraClear - GSM Network" id="04"/>
+		<MNC name="Telecom New Zealand - UMTS Ntework" id="05"/>
+		<MNC name="FX Networks Ltd" id="06"/>
+		<MNC name="Bluereach Limited" id="07"/>
+		<MNC name="NZ Communications - UMTS Network" id="24"/>
+	</MCC>
+	<MCC id="710" name="Nicaragua" size="2">
+		<MNC name="Empresa Nicaragüense de Telecomunicaciones, S.A. (ENITEL)" id="21"/>
+		<MNC name="Servicios de Comunicaciones, S.A. (SERCOM)" id="73"/>
+	</MCC>
+	<MCC id="614" name="Niger" size="2">
+		<MNC name="Sahel.Com" id="01"/>
+		<MNC name="Celtel" id="02"/>
+		<MNC name="Telecel" id="03"/>
+	</MCC>
+	<MCC id="621" name="Nigeria" size="2">
+		<MNC name="Econet Wireless Nigeria Ltd." id="20"/>
+		<MNC name="MTN Nigeria Communications" id="30"/>
+		<MNC name="MTEL" id="40"/>
+		<MNC name="Globacom" id="50"/>
+		<MNC name="EMTS" id="60"/>
+	</MCC>
+	<MCC id="555" name="Niue" size="2">
+		<MNC name="Telecom Niue" id="01"/>
+	</MCC>
+	<MCC id="242" name="Norway" size="2">
+		<MNC name="Telenor Norge AS" id="01"/>
+		<MNC name="Telia Norge AS" id="02"/>
+		<MNC name="Teletopia Gruppen AS" id="03"/>
+		<MNC name="Telia Norge AS" id="05"/>
+		<MNC name="ICE Norge AS" id="06"/>
+		<MNC name="Phonero AS" id="07"/>
+		<MNC name="TDC AS" id="08"/>
+		<MNC name="Com4 AS" id="09"/>
+		<MNC name="Norwegian Communications Authority" id="10"/>
+		<MNC name="Systemnet AS" id="11"/>
+		<MNC name="Telenor Norge AS" id="12"/>
+		<MNC name="ICE Communication Norge AS" id="14"/>
+		<MNC name="Jernbaneverket" id="20"/>
+		<MNC name="Jernbaneverket" id="21"/>
+		<MNC name="Lycamobile Norway Ltd" id="23"/>
+		<MNC name="Tampnet AS" id="99"/>
+	</MCC>
+	<MCC id="422" name="Oman" size="2">
+		<MNC name="Oman Mobile Telecommunications Company (Oman Mobile)" id="02"/>
+		<MNC name="Oman Qatari Telecommunications Company (Nawras)" id="03"/>
+		<MNC name="Oman Telecommunications Company (Omantel)" id="04"/>
+	</MCC>
+	<MCC id="410" name="Pakistan" size="2">
+		<MNC name="Mobilink" id="01"/>
+		<MNC name="PAK Telecom Mobile Ltd. (UFONE)" id="03"/>
+		<MNC name="CMPak" id="04"/>
+		<MNC name="Telenor Pakistan" id="06"/>
+		<MNC name="Warid Telecom" id="07"/>
+	</MCC>
+	<MCC id="552" name="Palau" size="2">
+		<MNC name="Palau National Communications Corp. (a.k.a. PNCC)" id="01"/>
+	</MCC>
+	<MCC id="714" name="Panama" size="2">
+		<MNC name="Cable &amp; Wireless Panama S.A." id="01"/>
+		<MNC name="BSC de Panama S.A." id="02"/>
+		<MNC name="Telefónica Móviles Panamá S.A." id="020"/>
+		<MNC name="Claro Panamá, S.A." id="03"/>
+		<MNC name="Digicel (Panamá), S.A." id="04"/>
+	</MCC>
+	<MCC id="537" name="Papua New Guinea" size="2">
+		<MNC name="Bmobile" id="01"/>
+		<MNC name="Telikom PNG Ltd" id="02"/>
+		<MNC name="Digicel Ltd" id="03"/>
+	</MCC>
+	<MCC id="744" name="Paraguay" size="2">
+		<MNC name="Hóla Paraguay S.A." id="01"/>
+		<MNC name="Hutchison Telecom S.A." id="02"/>
+		<MNC name="Compañia Privada de Comunicaciones S.A." id="03"/>
+	</MCC>
+	<MCC id="716" name="Peru" size="2">
+		<MNC name="TIM Peru" id="10"/>
+	</MCC>
+	<MCC id="515" name="Philippines" size="2">
+		<MNC name="Islacom" id="01"/>
+		<MNC name="Globe Telecom" id="02"/>
+		<MNC name="Smart Communications" id="03"/>
+		<MNC name="Digitel" id="05"/>
+	</MCC>
+	<MCC id="260" name="Poland" size="2">
+		<MNC name="Plus / Polkomtel S.A." id="01"/>
+		<MNC name="T-Mobile / PTC S.A." id="02"/>
+		<MNC name="Orange / PTK Centertel Sp. z o.o." id="03"/>
+		<MNC name="LTE / CenterNet S.A." id="04"/>
+		<MNC name="Orange(UMTS) / PTK Centertel Sp. z o.o." id="05"/>
+		<MNC name="Play / P4 Sp. z o.o." id="06"/>
+		<MNC name="Netia / Netia S.A." id="07"/>
+		<MNC name="E-Telko / E-Telko Sp. z o.o." id="08"/>
+		<MNC name="Lycamobile / Lycamobile Sp. z o.o." id="09"/>
+		<MNC name="Sferia / Sferia S.A." id="10"/>
+		<MNC name="Nordisk Polska / Nordisk Polska Sp. z o.o." id="11"/>
+		<MNC name="Cyfrowy Polsat / Cyfrowy Polsat S.A." id="12"/>
+		<MNC name="Sferia / Sferia S.A." id="13"/>
+		<MNC name="Sferia / Sferia S.A." id="14"/>
+		<MNC name="CenterNet / CenterNet S.A." id="15"/>
+		<MNC name="Mobyland / Mobyland Sp. z o.o." id="16"/>
+		<MNC name="Aero 2 / Aero 2 Sp. z o.o." id="17"/>
+		<MNC name="AMD Telecom / AMD Telecom S.A." id="18"/>
+		<MNC name="Teleena / Teleena Holding BV" id="19"/>
+		<MNC name="Mobile.Net / Mobile.Net Sp. z o.o." id="20"/>
+		<MNC name="Exteri / Exteri Sp. z o.o." id="21"/>
+		<MNC name="Arcomm / Arcomm Sp. z o.o." id="22"/>
+		<MNC name="Amicomm / Amicomm Sp. z o.o." id="23"/>
+		<MNC name="WideNet / WideNet Sp. z o.o." id="24"/>
+		<MNC name="BS&amp;T / Best Solutions &amp; Technology Sp. z o.o." id="25"/>
+		<MNC name="ATE / ATE-Advanced Technology &amp; Experience Sp. z o.o." id="26"/>
+		<MNC name="Intertelcom / Intertelcom Sp. z o.o." id="27"/>
+		<MNC name="PhoneNet / PhoneNet Sp. z o.o." id="28"/>
+		<MNC name="Interfonica / Interfonica Sp. z o.o." id="29"/>
+		<MNC name="GrandTel / GrandTel Sp. z o.o." id="30"/>
+		<MNC name="Phone IT / Phone IT Sp. z o.o." id="31"/>
+		<MNC name="Compatel Ltd / COMPATEL LIMITED" id="32"/>
+		<MNC name="Truphone Poland / Truphone Poland Sp. Z o.o." id="33"/>
+		<MNC name="T-Mobile / PTC S.A." id="34"/>
+		<MNC name="Play (testowy) / P4 Sp. z o.o." id="98"/>
+	</MCC>
+	<MCC id="268" name="Portugal" size="2">
+		<MNC name="Vodafone Telecel - Comunicaçôes Pessoais, S.A." id="01"/>
+		<MNC name="Optimus - Telecomunicaçôes, S.A." id="03"/>
+		<MNC name="Oniway - Inforcomunicaçôes, S.A." id="05"/>
+		<MNC name="TMN - Telecomunicaçôes Movéis Nacionais, S.A." id="06"/>
+	</MCC>
+	<MCC id="427" name="Qatar" size="2">
+		<MNC name="QATARNET" id="01"/>
+		<MNC name="Ooredoo Q.S.C./MOI LTE" id="06"/>
+	</MCC>
+	<MCC id="226" name="Romania" size="2">
+		<MNC name="Vodafone" id="01"/>
+		<MNC name="Romtelecom" id="02"/>
+		<MNC name="Cosmote" id="03"/>
+		<MNC name="Cosmote" id="04"/>
+		<MNC name="Digi.Mobil" id="05"/>
+		<MNC name="Cosmote" id="06"/>
+		<MNC name="Orange" id="10"/>
+		<MNC name="Enigma-System" id="11"/>
+	</MCC>
+	<MCC id="250" name="Russian Federation" size="2">
+		<MNC name="Mobile Telesystems" id="01"/>
+		<MNC name="Megafon" id="02"/>
+		<MNC name="Nizhegorodskaya Cellular Communications" id="03"/>
+		<MNC name="Sibchallenge" id="04"/>
+		<MNC name="Mobile Comms System" id="05"/>
+		<MNC name="BM Telecom" id="07"/>
+		<MNC name="Don Telecom" id="10"/>
+		<MNC name="Orensot" id="11"/>
+		<MNC name="Baykal Westcom" id="12"/>
+		<MNC name="Kuban GSM" id="13"/>
+		<MNC name="New Telephone Company" id="16"/>
+		<MNC name="Ermak RMS" id="17"/>
+		<MNC name="Volgograd Mobile" id="19"/>
+		<MNC name="ECC" id="20"/>
+		<MNC name="Extel" id="28"/>
+		<MNC name="Uralsvyazinform" id="39"/>
+		<MNC name="Stuvtelesot" id="44"/>
+		<MNC name="Printelefone" id="92"/>
+		<MNC name="Telecom XXI" id="93"/>
+		<MNC name="Beeline" id="99"/>
+	</MCC>
+	<MCC id="635" name="Rwanda" size="2">
+		<MNC name="MTN Rwandacell" id="10"/>
+		<MNC name="TIGO RWANDA LTD" id="13"/>
+		<MNC name="AIRTEL RWANDA Ltd" id="14"/>
+		<MNC name="Olleh Rwanda Networks (ORN)" id="17"/>
+	</MCC>
+	<MCC id="658" name="Saint Helena, Ascension and Tristan da Cunha" size="2">
+		<MNC name="Sure South Atlantic Ltd. (Ascension)" id="01"/>
+	</MCC>
+	<MCC id="356" name="Saint Kitts and Nevis" size="3">
+		<MNC name="Cable &amp; Wireless St Kitts &amp; Nevis Ltd trading as Lime" id="110"/>
+	</MCC>
+	<MCC id="358" name="Saint Lucia" size="3">
+		<MNC name="Cable &amp; Wireless (St Lucia) Ltd trading as Lime" id="110"/>
+	</MCC>
+	<MCC id="308" name="Saint Pierre and Miquelon" size="2">
+		<MNC name="SAS SPM Telecom" id="01"/>
+		<MNC name="Globaltel" id="02"/>
+	</MCC>
+	<MCC id="360" name="Saint Vincent and the Grenadines" size="3">
+		<MNC name="Cable &amp; Wireless St Vincent and the Grenadines Ltd trading as lime" id="110"/>
+	</MCC>
+	<MCC id="549" name="Samoa" size="2">
+		<MNC name="Telecom Samoa Cellular Ltd." id="01"/>
+		<MNC name="GoMobile SamoaTel Ltd" id="27"/>
+	</MCC>
+	<MCC id="292" name="San Marino" size="2">
+		<MNC name="Prima San Marino / San Marino Telecom" id="01"/>
+	</MCC>
+	<MCC id="626" name="Sao Tome and Principe" size="2">
+		<MNC name="Companhia Santomese de Telecomunicações" id="01"/>
+	</MCC>
+	<MCC id="420" name="Saudi Arabia" size="2">
+		<MNC name="Saudi Telecom" id="01"/>
+		<MNC name="Etihad Etisalat Company (Mobily)" id="03"/>
+	</MCC>
+	<MCC id="608" name="Senegal" size="2">
+		<MNC name="Sonatel (Orange)" id="01"/>
+		<MNC name="Sentel GSM (Tigo)" id="02"/>
+		<MNC name="Expresso Sénégal" id="03"/>
+		<MNC name="CSU" id="04"/>
+	</MCC>
+	<MCC id="220" name="Serbia" size="2">
+		<MNC name="Telenor d.o.o." id="01"/>
+		<MNC name="Telekom Srbija a.d." id="03"/>
+		<MNC name="Vip mobile d.o.o." id="05"/>
+		<MNC name="Orion telekom d.o.o." id="07"/>
+		<MNC name="MUNDIO MOBILE d.o.o." id="09"/>
+		<MNC name="GLOBALTEL d.o.o." id="11"/>
+	</MCC>
+	<MCC id="633" name="Seychelles" size="2">
+		<MNC name="Cable &amp; Wireless (Seychelles) Ltd." id="01"/>
+		<MNC name="Airtel (Seychelles) Ltd" id="10"/>
+	</MCC>
+	<MCC id="619" name="Sierra Leone" size="2">
+		<MNC name="Celtel" id="01"/>
+		<MNC name="Millicom" id="02"/>
+		<MNC name="Africell" id="03"/>
+		<MNC name="Comium (Sierra Leone) Ltd" id="04"/>
+		<MNC name="Lintel (Sierra Leone) Ltd." id="05"/>
+		<MNC name="INTERGROUP TELECOM" id="09"/>
+		<MNC name="Mobitel" id="25"/>
+		<MNC name="Datatel (SL) Ltd GSM" id="40"/>
+		<MNC name="Datatel (SL) Ltd CDMA" id="50"/>
+	</MCC>
+	<MCC id="525" name="Singapore" size="2">
+		<MNC name="Singtel ST GSM900" id="01"/>
+		<MNC name="Singtel ST GSM1800" id="02"/>
+		<MNC name="M1" id="03"/>
+		<MNC name="StarHub" id="05"/>
+		<MNC name="StarHub" id="08"/>
+		<MNC name="Digital Trunked Radio Network" id="12"/>
+	</MCC>
+	<MCC id="231" name="Slovakia" size="2">
+		<MNC name="Orange, GSM" id="01"/>
+		<MNC name="Eurotel, GSM &amp; NMT" id="02"/>
+		<MNC name="Eurotel, UMTS" id="04"/>
+		<MNC name="Orange, UMTS" id="05"/>
+	</MCC>
+	<MCC id="293" name="Slovenia" size="2">
+		<MNC name="SI Mobil" id="40"/>
+		<MNC name="Mobitel" id="41"/>
+		<MNC name="T-2 d.o.o." id="64"/>
+		<MNC name="Tusmobil d.o.o." id="70"/>
+	</MCC>
+	<MCC id="540" name="Solomon Islands" size="2">
+		<MNC name="Bemobile (BMobile (SI) Ltd)" id="02"/>
+	</MCC>
+	<MCC id="655" name="South Africa" size="2">
+		<MNC name="Vodacom (Pty) Ltd." id="01"/>
+		<MNC name="Telkom SA Ltd" id="02"/>
+		<MNC name="Sasol (Pty) Ltd" id="04"/>
+		<MNC name="Sentech (Pty) Ltd." id="06"/>
+		<MNC name="Cell C (Pty) Ltd." id="07"/>
+		<MNC name="Mobile Telephone Networks (MTN) Pty Ltd" id="10"/>
+		<MNC name="SAPS Gauteng" id="11"/>
+		<MNC name="Mobile Telephone Networks (MTN) Pty Ltd" id="12"/>
+		<MNC name="Neotel Pty Ltd" id="13"/>
+		<MNC name="Neotel Pty Ltd" id="14"/>
+		<MNC name="Sishen Iron Ore Company (Ltd) Pty" id="17"/>
+		<MNC name="Wireless Business Solutions (iBurst)" id="19"/>
+		<MNC name="Cape Town Metropolitan Council" id="21"/>
+		<MNC name="SMS Portal (Pty) Ltd" id="24"/>
+		<MNC name="Wirels Connect" id="25"/>
+		<MNC name="A to Z Vaal Industrial Supplies Pty Ltd" id="27"/>
+		<MNC name="Hymax Talking Solutions (Pty) Ltd" id="28"/>
+		<MNC name="Bokamoso Consortium Pty Ltd" id="30"/>
+		<MNC name="Karabo Telecoms (Pty) Ltd." id="31"/>
+		<MNC name="Ilizwi Telecommunications Pty Ltd" id="32"/>
+		<MNC name="Thinta Thinta Telecommunications Pty Ltd" id="33"/>
+		<MNC name="Bokone Telecoms Pty Ltd" id="34"/>
+		<MNC name="Kingdom Communications Pty Ltd" id="35"/>
+		<MNC name="Amatole Telecommunication Pty Ltd" id="36"/>
+		<MNC name="Wireless Business Solutions (Pty) Ltd" id="38"/>
+		<MNC name="South African Police Service" id="41"/>
+		<MNC name="SMS Cellular Services (Pty) Ltd" id="46"/>
+		<MNC name="Ericsson South Africa (Pty) Ltd" id="50"/>
+		<MNC name="Integrat (Pty) Ltd" id="51"/>
+		<MNC name="Wireless Business Solutions (Pty) Ltd" id="73"/>
+		<MNC name="Wireless Business Solutions (Pty) Ltd" id="74"/>
+	</MCC>
+	<MCC id="659" name="South Sudan" size="2">
+		<MNC name="Sudani/Sudatel" id="12"/>
+		<MNC name="Zain-South Sudan" id="91"/>
+		<MNC name="MTN-South Sudan" id="92"/>
+		<MNC name="Vivacel/NOW" id="95"/>
+		<MNC name="Gemtel" id="97"/>
+	</MCC>
+	<MCC id="214" name="Spain" size="2">
+		<MNC name="Vodafone España, SAU" id="01"/>
+		<MNC name="France Telecom España, SA" id="03"/>
+		<MNC name="Xfera Móviles, S.A." id="04"/>
+		<MNC name="Telefónica Móviles España, SAU" id="05"/>
+		<MNC name="Vodafone España, SAU" id="06"/>
+		<MNC name="Telefónica Móviles España, SAU" id="07"/>
+		<MNC name="Euskaltel, SA" id="08"/>
+		<MNC name="France Telecom España, SA" id="09"/>
+		<MNC name="Operadora de Telecomunicaciones Opera SL" id="10"/>
+		<MNC name="France Telecom España, SA" id="11"/>
+		<MNC name="Contacta Servicios Avanzados de Telecomunicaciones SL" id="12"/>
+		<MNC name="Incotel Ingeniera y Consultaria SL" id="13"/>
+		<MNC name="Incotel Servicioz Avanzados SL" id="14"/>
+		<MNC name="BT España Compañia de Servicios Globales de Telecomunicaciones, SAU" id="15"/>
+		<MNC name="Telecable de Asturias, SAU" id="16"/>
+		<MNC name="R Cable y Telecomunicaciones Galicia, SA" id="17"/>
+		<MNC name="Cableuropa, SAU" id="18"/>
+		<MNC name="E-Plus Móviles, SL" id="19"/>
+		<MNC name="Fonyou Telecom, SL" id="20"/>
+		<MNC name="ORANGE ESPAGNE, S.A. UNIPERSONAL" id="21"/>
+		<MNC name="Best Spain Telecom, SL" id="22"/>
+		<MNC name="Vizzavi España, S.L." id="24"/>
+		<MNC name="Lycamobile, SL" id="25"/>
+		<MNC name="Lleida Networks Serveis Telemátics, SL" id="26"/>
+		<MNC name="SCN Truphone SL" id="27"/>
+		<MNC name="Consorcio de Telecomunicaciones Avanzadas, S.A." id="28"/>
+		<MNC name="NEO-SKY 2002, S.A." id="29"/>
+		<MNC name="Compatel Limited" id="30"/>
+		<MNC name="Red Digital De Telecomunicaciones de las Islas Baleares, S.L." id="31"/>
+		<MNC name="TUENTI TECHNOLOGIES, S.L." id="32"/>
+		<MNC name="EURONA WIRELESS TELECOM, S.A." id="33"/>
+		<MNC name="AIRE NETWORKS DEL MEDITERRÁNEO, S.L. UNIPERSONAL" id="34"/>
+		<MNC name="INGENIUM OUTSOURCING SERVICES, S.L." id="35"/>
+	</MCC>
+	<MCC id="413" name="Sri Lanka" size="2">
+		<MNC name="MTN Network Ltd." id="02"/>
+		<MNC name="Celtel Lanka Ltd." id="03"/>
+	</MCC>
+	<MCC id="634" name="Sudan" size="2">
+		<MNC name="SD Mobitel" id="01"/>
+		<MNC name="Areeba-Sudan" id="02"/>
+		<MNC name="MTN Sudan" id="03"/>
+		<MNC name="Network of the World Ltd (NOW)" id="05"/>
+		<MNC name="Zain Sudan" id="06"/>
+		<MNC name="MTN Sudan" id="99"/>
+	</MCC>
+	<MCC id="746" name="Suriname" size="2">
+		<MNC name="Telesur" id="02"/>
+		<MNC name="Digicel" id="03"/>
+		<MNC name="Intelsur" id="04"/>
+		<MNC name="Telesur (CDMA)" id="05"/>
+	</MCC>
+	<MCC id="653" name="Swaziland" size="2">
+		<MNC name="SPTC" id="01"/>
+		<MNC name="Swazi MTN" id="10"/>
+	</MCC>
+	<MCC id="240" name="Sweden" size="2">
+		<MNC name="Telia Sonera Sverige AB" id="01"/>
+		<MNC name="H3G Access AB" id="02"/>
+		<MNC name="Netett Sverige AB" id="03"/>
+		<MNC name="3G Infrastructure Services AB" id="04"/>
+		<MNC name="Svenska UMTS-Nät AB" id="05"/>
+		<MNC name="Telenor Sverige AB" id="06"/>
+		<MNC name="Telenor Sverige AB" id="08"/>
+		<MNC name="Communication for Devices in Sweden AB" id="09"/>
+		<MNC name="Tele2 Sverige AB" id="10"/>
+		<MNC name="ComHem AB" id="11"/>
+		<MNC name="Lycamobile Sweden Limited" id="12"/>
+		<MNC name="Alltele Företag Sverige AB" id="13"/>
+		<MNC name="TDC Sverige AB" id="14"/>
+		<MNC name="Wireless Maingate Nordic AB" id="15"/>
+		<MNC name="42 Telecom AB" id="16"/>
+		<MNC name="Götalandsnätet AB" id="17"/>
+		<MNC name="Generic Mobile Systems Sweden AB" id="18"/>
+		<MNC name="Mundio Mobile Sweden Ltd" id="19"/>
+		<MNC name="iMEZ AB" id="20"/>
+		<MNC name="Trafikverket ICT" id="21"/>
+		<MNC name="EuTel AB" id="22"/>
+		<MNC name="Infobip LTD (UK)" id="23"/>
+		<MNC name="Net4Mobility HB" id="24"/>
+		<MNC name="Monty UK Global Limited" id="25"/>
+		<MNC name="Beepsend A.B." id="26"/>
+		<MNC name="GlobeTouch AB" id="27"/>
+		<MNC name="CoolTEL Aps" id="28"/>
+		<MNC name="Mercury International Carrier Services" id="29"/>
+		<MNC name="NextGen Mobile Ltd" id="30"/>
+		<MNC name="RebTel Networks AB" id="31"/>
+		<MNC name="Compatel Ltd." id="32"/>
+		<MNC name="Mobile Arts AB" id="33"/>
+		<MNC name="Pro Net Telecommunications Services Ltd." id="34"/>
+		<MNC name="42 Telecom LTD" id="35"/>
+		<MNC name="Interactive Digital Media GmbH" id="36"/>
+		<MNC name="CLX Networks AB" id="37"/>
+		<MNC name="Voxbone SA" id="38"/>
+		<MNC name="Borderlight AB" id="39"/>
+		<MNC name="ReWiCom Scandinavia AB" id="40"/>
+		<MNC name="Shyam Telecom UK Ltd" id="41"/>
+		<MNC name="Telenor Connexion AB" id="42"/>
+		<MNC name="MobiWeb Ltd." id="43"/>
+		<MNC name="Limitless Mobile AB" id="44"/>
+		<MNC name="Spirius AB" id="45"/>
+		<MNC name="Telefonaktiebolaget LM Ericsson (MNC assigned for test purpose. Temporary license until 2018-12-31)" id="60"/>
+		<MNC name="shared use for closed networks" id="65"/>
+		<MNC name="shared use for closed networks" id="66"/>
+		<MNC name="shared use for test purpose" id="67"/>
+		<MNC name="shared use for test purpose" id="68"/>
+		<MNC name="crisis management after determination by the Swedish Post- and Telecom Authority" id="69"/>
+	</MCC>
+	<MCC id="228" name="Switzerland" size="2">
+		<MNC name="Swisscom Schweiz AG" id="01"/>
+		<MNC name="Sunrise Communications AG" id="02"/>
+		<MNC name="Salt Mobile SA" id="03"/>
+		<MNC name="Comfone AG" id="05"/>
+		<MNC name="SBB AG" id="06"/>
+		<MNC name="TelCommunication Services AG" id="08"/>
+		<MNC name="Comfone AG" id="09"/>
+		<MNC name="Sunrise Communications AG" id="12"/>
+		<MNC name="Bebbicell AG" id="51"/>
+		<MNC name="upc Cablecom GmbH" id="53"/>
+		<MNC name="Lycamobile AG" id="54"/>
+		<MNC name="Mitto AG" id="57"/>
+		<MNC name="Beeone Communications SA" id="58"/>
+	</MCC>
+	<MCC id="417" name="Syrian Arab Republic" size="2">
+		<MNC name="Syriatel" id="01"/>
+		<MNC name="Spacetel Syria" id="02"/>
+		<MNC name="Syrian Telecom" id="09"/>
+	</MCC>
+	<MCC id="436" name="Tajikistan" size="2">
+		<MNC name="JC Somoncom" id="01"/>
+		<MNC name="CJSC Indigo Tajikistan" id="02"/>
+		<MNC name="TT mobile" id="03"/>
+		<MNC name="Josa Babilon-T" id="04"/>
+		<MNC name="CTJTHSC Tajik-tel" id="05"/>
+	</MCC>
+	<MCC id="640" name="Tanzania" size="2">
+		<MNC name="MIC Tanzania Limited (Tigo)" id="02"/>
+		<MNC name="Zanzibar Telecom Limited (Zantel)" id="03"/>
+		<MNC name="Vodacom Tanzania Limited" id="04"/>
+		<MNC name="Airtel Tanzania Limited" id="05"/>
+		<MNC name="Tanzania Telecommunications Company Limited" id="07"/>
+		<MNC name="Benson Informatics Limited (Smart)" id="08"/>
+		<MNC name="Viettel Tanzania Limited (Halotel)" id="09"/>
+		<MNC name="Smile Communications Tanzania Ltd" id="11"/>
+		<MNC name="Wiafrica Tanzania Limited (Cootel)" id="13"/>
+	</MCC>
+	<MCC id="520" name="Thailand" size="2">
+		<MNC name="CAT CDMA" id="00"/>
+		<MNC name="AIS GSM" id="01"/>
+		<MNC name="CAT CDMA" id="02"/>
+		<MNC name="Advanced Wireless Network Company Limited" id="03"/>
+		<MNC name="Real Future Company Limited" id="04"/>
+		<MNC name="DTAC Network Company Limite" id="05"/>
+		<MNC name="TOT Public Company Limited" id="15"/>
+		<MNC name="Total Access Communications Public  Company Limited" id="18"/>
+		<MNC name="ACes Regional Services Company Limited" id="20"/>
+		<MNC name="Digital Phone Company Limited" id="23"/>
+		<MNC name="TOT Public Company Limited" id="47"/>
+		<MNC name="True Move Company Limited" id="99"/>
+	</MCC>
+	<MCC id="294" name="The Former Yugoslav Republic of Macedonia" size="2">
+		<MNC name="T-Mobile" id="01"/>
+		<MNC name="Cosmofon" id="02"/>
+		<MNC name="Nov Operator" id="03"/>
+		<MNC name="Company for telecommunications LYCAMOBILE LLC-Skopje" id="04"/>
+		<MNC name="WTI Macedonia" id="10"/>
+		<MNC name="MOBIK TELEKOMUNIKACII DOOEL- Skopje" id="11"/>
+	</MCC>
+	<MCC id="514" name="Timor-Leste" size="2">
+		<MNC name="Telin Timor-Leste" id="01"/>
+		<MNC name="Timor Telecom" id="02"/>
+		<MNC name="Viettel Timor-Leste" id="03"/>
+	</MCC>
+	<MCC id="615" name="Togo" size="2">
+		<MNC name="Togo Telecom" id="01"/>
+	</MCC>
+	<MCC id="539" name="Tonga" size="2">
+		<MNC name="Tonga Communications Corporation" id="01"/>
+		<MNC name="Digicel" id="43"/>
+		<MNC name="Digicel (Tonga) Ltd" id="88"/>
+	</MCC>
+	<MCC id="374" name="Trinidad and Tobago" size="2">
+		<MNC name="TSTT Mobile" id="12"/>
+		<MNC name="Digicel Trinidad and Tobago Ltd." id="130"/>
+		<MNC name="LaqTel Ltd." id="140"/>
+	</MCC>
+	<MCC id="605" name="Tunisia" size="2">
+		<MNC name="Tunisie Telecom" id="02"/>
+		<MNC name="Orascom Telecom" id="03"/>
+	</MCC>
+	<MCC id="286" name="Turkey" size="2">
+		<MNC name="Turkcell" id="01"/>
+		<MNC name="Telsim GSM" id="02"/>
+		<MNC name="Aria" id="03"/>
+		<MNC name="Aycell" id="04"/>
+	</MCC>
+	<MCC id="438" name="Turkmenistan" size="2">
+		<MNC name="Barash Communication Technologies (BCTI)" id="01"/>
+		<MNC name="TM-Cell" id="02"/>
+	</MCC>
+	<MCC id="376" name="Turks and Caicos Islands" size="3">
+		<MNC name="Cable &amp; Wireless (TCI) Ltd trading asLime" id="350"/>
+		<MNC name="IslandCom Communications Ltd." id="352"/>
+		<MNC name="IslandCom Communication Ltd" id="360"/>
+	</MCC>
+	<MCC id="553" name="Tuvalu" size="2">
+		<MNC name="Tuvalu Telecommunications Corporation" id="01"/>
+	</MCC>
+	<MCC id="641" name="Uganda" size="2">
+		<MNC name="Celtel Uganda" id="01"/>
+		<MNC name="MTN Uganda Ltd." id="10"/>
+		<MNC name="Uganda Telecom Ltd." id="11"/>
+		<MNC name="House of Integrated Technology and Systems Uganda Ltd (HiTs Telecom)" id="14"/>
+		<MNC name="Sure Telecom Uganda Limited" id="18"/>
+		<MNC name="Warid Telecom Uganda Ltd." id="22"/>
+		<MNC name="Anupam Global Soft Uganda Limited" id="30"/>
+		<MNC name="Smile Communications Uganda Limited" id="33"/>
+		<MNC name="Civil Aviation Authority (CAA)" id="40"/>
+		<MNC name="K2 Telecom Ltd" id="44"/>
+		<MNC name="i-Tel Ltd" id="66"/>
+	</MCC>
+	<MCC id="255" name="Ukraine" size="2">
+		<MNC name="Ukrainian Mobile Communication, UMC" id="01"/>
+		<MNC name="Ukranian Radio Systems, URS" id="02"/>
+		<MNC name="Kyivstar GSM" id="03"/>
+		<MNC name="International Telecommunications Ltd." id="04"/>
+		<MNC name="Golden Telecom" id="05"/>
+		<MNC name="Astelit" id="06"/>
+		<MNC name="Ukrtelecom" id="07"/>
+		<MNC name="CJSC - Telesystems of Ukraine" id="21"/>
+	</MCC>
+	<MCC id="424" name="United Arab Emirates" size="2">
+		<MNC name="Etisalat" id="02"/>
+	</MCC>
+	<MCC id="234" name="United Kingdom" size="2">
+		<MNC name="British Telecom" id="00"/>
+		<MNC name="Mundio Mobile Limited" id="01"/>
+		<MNC name="Telefonica UK Limited" id="02"/>
+		<MNC name="Jersey Airtel Limited" id="03"/>
+		<MNC name="FMS Solutions Limited" id="04"/>
+		<MNC name="COLT Mobile Telecommunications Limited" id="05"/>
+		<MNC name="Internet Computer Bureau Limited" id="06"/>
+		<MNC name="Vodafone Ltd (C&amp;W)" id="07"/>
+		<MNC name="BT OnePhone Limited" id="08"/>
+		<MNC name="Tismi BV" id="09"/>
+		<MNC name="Telefonica UK Limited" id="10"/>
+		<MNC name="Telefonica UK Limited" id="11"/>
+		<MNC name="Network Rail Infrastructure Limited" id="12"/>
+		<MNC name="Network Rail Infrastructure Limited" id="13"/>
+		<MNC name="HAY SYSTEMS LIMITED" id="14"/>
+		<MNC name="Vodafone Uk Ltd" id="15"/>
+		<MNC name="TalkTalk Communications Limited" id="16"/>
+		<MNC name="FleXtel Limited" id="17"/>
+		<MNC name="Cloud9 Communications Limited" id="18"/>
+		<MNC name="TeleWare PLC" id="19"/>
+		<MNC name="Hutchison 3G UK Ltd" id="20"/>
+		<MNC name="Telesign Mobile Limited" id="22"/>
+		<MNC name="Icron Network Limited" id="23"/>
+		<MNC name="Stour Marine Limited" id="24"/>
+		<MNC name="Truphone Ltd" id="25"/>
+		<MNC name="Lycamobile UK Limited" id="26"/>
+		<MNC name="Teleena UK Limited" id="27"/>
+		<MNC name="Marathon Telecom Limited" id="28"/>
+		<MNC name="(aq) Limited trading as aql" id="29"/>
+		<MNC name="EE Limited ( TM)" id="30"/>
+		<MNC name="EE Limited ( TM)" id="31"/>
+		<MNC name="EE Limited ( TM)" id="32"/>
+		<MNC name="Orange" id="33"/>
+		<MNC name="Orange" id="34"/>
+		<MNC name="Sure (Isle of Man) Limited" id="36"/>
+		<MNC name="Synectiv Ltd" id="37"/>
+		<MNC name="Virgin Mobile Telecoms Limited" id="38"/>
+		<MNC name="Gamma Telecom Holdings Ltd" id="39"/>
+		<MNC name="Jersey Telecom" id="50"/>
+		<MNC name="UK Broadband Limited" id="51"/>
+		<MNC name="Shyam Telecom UK Ltd" id="52"/>
+		<MNC name="Limitless Mobile Ltd" id="53"/>
+		<MNC name="The Carphone Warehouse Limited" id="54"/>
+		<MNC name="Sure (Guernsey) Limited" id="55"/>
+		<MNC name="CESG" id="56"/>
+		<MNC name="Sky UK Limited" id="57"/>
+		<MNC name="Manx Telecom" id="58"/>
+		<MNC name="Limitless Mobile Ltd" id="59"/>
+		<MNC name="AMSUK Limited" id="70"/>
+		<MNC name="British Telecom" id="76"/>
+		<MNC name="Airwave Solutions Ltd" id="78"/>
+		<MNC name="EE Limited ( TM)" id="86"/>
+		<MNC name="Mundio Mobile Limited" id="00"/>
+		<MNC name="EE Limited ( TM)" id="01"/>
+		<MNC name="EE Limited ( TM)" id="02"/>
+		<MNC name="UK Broadband Limited" id="03"/>
+		<MNC name="British Telecom" id="77"/>
+		<MNC name="Vodafone Uk Ltd" id="91"/>
+		<MNC name="Vodafone Ltd (C&amp;W)" id="92"/>
+		<MNC name="Hutchison 3G UK Ltd" id="94"/>
+		<MNC name="Network Rail Infrastructure Limited" id="95"/>
+	</MCC>
+	<MCC id="310" name="United States" size="3">
+		<MNC name="Verizon Wireless" id="010"/>
+		<MNC name="Verizon Wireless" id="012"/>
+		<MNC name="Verizon Wireless" id="013"/>
+		<MNC name="Cricket Communications" id="016"/>
+		<MNC name="North Sight Communications Inc" id="017"/>
+		<MNC name="Union Telephone Company" id="020"/>
+		<MNC name="Centennial Communications" id="030"/>
+		<MNC name="ETEX Communications dba ETEX Wireless" id="035"/>
+		<MNC name="MTA Communications dba MTA Wireless" id="040"/>
+		<MNC name="Alaska Communications" id="050"/>
+		<MNC name="Consolidated Telcom" id="060"/>
+		<MNC name="AT&amp;T" id="070"/>
+		<MNC name="Corr Wireless Communications LLC" id="080"/>
+		<MNC name="Cricket Communications" id="090"/>
+		<MNC name="New Mexico RSA 4 East Ltd. Partnership" id="100"/>
+		<MNC name="Pacific Telecom Inc" id="110"/>
+		<MNC name="Sprintcom Inc" id="120"/>
+		<MNC name="Carolina West Wireless" id="130"/>
+		<MNC name="GTA Wireless LLC" id="140"/>
+		<MNC name="Cingular Wireless" id="150"/>
+		<MNC name="T-Mobile USA" id="160"/>
+		<MNC name="Cingular Wireless" id="170"/>
+		<MNC name="West Central Wireless" id="180"/>
+		<MNC name="Alaska Wireless Communications LLC" id="190"/>
+		<MNC name="T-Mobile USA" id="200"/>
+		<MNC name="T-Mobile USA" id="210"/>
+		<MNC name="T-Mobile USA" id="220"/>
+		<MNC name="T-Mobile USA" id="230"/>
+		<MNC name="T-Mobile USA" id="240"/>
+		<MNC name="T-Mobile USA" id="250"/>
+		<MNC name="T-Mobile USA" id="260"/>
+		<MNC name="T-Mobile USA" id="270"/>
+		<MNC name="Contennial Puerto Rio License Corp." id="280"/>
+		<MNC name="NEP Cellcorp Inc." id="290"/>
+		<MNC name="Blanca Telephone Company" id="300"/>
+		<MNC name="T-Mobile USA" id="310"/>
+		<MNC name="Smith Bagley Inc, dba Cellular One" id="320"/>
+		<MNC name="AWCC" id="330"/>
+		<MNC name="High Plains Midwest LLC, dba Westlink Communications" id="340"/>
+		<MNC name="Mohave Cellular L.P." id="350"/>
+		<MNC name="Cellular Network Partnership dba Pioneer Cellular" id="360"/>
+		<MNC name="Docomo Pacific Inc" id="370"/>
+		<MNC name="New Cingular Wireless PCS, LLC" id="380"/>
+		<MNC name="TX-11 Acquistion LLC" id="390"/>
+		<MNC name="Wave Runner LLC" id="400"/>
+		<MNC name="Cingular Wireless" id="410"/>
+		<MNC name="Cincinnati Bell Wireless LLC" id="420"/>
+		<MNC name="GCI Communications Corp" id="430"/>
+		<MNC name="Numerex Corp" id="440"/>
+		<MNC name="North East Cellular Inc." id="450"/>
+		<MNC name="Newcore Wireless" id="460"/>
+		<MNC name="nTELOS Communications Inc" id="470"/>
+		<MNC name="Choice Phone LLC" id="480"/>
+		<MNC name="T-Mobile USA" id="490"/>
+		<MNC name="Public Service Cellular, Inc." id="500"/>
+		<MNC name="Nsighttel Wireless Inc" id="510"/>
+		<MNC name="Transactions Network Services" id="520"/>
+		<MNC name="Iowa Wireless Services LLC" id="530"/>
+		<MNC name="Oklahoma Western Telephone Company" id="540"/>
+		<MNC name="Wireless Solutions International" id="550"/>
+		<MNC name="AT&amp;T" id="560"/>
+		<MNC name="MTPCS LLC" id="570"/>
+		<MNC name="Inland Cellular Telephone Company" id="580"/>
+		<MNC name="Verizon Wireless" id="590"/>
+		<MNC name="New Cell Inc. dba Cellcom" id="600"/>
+		<MNC name="Elkhart Telephone Co. Inc. dba Epic Touch Co." id="610"/>
+		<MNC name="Nsighttel Wireless Inc" id="620"/>
+		<MNC name="Airadigm Communications" id="640"/>
+		<MNC name="Jasper Wireless Inc." id="650"/>
+		<MNC name="T-Mobile USA" id="660"/>
+		<MNC name="AT&amp;T Mobility Vanguard Services" id="670"/>
+		<MNC name="AT&amp;T" id="680"/>
+		<MNC name="Keystone Wireless LLC" id="690"/>
+		<MNC name="Cross Valiant Cellular Partnership" id="700"/>
+		<MNC name="Arctic Slope Telephone Association Cooperative" id="710"/>
+		<MNC name="Wireless Solutions International Inc." id="720"/>
+		<MNC name="US Cellular" id="730"/>
+		<MNC name="Convey Communications Inc" id="740"/>
+		<MNC name="East Kentucky Network LLC dba Appalachian Wireless" id="750"/>
+		<MNC name="Lynch 3G Communications Corporation" id="760"/>
+		<MNC name="Iowa Wireless Services LLC dba I Wireless" id="770"/>
+		<MNC name="D.D. Inc" id="780"/>
+		<MNC name="PinPoint Communications Inc." id="790"/>
+		<MNC name="T-Mobile USA" id="800"/>
+		<MNC name="LCFR LLC" id="810"/>
+		<MNC name="South Canaan Cellular Communications Co. LP" id="820"/>
+		<MNC name="Clearwire Corporation" id="830"/>
+		<MNC name="Telecom North America Mobile Inc" id="840"/>
+		<MNC name="Aeris Communications, Inc." id="850"/>
+		<MNC name="TX RSA 15B2, LP dba Five Star Wireless" id="860"/>
+		<MNC name="Kaplan Telephone Company Inc." id="870"/>
+		<MNC name="Advantage Cellular Systems, Inc." id="880"/>
+		<MNC name="Verizon Wireless" id="890"/>
+		<MNC name="Cable &amp; Communications Corporation dba Mid-Rivers Wireless" id="900"/>
+		<MNC name="Verizon Wireless" id="910"/>
+		<MNC name="James Valley Wireless LLC" id="920"/>
+		<MNC name="Copper Valley Wireless" id="930"/>
+		<MNC name="Iris Wireless LLC" id="940"/>
+		<MNC name="Texas RSA 1 dba XIT Wireless" id="950"/>
+		<MNC name="UBET Wireless" id="960"/>
+		<MNC name="Globalstar USA" id="970"/>
+		<MNC name="Texas RSA 7B3 dba Peoples Wireless Services" id="980"/>
+		<MNC name="Worldcall Interconnect" id="990"/>
+		<MNC name="Mid-Tex Cellular Ltd." id="000"/>
+		<MNC name="Chariton Valley Communications Corp., Inc." id="010"/>
+		<MNC name="Missouri RSA No. 5 Partnership" id="020"/>
+		<MNC name="Indigo Wireless, Inc." id="030"/>
+		<MNC name="Commnet Wireless LLC" id="040"/>
+		<MNC name="Thumb Cellular Limited Partnership" id="050"/>
+		<MNC name="Space Data Corporation" id="060"/>
+		<MNC name="Wisconsin RSA #7 Limited Partnership" id="070"/>
+		<MNC name="Pine Telephone Company dba Pine Cellular" id="080"/>
+		<MNC name="LongLines Wireless" id="090"/>
+		<MNC name="Nex-Tech Wireless LLC" id="100"/>
+		<MNC name="Verizon Wireless" id="110"/>
+		<MNC name="Choice Phone LLC" id="120"/>
+		<MNC name="Light Squared LP" id="130"/>
+		<MNC name="Cross Telephone Company" id="140"/>
+		<MNC name="Wilkes Cellular Inc." id="150"/>
+		<MNC name="Light Squared LP" id="160"/>
+		<MNC name="PetroCom LLC" id="170"/>
+		<MNC name="Cingular Wireless, Licensee Pacific Telesis Mobile Services, LLC" id="180"/>
+		<MNC name="Cellular Properties Inc." id="190"/>
+		<MNC name="ARINC" id="200"/>
+		<MNC name="Emery Telecom-Wireless Inc" id="210"/>
+		<MNC name="United States Cellular" id="220"/>
+		<MNC name="Cellular South Inc" id="230"/>
+		<MNC name="Cordova Wireless Communications Inc" id="240"/>
+		<MNC name="Wave Runner LLC" id="250"/>
+		<MNC name="Clearwire Corporation" id="260"/>
+		<MNC name="Verizon Wireless" id="270"/>
+		<MNC name="Verizon Wireless" id="271"/>
+		<MNC name="Verizon Wireless" id="272"/>
+		<MNC name="Verizon Wireless" id="273"/>
+		<MNC name="Verizon Wireless" id="274"/>
+		<MNC name="Verizon Wireless" id="275"/>
+		<MNC name="Verizon Wireless" id="276"/>
+		<MNC name="Verizon Wireless" id="277"/>
+		<MNC name="Verizon Wireless" id="278"/>
+		<MNC name="Verizon Wireless" id="279"/>
+		<MNC name="Verizon Wireless" id="280"/>
+		<MNC name="Verizon Wireless" id="281"/>
+		<MNC name="Verizon Wireless" id="282"/>
+		<MNC name="Verizon Wireless" id="283"/>
+		<MNC name="Verizon Wireless" id="284"/>
+		<MNC name="Verizon Wireless" id="285"/>
+		<MNC name="Verizon Wireless" id="286"/>
+		<MNC name="Verizon Wireless" id="287"/>
+		<MNC name="Verizon Wireless" id="288"/>
+		<MNC name="Verizon Wireless" id="289"/>
+		<MNC name="Pinpoint Wireless Inc." id="290"/>
+		<MNC name="Nexus Communications Inc" id="300"/>
+		<MNC name="Leaco Rural Telephone Company Inc" id="310"/>
+		<MNC name="Commnet Wireless LLC" id="320"/>
+		<MNC name="Bug Tussel Wireless LLC" id="330"/>
+		<MNC name="Illinois Valley Cellular" id="340"/>
+		<MNC name="Sagebrush Cellular Inc dba Nemont" id="350"/>
+		<MNC name="Stelera Wireless LLC" id="360"/>
+		<MNC name="GCI Communications Corp" id="370"/>
+		<MNC name="New Dimension Wireless Ltd" id="380"/>
+		<MNC name="Verizon Wireless" id="390"/>
+		<MNC name="Iowa RSA No. 2 Limited Partnership" id="410"/>
+		<MNC name="Northwest Missouri Cellular Limited Partnership" id="420"/>
+		<MNC name="RSA 1 Limited Partnership dba Cellular 29 Plus" id="430"/>
+		<MNC name="Bluegrass Cellular LLC" id="440"/>
+		<MNC name="Panhandle Telecommunication Systems Inc." id="450"/>
+		<MNC name="Fisher Wireless Services Inc" id="460"/>
+		<MNC name="Vitelcom Cellular Inc dba Innovative Wireless" id="470"/>
+		<MNC name="Verizon Wireless" id="480"/>
+		<MNC name="Verizon Wireless" id="481"/>
+		<MNC name="Verizon Wireless" id="482"/>
+		<MNC name="Verizon Wireless" id="483"/>
+		<MNC name="Verizon Wireless" id="484"/>
+		<MNC name="Verizon Wireless" id="485"/>
+		<MNC name="Verizon Wireless" id="486"/>
+		<MNC name="Verizon Wireless" id="487"/>
+		<MNC name="Verizon Wireless" id="488"/>
+		<MNC name="Verizon Wireless" id="489"/>
+		<MNC name="Sprintcom Inc" id="490"/>
+		<MNC name="Mosaic Telecom Inc" id="500"/>
+		<MNC name="Light Squared LP" id="510"/>
+		<MNC name="Light Squared LP" id="520"/>
+		<MNC name="Newcore Wireless LLC" id="530"/>
+		<MNC name="Proximiti Mobility Inc" id="540"/>
+		<MNC name="Commnet Midwest LLC" id="550"/>
+		<MNC name="OTZ Communications Inc" id="560"/>
+		<MNC name="Bend Cable Communications LLC" id="570"/>
+		<MNC name="United States Cellular" id="580"/>
+		<MNC name="California RSA No3 Ltd Partnership dba Golden State Cellular" id="590"/>
+		<MNC name="Cox TMI Wireless LLC" id="600"/>
+		<MNC name="North Dakota Network Co." id="610"/>
+		<MNC name="Terrestar Networks Inc" id="620"/>
+		<MNC name="Corr Wireless Communications" id="630"/>
+		<MNC name="Standing Rock Telecommunications" id="640"/>
+		<MNC name="United Wireless Inc" id="650"/>
+		<MNC name="Metro PCS Wireless Inc" id="660"/>
+		<MNC name="Pine Belt Cellular Inc dba Pine Belt Wireless" id="670"/>
+		<MNC name="GreenFly LLC" id="680"/>
+		<MNC name="TeleBeeper of New Mexico Inc" id="690"/>
+		<MNC name="TotalSolutions Telecom LLC" id="700"/>
+		<MNC name="Northeast Wireless Networks LLC" id="710"/>
+		<MNC name="Maine PCS LLC" id="720"/>
+		<MNC name="Proximiti Mobility Inc" id="730"/>
+		<MNC name="Telalaska Cellular" id="740"/>
+		<MNC name="NetAmerica Alliance LLC" id="750"/>
+		<MNC name="Edigen Inc" id="760"/>
+		<MNC name="Radio Mobile Access Inc" id="770"/>
+		<MNC name="Bluegrass Cellular LLC" id="800"/>
+		<MNC name="Blegrass Cellular LLC" id="810"/>
+		<MNC name="Kineto Wireless Inc" id="820"/>
+		<MNC name="Thumb Cellular LLC" id="830"/>
+		<MNC name="Nsight Spectrum LLC" id="840"/>
+		<MNC name="Nsight Spectrum LLC" id="850"/>
+		<MNC name="Uintah Basin Electronic Telecommunications" id="860"/>
+		<MNC name="Sprintcom Inc" id="870"/>
+		<MNC name="Sprintcom Inc" id="880"/>
+		<MNC name="Globecom Network Services Corporation" id="890"/>
+		<MNC name="Gigsky Inc." id="900"/>
+		<MNC name="SI Wireless LLC" id="910"/>
+		<MNC name="Missouri RSA No 5 Partnership dba Charlton Valley Wireless Services" id="920"/>
+		<MNC name="Clearwire Corporation" id="940"/>
+		<MNC name="Sunman Telecommunications corp." id="950"/>
+		<MNC name="Lycamobile USA Inc" id="960"/>
+		<MNC name="Big River Broadband LLC" id="970"/>
+		<MNC name="LigTel Communications" id="980"/>
+		<MNC name="VTel Wireless" id="990"/>
+		<MNC name="Charlton Valley Communication Corporation Inc" id="010"/>
+		<MNC name="Infrastructure Networks LLC" id="020"/>
+		<MNC name="Cross Wireless" id="030"/>
+		<MNC name="Custer Telephone Cooperative Inc" id="040"/>
+		<MNC name="Fuego Wireless LLC" id="050"/>
+		<MNC name="CoverageCo" id="060"/>
+		<MNC name="Adams Networks Inc" id="070"/>
+		<MNC name="South Georgia Regional Information Technology Authority" id="080"/>
+		<MNC name="Allied Wireless Communications Corporation" id="090"/>
+		<MNC name="ClearSky Technologies Inc" id="100"/>
+		<MNC name="Texas Energy Network LLC" id="110"/>
+		<MNC name="East Kentucky Network LLC dba Appalachian Wireless" id="120"/>
+		<MNC name="East Kentucky Network LLC dba Appalachian Wireless" id="130"/>
+		<MNC name="Cleveland Unlimited Inc" id="140"/>
+		<MNC name="Northwest Cell" id="150"/>
+		<MNC name="RSA1 Limited Partnership dba Chat Mobility" id="160"/>
+		<MNC name="Iowa RSA No. 2 Limited Partnership" id="170"/>
+		<MNC name="Keystone Wireless LLC" id="180"/>
+		<MNC name="Sprint-Nextel Communications Inc" id="190"/>
+		<MNC name="Voyager Mobility LLC" id="200"/>
+		<MNC name="Assigned to Public  Safety" id="100"/>
+		<MNC name="Sprint-Nextel Communications Inc" id="010"/>
+		<MNC name="Southern Communications Services Inc." id="011"/>
+	</MCC>
+	<MCC id="748" name="Uruguay" size="2">
+		<MNC name="Ancel - TDMA" id="00"/>
+		<MNC name="Ancel - GSM" id="01"/>
+		<MNC name="Ancel" id="03"/>
+		<MNC name="Movistar" id="07"/>
+		<MNC name="CTI Móvil" id="10"/>
+	</MCC>
+	<MCC id="434" name="Uzbekistan" size="2">
+		<MNC name="Buztel" id="01"/>
+		<MNC name="Uzmacom" id="02"/>
+		<MNC name="Daewoo Unitel" id="04"/>
+		<MNC name="Coscom" id="05"/>
+		<MNC name="Uzdunrobita" id="07"/>
+	</MCC>
+	<MCC id="541" name="Vanuatu" size="2">
+		<MNC name="SMILE" id="01"/>
+		<MNC name="Digicel Vanuatu" id="05"/>
+		<MNC name="WANTOK" id="07"/>
+	</MCC>
+	<MCC id="734" name="Venezuela (Bolivarian Republic of)" size="2">
+		<MNC name="Corporación Digitel" id="02"/>
+		<MNC name="GALAXY ENTERTAINMENT DE VENEZUELA C.A." id="03"/>
+		<MNC name="Telcel, C.A." id="04"/>
+		<MNC name="Telecomunicaciones Movilnet, C.A." id="06"/>
+	</MCC>
+	<MCC id="452" name="Viet Nam" size="2">
+		<MNC name="Mobifone" id="01"/>
+		<MNC name="Vinaphone" id="02"/>
+		<MNC name="S Telecom (CDMA)" id="03"/>
+		<MNC name="Viettel" id="04"/>
+		<MNC name="EVN Telecom" id="06"/>
+		<MNC name="Beeline VN/GTEL Mobile JSC" id="07"/>
+		<MNC name="EVN Telecom" id="08"/>
+	</MCC>
+	<MCC id="543" name="Wallis and Futuna" size="2">
+		<MNC name="Manuia" id="01"/>
+	</MCC>
+	<MCC id="421" name="Yemen" size="2">
+		<MNC name="Yemen Mobile Phone Company" id="01"/>
+		<MNC name="Spacetel Yemen" id="02"/>
+		<MNC name="Y-Telecom" id="04"/>
+	</MCC>
+	<MCC id="645" name="Zambia" size="2">
+		<MNC name="Celtel Zambia Ltd." id="01"/>
+		<MNC name="Telecel Zambia Ltd." id="02"/>
+		<MNC name="Zamtel" id="03"/>
+	</MCC>
+	<MCC id="648" name="Zimbabwe" size="2">
+		<MNC name="Net One" id="01"/>
+		<MNC name="Telecel" id="03"/>
+		<MNC name="Econet" id="04"/>
+	</MCC>
+	<MCC id="901" name="International Mobile, shared codec" size="2">
+		<MNC name="ICO Global Communications" id="01"/>
+		<MNC name="Iridium Communications Inc" id="03"/>
+		<MNC name="Thuraya RMSS Network" id="05"/>
+		<MNC name="Thuraya Satellite Telecommunications Company" id="06"/>
+		<MNC name="Asia Cellular Satellite (AceS)" id="10"/>
+		<MNC name="Inmarsat Ltd." id="11"/>
+		<MNC name="Maritime Communications Partner AS (MCP network)" id="12"/>
+		<MNC name="BebbiCell AG" id="13"/>
+		<MNC name="AeroMobile AS" id="14"/>
+		<MNC name="OnAir" id="15"/>
+		<MNC name="Jasper Wireless, Inc" id="16"/>
+		<MNC name="Jersey Telecom" id="17"/>
+		<MNC name="Cingular Wireless" id="18"/>
+		<MNC name="Vodafone Malta (Vodafone Group)" id="19"/>
+		<MNC name="Intermatica" id="20"/>
+		<MNC name="Wins Limited (former Seanet Maritime Communications AB)" id="21"/>
+		<MNC name="MediaLincc Ltd" id="22"/>
+		<MNC name="Beeline" id="23"/>
+		<MNC name="Voxbone SA" id="24"/>
+		<MNC name="Telecom Italia" id="26"/>
+		<MNC name="Onair" id="27"/>
+		<MNC name="Vodafone Group" id="28"/>
+		<MNC name="Telenor Connexion AB" id="29"/>
+		<MNC name="France Telecom Orange" id="31"/>
+		<MNC name="Megafon" id="32"/>
+		<MNC name="Smart Communications, Inc" id="33"/>
+		<MNC name="Tyntec Limited" id="34"/>
+		<MNC name="Globecomm Network Services" id="35"/>
+		<MNC name="Azerfon LLC" id="36"/>
+		<MNC name="TRANSATEL" id="37"/>
+		<MNC name="Multiregional TransitTelecom (MTT)" id="38"/>
+		<MNC name="MTX Connect Ltd" id="39"/>
+		<MNC name="Deutsche Telekom AG" id="40"/>
+		<MNC name="BodyTrace Netherlands B.V." id="41"/>
+		<MNC name="DCN Hub ehf" id="42"/>
+		<MNC name="EMnify GmbH" id="43"/>
+		<MNC name="AT&amp;T, Inc." id="44"/>
+		<MNC name="Advanced Wireless Network Company Limited" id="45"/>
+		<MNC name="Telecom26 AG" id="46"/>
+		<MNC name="Ooredoo" id="47"/>
+		<MNC name="Communication for Devices in Sweden AB" id="48"/>
+		<MNC name="Zain Kuwait" id="49"/>
+		<MNC name="Sawatch Limited/EchoStar Mobile Limited" id="50"/>
+		<MNC name="VisionNG" id="51"/>
+		<MNC name="Manx Telecom Trading Ltd." id="52"/>
+		<MNC name="Deutsche Telekom AG" id="53"/>
+		<MNC name="UN Office for the Coordination of Humanitarian Affairs (OCHA)" id="88"/>
+	</MCC></Database>

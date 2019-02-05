@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.navigon.navigator*navigon.db" type="database">
+        <sql cmd="SELECT rowid, route_id, currentTime, latitude, longitude, elevation FROM trip_log_route_positions;">
+            <type text="Navigon Navigator [trip_log_route_positions]" category="Locations"/>
+            <package>
+                <field addfields="Route:{%1}"/>
+            </package>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}" int=""/>
+                <field addfields="Elevation: {%5}"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, address, time_stamp, latitude, longitude, address2 FROM recents;">
+            <type text="Navigon Navigator [recents]" category="Locations"/>
+            <package>
+                <field addfields="Address:{%1}"/>
+            </package>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}"/>
+                <field addfields="Address2: {%5}"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

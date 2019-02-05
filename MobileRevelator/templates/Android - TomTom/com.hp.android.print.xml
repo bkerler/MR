@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.hp.android.print/databases/job" type="database">
+        <sql cmd="SELECT rowid, created, status, printer_name, printer_model from local_job;">
+            <type text="HP Print Job" category="Media"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Status: {%2};"/>
+                <field addfields="Printername: {%3};"/>
+                <field addfields="Printermodel/IP: {%4};"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

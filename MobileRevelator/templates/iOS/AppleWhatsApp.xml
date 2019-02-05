@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+    <Template table="ZWAMESSAGE" database="select * from ZWAMESSAGE, ZWAMEDIAITEM, ZWACHATSESSION where (ZWAMESSAGE.ZMEDIAITEM=ZWAMEDIAITEM.Z_PK) and (ZWAMESSAGE.ZCHATSESSION=ZWACHATSESSION.Z_PK);" name="WhatsApp" path="ChatStorage.sqlite">
+        <column id="ZISFROMME (int)" type="textreplace">
+            <r replace="1" with="sent"/>
+            <r replace="0" with="received"/>
+        </column>
+        <column id="ZMESSAGEDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ZLASTMESSAGEDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+    </Template>
+</Items>

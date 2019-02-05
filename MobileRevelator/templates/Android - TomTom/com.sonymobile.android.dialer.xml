@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sonymobile.android.dialer/databases/dialer.db" type="database">
+        <sql cmd="SELECT rowid, phone_number, display_name, last_smartdial_update_time, times_used from smartdial_table;">
+            <type text="Sony Smartdial Outgoing" category="Calls"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Times used:{%4}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

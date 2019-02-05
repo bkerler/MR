@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template database="select rowid, address, read, date, body, type from sms_tb;" name="Huawei SMS" path="sms.db">
+    <column id="date (QString)" type="sqlcmd">
+        <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+    </column>
+    <column id="phone (QString)"/>
+    <column id="name (QString)"/>
+</Template>
+
+<Timeline path="/sms.db" type="database">
+        <sql cmd="select rowid, address, read, date, body, type from sms_tb;">
+            <type text="Huawei SMS" category="Messenger">
+                <field addfields="[type:{%5}]" replace="1=Incoming;2=Outgoing;3=Draft;5=Rejected"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}" replace="1=yes;0=no"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias/>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>

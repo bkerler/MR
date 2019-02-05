@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="larry.zou.colorfullife/databases/ColorfullifeDatabase" type="database">
+        <sql cmd="SELECT rowid, TITLE, URL, UPDATED, TYPE, ACCESS FROM PICASA_ALBUM;">
+            <type text="Colorfullife Picasa" category="Uploads"/>
+            <package field="{%4}"/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="[URL: {%2},"/>
+                <field addfields="Title: {%1},"/>
+                <field addfields="Access: {%5}]"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

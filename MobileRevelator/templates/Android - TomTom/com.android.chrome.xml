@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.android.chrome/app_chrome/Default/History" type="database">
+        <sql cmd="select visits.rowid, urls.url, urls.title, urls.visit_count, visits.visit_time from urls LEFT OUTER JOIN visits ON visits.url=urls.id;">
+            <type text="Google Chrome History" category="Browser"/>
+            <package>
+                <field addfields="&quot;{%2}&quot;"/>
+            </package>
+            <timestamp field="{%4}" int="/1000000-11644473600"/>
+            <duration/>
+            <desc>
+                <field addfields="Url:&quot;{%1}&quot;;"/>
+                <field addfields="Visits:{%3};"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT keyword_search_terms.rowid, keyword_search_terms.term, urls.url, urls.last_visit_time FROM keyword_search_terms LEFT OUTER JOIN urls ON urls.id=keyword_search_terms.url_id;">
+            <type text="Chrome Search" category="Searches"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000000-11644473600"/>
+            <duration/>
+            <desc>
+                <field addfields="Search:&quot;{%1}&quot;;"/>
+                <field addfields="Url:&quot;{%2}&quot;;"/>
+                <field addfields="Rowid:&quot;{%0}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, target_path, start_time, received_bytes, referrer FROM downloads;">
+            <type text="Chrome Downloads" category="Downloads"/>
+            <package/>
+            <timestamp field="{%2}" int="/1000000-11644473600"/>
+            <duration/>
+            <desc>
+                <field addfields="Filename:&quot;{%1}&quot;;"/>
+                <field addfields="Url:&quot;{%4}&quot;;"/>
+                <field addfields="Received Bytes:{%3}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+
+<Timeline path="com.android.chrome/app_chrome/Default/Cookies" type="database">
+        <sql cmd="SELECT rowid, host_key, path, creation_utc, last_access_utc FROM cookies;">
+            <type text="Chrome Cookies" category="Browser"/>
+            <package/>
+            <timestamp field="{%4}" int="/1000000-11644473600"/>
+            <duration/>
+            <desc>
+                <field addfields="Host:&quot;{%1}&quot;;"/>
+                <field addfields="Path:&quot;{%2}&quot;;"/>
+                <field addfields="Creation_Time:{%3}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+
+<Timeline path="com.android.chrome/app_chrome/Default/Offline Pages/metadata/OfflinePages.db" type="database">
+        <sql cmd="select rowid, last_access_time, access_count,  online_url, file_path, title from offlinepages_v1 where client_namespace=='download';">
+            <type text="Chrome Offline-Pages" category="Browser"/>
+            <package>
+                <field addfields="&quot;{%5}&quot;"/>
+            </package>
+            <timestamp field="{%1}" int="/1000000-11644473600"/>
+            <duration/>
+            <filename/>
+            <desc>
+                <field addfields="Filename:&quot;{%4}&quot;;"/>
+                <field addfields="Url:&quot;{%3}&quot;;"/>
+                <field addfields="Access-Count:{%2};"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+
+<Timeline path="/Offline Pages/archives/*.mhtml" type="raw">
+        <python run="android_filename.py">
+            <type text="Chrome Offline-Pages (Archive)" category="Browser"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+
+<Timeline path="com.android.chrome/app_chrome/Default/Bookmarks" type="raw">
+        <python run="android_chrome.py">
+            <type text="Chrome Bookmarks" category="Browser">
+                <field addfields="{%1}"/>
+            </type>
+            <filename>
+                <field addfields="{%6}"/>
+            </filename>
+            <package>
+                <field addfields="{%2}"/>
+            </package>
+            <timestamp field="{%3}" int="/1000000-11644473600"/>
+            <duration field="{%4}"/>
+            <desc>
+                <field addfields="{%5}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </python>
+</Timeline>
+     
+<Timeline path="com.android.chrome/app_chrome/Default/Sync Data/SyncData.sqlite3" type="database">
+        <python run="android_chrome_syncdata.py">
+            <type text="Google Chrome Sync Data" category="Browser"/>
+            <package>
+                <field addfields="&quot;{%1}&quot;"/>
+            </package>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+</Items>

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.tomtom.navkit/files/fav/locations.sqlite" type="raw">
+        <python run="tomtom_locations.py">
+            <type text="TomTom Locations" category="Locations"/>
+            <package>
+                <field addfields="{%5}"/>
+            </package>
+            <timestamp field="{%7}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <filename field="{%8}"/>
+            <deleted field="{%9}"/>
+        </python>
+</Timeline>
+<Timeline path="com.tomtom.navkit/files/local/PersonalNetwork.sqlite" type="raw">
+        <python run="tomtom_personalnetwork.py">
+            <type text="TomTom PersonalNetwork [Trips]" category="Locations"/>
+            <package>
+                <field addfields="Track:{%1}"/>
+            </package>
+            <timestamp field="{%2}" int=""/>
+            <duration/>
+            <desc/>
+            <location>
+                <field addfields="{%5} "/>
+                <field addfields="to {%8}"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <filename field="{%9}"/>
+            <deleted field="{%10}"/>
+        </python>
+</Timeline>
+<Timeline path="com.tomtom.navkit/files/tracks/tracks.sqlite" type="raw">
+        <python run="tomtom_tracks.py">
+            <type text="TomTom Tracks" category="Locations"/>
+            <package>
+                <field addfields="Track:{%1};"/>
+            </package>
+            <timestamp field="{%3}" int=""/>
+            <duration/>
+            <desc/>
+            <location>
+                <field addfields="{%7} "/>
+                <field addfields="to {%10}"/>
+                <field addfields=",ended at:{%11}"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <filename field="{%12}"/>
+            <deleted field="{%13}"/>
+        </python>
+</Timeline>
+<Timeline path="com.tomtom.navkit/files/mapmatching.sqlite" type="raw">
+        <python run="tomtom_mapmatching.py">
+            <type text="TomTom MapMatching" category="Locations"/>
+            <package>
+                <field addfields="Track:{%1};"/>
+            </package>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="Heading:{%5}"/>
+            </desc>
+            <location>
+                <field latitude="{%3}" longitude="{%4}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <filename field="{%7}"/>
+            <deleted field="{%6}"/>
+        </python>
+</Timeline>
+<Timeline path="triplog-*.dat" type="raw">
+        <python run="Filenamecreator">
+            <type text="TomTom TripLog (TomTom)" category="Locations"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+<Timeline path="MapSettings*tlv" type="raw">
+        <python run="Filenamecreator">
+            <type text="android_filename.py" category="Locations"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+</Items>

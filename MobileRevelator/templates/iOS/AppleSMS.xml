@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+	<Template table="message" name="SMS Messages" path="sms.db">
+		<column id="flags (int)" type="textreplace">
+			<r replace="0" with="deleted"/>
+			<r replace="16387" with="unknown recieved"/>
+			<r replace="2" with="recieved"/>
+			<r replace="33" with="Send Failure"/>
+			<r replace="35" with="Send Failure with retries"/>
+			<r replace="3" with="sent"/>
+			<r replace="129" with="deleted"/>
+			<r replace="131" with="unknown"/>
+		</column>
+		<column id="is_madrid (int)" type="textreplace">
+			<r replace="1" with="yes"/>
+			<r replace="0" with="no"/>
+		</column>
+		<column id="date (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="read (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="madrid_date_read (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="madrid_date_delivered (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+	</Template>
+	<Template table="madrid_attachment" name="SMS Attachments" path="sms.db">
+		<column id="created_date (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="start_date (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="is_incoming (int)" type="textreplace">
+			<r replace="1" with="yes"/>
+			<r replace="0" with="no"/>
+		</column>
+	</Template>
+</Items>

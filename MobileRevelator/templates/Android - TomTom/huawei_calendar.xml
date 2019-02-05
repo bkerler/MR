@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="/calendar.db" type="database">
+        <sql cmd="select rowid, dtstart, (dtend-dtstart), title, description, eventLocation from Events_tb;">
+            <type text="Huawei Calendar" category="Calendar"/>
+            <package field="{%3}"/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration field="{%2}"/>
+            <desc>
+                <field addfields="Location:&quot;{%5}&quot;;"/>
+                <field addfields="Description:&quot;{%4}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

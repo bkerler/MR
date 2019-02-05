@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="de.halfreal.clipboardactions/databases/ClipboardActions" type="database">
+        <sql cmd="SELECT rowid, createDate, content, html from clips;">
+            <type text="ClipboardActions" category="Documents"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Content:&quot;{%2}&quot;;" unhtml="1"/>
+                <field addfields="HTML:&quot;{%3}&quot;;" unhtml="1"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

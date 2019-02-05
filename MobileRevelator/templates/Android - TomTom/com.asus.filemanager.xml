@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.asus.filemanager/databases/filemanager.db" type="database">
+        <sql cmd="SELECT rowid, file_path, modify_time, bitmap from thumbnail;">
+            <type text="Asus Filemanager Thumbnails" category="Media"/>
+            <package/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Path:&quot;{%1}/"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%3}"/>
+            </image>
+        </sql>
+        <sql cmd="SELECT rowid, _data, _display_name, date_opened from recentlyopen;">
+            <type text="Asus Filemanager Recently Open" category="Media"/>
+            <package>
+                <field addfields="&quot;{%2}&quot;"/>
+            </package>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Path:&quot;{%1}/"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

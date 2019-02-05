@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template table="MessageModel" deletemissingfields="true" name="Lovoo" path="LovooFlowDb.db">
+        <column id="attachmentLatitude (double)"/>
+        <column id="attachmentLongitude (double)"/>
+        <column id="attachmentPicture_id (QString)"/>
+        <column id="content (QString)"/>
+        <column id="direction (QString)"/>
+        <column id="gender (QString)"/>
+        <column id="id (QString)"/>
+        <column id="newMessage (int)"/>
+        <column id="time (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="messageType (QString)"/>
+        <column id="userId (QString)" type="sqlcmd">
+            <r cmd="SELECT UserModel.name FROM UserModel WHERE UserModel.id=='[%1]';"/>
+        </column>
+        <column id="conversationId (QString)"/>
+</Template>
+
+<Timeline path="net.lovoo.android/databases/LovooFlowDb.db" type="database">
+        <sql cmd="select MessageModel.rowid, MessageModel.userId, UserModel.name, MessageModel.attachmentLatitude,MessageModel.attachmentLongitude,MessageModel.content,MessageModel.direction,MessageModel.time,MessageModel.messageType from MessageModel OUTER LEFT JOIN UserModel ON MessageModel.userId==UserModel.id;">
+            <type text="Lovoo Messages" category="Messenger">
+                <field addfields="[Type:{%6}]"/>
+            </type>
+            <package/>
+            <timestamp field="{%7}" int=""/>
+            <duration/>
+            <desc>
+                <field addfields="Type:{%8};"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%5}"/>
+            </message>
+            <location>
+                <field latitude="{%3}" longitude="{%4}"/>
+            </location>
+        </sql>
+</Timeline>
+
+<Contacts path="net.lovoo.android/databases/LovooFlowDb.db" type="database">
+        <sql cmd="select rowid, id, name, gender, age, lastOnlineTime, whazzup, verified, currentLocationCity, currentLocationCountry, currentLocationLatitude, currentLocationLongitude, currentLocationDistance, iceBreakerConnectionState from UserModel;">
+            <type text="Lovoo"/>
+            <package/>
+            <timestamp field="{%5}" int=""/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <desc>
+                <field addfields="Gender:{%3};"/>
+                <field addfields="Age:{%4};"/>
+                <field addfields="Whazzup:{%6};"/>
+                <field addfields="Verified:{%7};"/>
+                <field addfields="IceBreakerConnectionState:{%13};"/>
+            </desc>
+            <location>
+                <field addfields="currentLocationCity:{%8}"/>
+                <field addfields="currentLocationCountry:{%9};"/>
+                <field addfields="currentLocationDistance:{%12};"/>
+                <field latitude="{%10}" longitude="{%11}"/>
+            </location>
+        </sql>
+</Contacts>
+
+</Items>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sonyericsson.organizer/databases/alarms.db" type="database">
+        <sql cmd="SELECT rowid, alarmtime, message from alarms;">
+            <type text="Sony Organizer Alarm" category="Calendar"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Message:&quot;{%2}&quot;;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

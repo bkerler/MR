@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.badoo.mobile/databases/Chaton.db" type="database">
+        <sql cmd="select MessagesCache.rowid, MessagesCache.fromUser, ConversationsCache.userName, MessagesCache.message, MessagesCache.imageUrl, MessagesCache.latitude, MessagesCache.longitude, MessagesCache.created, MessagesCache.type, MessagesCache.video_call_duration, MessagesCache.video_call_first_status_text from MessagesCache OUTER LEFT JOIN ConversationsCache ON ConversationsCache.userId==MessagesCache.fromUser;">
+            <type text="Badoo Messages" category="Messenger">
+                <field addfields="[Type:{%8}]" replace="1=Message;4=Picture"/>
+            </type>
+            <package/>
+            <timestamp field="{%7}" int="/1000"/>
+            <duration>
+                <field addfields="Video_Call:{%9}"/>
+            </duration>
+            <desc>
+                <field addfields="Imageurl:{%4};"/>
+                <field addfields="Video_Call_First_Status_Text:{%10}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%3}"/>
+            </message>
+            <location>
+                <field latitude="{%5}" longitude="{%6}"/>
+            </location>
+        </sql>
+</Timeline>
+
+<Contacts path="com.badoo.mobile/databases/Chaton.db" type="database">
+        <sql cmd="select rowid, userId, updatedTimestamp, userName, userImageUrl, location from ConversationsCache;">
+            <type text="Badoo"/>
+            <package/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <desc>
+                <field addfields="UserImageUrl:{%4};"/>
+            </desc>
+            <location>
+                <field addfields="{%5}"/>
+            </location>
+        </sql>
+</Contacts>
+</Items>

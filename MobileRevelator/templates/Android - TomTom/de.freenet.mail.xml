@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template table="mail" database="select mail.id, mail.[from], mail.[to], mail.subject, mail_body.html, mail_body.plain, mail.received_date, mail.folder_id, mail.has_attachment, attachment.name from mail, mail_body LEFT OUTER JOIN attachment ON attachment.mail == mail._id where mail.id == mail_body._id;" name="Freenet" path="mail.db">
+        <column id="id (QString)"/>
+        <column id="received_date (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="folder_id (QString)"/>
+        <column id="from (QString)"/>
+        <column id="to (QString)"/>
+        <column id="subject (QString)"/>
+        <column id="html (QString)"/>
+        <column id="size (int)"/>
+        <column id="has_attachment (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+</Template>
+
+<Timeline path="de.freenet.mail/databases/mail.db" type="database">
+        <python run="android_freenet.py">
+            <type text="Freenet EMail" category="EMails"/>
+            <package>
+                <field addfields="Subject:&quot;{%5}&quot;"/>
+            </package>
+            <timestamp field="{%7}" int=""/>
+            <duration/>
+            <desc>
+                <field addfields="From:&quot;{%1}&quot;"/>
+                <field addfields="&lt;{%2}&gt;;"/>
+                <field addfields="To:&quot;{%3}&quot;"/>
+                <field addfields="&lt;{%4}&gt;;"/>
+                <field addfields="Folder: {%7}"/>
+                <field addfields="Attachments: {%8}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%6}"/>
+            </message>
+        </python>
+</Timeline>
+</Items>

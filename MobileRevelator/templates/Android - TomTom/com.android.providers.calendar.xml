@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.android.providers.calendar/databases/calendar.db" type="database">
+        <sql cmd="SELECT rowid, title, eventLocation, description, dtstart, (dtend-dtstart) from Events;">
+            <type text="Android Calendar" category="Calendar"/>
+            <package field="{%1}"/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration field="{%5}"/>
+            <desc>
+                <field addfields="Location:&quot;{%2}&quot;;"/>
+                <field addfields="Description:&quot;{%3}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template table="messages" deletemissingfields="true" name="GoldWhatsApp Messages" path="msgstore.db">
+        <column id="key_remote_jid (QString)"/>
+        <column id="key_from_me (int)" type="textreplace">
+            <r replace="1" with="sent"/>
+            <r replace="0" with="received"/>
+        </column>
+        <column id="data (QString)"/>
+        <column id="timestamp (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="data_mime_type (QString)"/>
+        <column id="media_size (int)"/>
+        <column id="media_name (QString)"/>
+        <column id="media_caption (QString)"/>
+        <column id="media_duration (int)"/>
+        <column id="latitude (double)"/>
+        <column id="longitude (double)"/>
+        <column id="remote_resource (QString)"/>
+        <column id="received_timestamp (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="send_timestamp (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="receipt_server_timestamp (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="receipt_device_timestamp (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="read_device_timestamp (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="raw_data (QByteArray)"/>
+        <column id="recipient_count (int)"/>
+</Template>
+    
+<Timeline path="com.gbwhatsapp*/files/Logs*.log" type="raw">
+        <python run="android_whatsapplog.py">
+            <type text="WhatsApp3Plus Log" category="Usage"/>
+            <package>
+                <field addfields="{%0}"/>
+            </package>
+            <filename>
+                <field addfields="{%3}"/>
+            </filename>
+            <timestamp field="{%1}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </python>
+</Timeline>    
+    
+<Timeline path="com.gbwhatsapp*/files/Logs*.log.gz" type="raw">
+        <python run="android_whatsapplog.py">
+            <type text="WhatsApp3Plus Log" category="Usage"/>
+            <package>
+                <field addfields="{%0}"/>
+            </package>
+            <filename>
+                <field addfields="{%3}"/>
+            </filename>
+            <timestamp field="{%1}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </python>
+</Timeline>
+
+<Timeline path="com.gbwhatsapp*/databases/msgstore.db" type="database">
+        <attach database="com.gbwhatsapp*/databases/wa.db" alias="wa"/>
+        <python run="android_whatsapp.py">
+            <type text="WhatsApp3Plus" category="Messenger">
+                <field addfields="{%11} "/>
+                <field addfields="[Type:{%5}]" replace="0=Incoming;1=Sent"/>
+            </type>
+            <package>
+                <field addfields="Group: {%4}"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration field="{%8}" int="*1000"/>
+            <desc>
+                <field addfields="Caption:&quot;{%9}&quot;;"/>
+                <field addfields="{%7}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%6}"/>
+            </message>
+            <image>
+                <field addfields="{%10}"/>
+            </image>
+            <deleted filename="{%13}">
+                <field addfields="{%12}"/>
+            </deleted>
+        </python>
+        <sql cmd="SELECT rowid, latitude, longitude, received_timestamp, media_url, media_name, raw_data FROM messages where latitude!=0;">
+            <type text="GoldWhatsApp Media" category="Locations"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <location>
+                <field latitude="{%1}" longitude="{%2}" int=""/>
+            </location>
+            <desc>
+                <field addfields="Url:{%4}"/>
+                <field addfields=";Name:{%5}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%6}"/>
+            </image>
+        </sql>
+</Timeline>
+
+<Timeline path="WhatsApp3Plus/Media/*.mp4" type="raw">
+        <python run="android_filename.py">
+            <type text="WhatsApp3Plus Videos" category="Media"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+
+<Timeline path="WhatsApp3Plus/Media/*.opus" type="raw">
+        <python run="android_filename.py">
+            <type text="WhatsApp3Plus VoiceNotes Opus" category="Media"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+
+<Timeline path="WhatsApp3Plus/Media/*.ogg" type="raw">
+        <python run="android_filename.py">
+            <type text="WhatsApp3Plus VoiceNotes OGG" category="Media"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+
+<Contacts path="com.gbwhatsapp*/databases/wa.db" type="database">
+    <sql cmd="select rowid, jid, status_timestamp, wa_name, display_name from wa_contacts where is_whatsapp_user==1;select rowid, jid, photo_id_timestamp, wa_name, display_name from wa_contacts where is_whatsapp_user==1;">
+        <type text="GoldWhatsApp"/>
+        <contact>
+            <field addfields="{%1}"/>
+        </contact>
+        <contact_alias>
+            <field addfields="{%3} "/>
+            <field addfields="[{%4}]"/>
+        </contact_alias>
+        <timestamp field="{%2}" int="/1000"/>
+    </sql>
+</Contacts>
+</Items>

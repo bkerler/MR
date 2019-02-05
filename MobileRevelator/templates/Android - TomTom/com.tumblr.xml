@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+   <Template table="posts" name="Tumblr" path="Tumblr.sqlite">
+      <column id="timestammp (QString)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+      <column id="updatetime (int)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+      <column id="liked (int)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+   </Template>
+   <Timeline path="com.tumblr/databases/tumblr*" type="database">
+        <sql cmd="select messaging_message.rowid, messaging_message.sender_blog_uuid, messaging_message.timestamp, messaging_message.text, user_blogs.name from messaging_message left outer join  user_blogs on messaging_message.sender_blog_uuid = user_blogs.uuid;">
+            <type text="Tumblr Messages" category="Messenger"/>
+            <package/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias>
+                 <field addfields="From: {%4} "/>
+            </contact_alias>
+            <message>
+                <field addfields="{%3}"/>
+            </message>
+        </sql>
+</Timeline> 
+</Items>

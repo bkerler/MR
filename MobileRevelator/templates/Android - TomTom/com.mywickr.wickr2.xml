@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+   <Template table="Wickr_Message" deletemissingfields="true" name="Wickr" path="decrypted.db">
+      <column id="_id (int)"/>
+      <column id="timestamp (int)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+      <column id="type (QString)">
+      </column>
+      <column id="msgIDs (QString)">
+      </column>
+      <column id="bodyText (QByteArray)">
+      </column>
+      <column id="isHidden (int)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+      <column id="senderUserID (QString)" type="sqlcmd">
+         <r cmd="SELECT userAlias FROM Wickr_User WHERE Wickr_User.userIDHash=='[%1]';"/>
+      </column>
+   </Template>
+</Items>

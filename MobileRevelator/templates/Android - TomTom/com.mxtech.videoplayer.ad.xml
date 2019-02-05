@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.mxtech.videoplayer.ad/databases/videos.db" type="database">
+        <sql cmd="select rowid, Directory, Size, FileName, LastModified from VideoFile;">
+            <type text="Mxtech Videoplayer Video" category="Media"/>
+            <package/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="[Size:{%2}, "/>
+                <field addfields="FileName:&quot;{%3}&quot;, "/>
+                <field addfields="Directory:{%1}]"/>
+            </desc>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+        <sql cmd="SELECT rowid, Time, Query FROM SearchHistory;">
+            <type text="Mxtech Videoplayer Search" category="Searches"/>
+            <package/>
+            <timestamp field="{%1}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="Search:&quot;{%2}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

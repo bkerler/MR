@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.greenleaf.android.translator.enes.a/databases/wotd" type="database">
+        <sql cmd="SELECT rowid, langFromPhrase, langToPhrase, wotdDate, langFrom, langTo FROM words;">
+            <type text="Greenleaf Translator" category="Other"/>
+            <package/>
+            <timestamp field="{%3}" format="yyyy-MM-dd"/>
+            <duration/>
+            <desc>
+                <field addfields="Translated [From:{%4},"/>
+                <field addfields="To:{%5}]"/>
+                <field addfields=": &quot;{%2}&quot;"/>
+            </desc>
+            <message>
+                <field addfields="{%1}"/>
+            </message>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

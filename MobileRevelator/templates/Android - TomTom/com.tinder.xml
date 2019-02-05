@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template table="messages" name="Tinder tinder.db" path="tinder.db">
+      <column id="user_id (QString)" type="sqlcmd">
+         <r cmd="SELECT matches.user_name FROM matches WHERE matches.user_id=='[%1]';"/>
+      </column>
+      <column id="match_id (QString)" type="sqlcmd">
+         <r cmd="SELECT matches.user_name FROM matches WHERE matches.id=='[%1]';"/>
+      </column>
+</Template>
+<Timeline path="com.tinder/databases/tinder.db" type="database">
+        <sql cmd="select messages.rowid, messages.created, matches.user_name, messages.text from messages INNER JOIN matches ON matches.id = messages.match_id;">
+            <type text="Tinder" category="Messenger"/>
+            <package/>
+            <timestamp field="{%1}" format="yyyy-MM-ddThh:mm:ss.zzzZ"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%3}"/>
+            </message>
+        </sql>
+</Timeline>
+<Timeline path="com.tinder/databases/tinder-3.db" type="database">
+        <sql cmd="select message.rowid, message.sent_date, message.from_id, match_person.name, message.text from message OUTER LEFT JOIN match_person ON match_person.id = message.from_id;">
+            <type text="Tinder" category="Messenger"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+        </sql>
+</Timeline>
+<Contacts path="com.tinder/databases/tinder.db" type="database">
+        <sql cmd="select rowid, user_id, last_activity, user_name from matches where user_id not null;">
+            <type text="Tinder"/>
+            <package/>
+            <timestamp field="{%2}" format="yyyy-MM-ddThh:mm:ss.zzzZ"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>    
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+<Contacts path="com.tinder/databases/tinder-3.db" type="database">
+        <sql cmd="select rowid, person_id, last_activity_date from match where person_id not null;">
+            <type text="Tinder"/>
+            <package/>
+            <timestamp field="{%2}" format="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>    
+            <contact_alias/>
+            <message/>
+        </sql>
+</Contacts>
+</Items>

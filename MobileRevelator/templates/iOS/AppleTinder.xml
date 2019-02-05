@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+   <Template table="ZMESSAGE" deletemissingfields="true" name="Tinder Tinder2.sqlite" path="Tinder2.sqlite">
+      <column id="ZCLIENTCREATED (QString)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+      <column id="ZCREATED (QString)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+      <column id="ZFROMUSERID (QString)" type="sqlcmd">
+         <r cmd="SELECT ZUSER.ZFIRSTNAME FROM ZUSER WHERE ZUSER.ZUSERID=='[%1]';"/>
+      </column>
+      <column id="ZVIEWED (int)" type="textreplace">
+     <r replace="1" with="yes"/>
+     <r replace="0" with="no"/>
+      </column>
+      <column id="ZHASERROR (int)" type="textreplace">
+     <r replace="1" with="yes"/>
+     <r replace="0" with="no"/>
+      </column>
+    <column id="ZTEXT (QString)"/>
+   </Template>
+</Items>

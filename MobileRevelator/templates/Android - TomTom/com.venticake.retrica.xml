@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.venticake.retrica/databases/RETRICA_THUMBNAIL.sqlite" type="database">
+        <sql cmd="SELECT rowid, thumbnail_image, uri FROM THUMBNAIL;">
+            <type text="Retrica Thumbnails" category="Media"/>
+            <package/>
+            <image>
+                <field addfields="{%1}"/>
+            </image>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="Path:&quot;{%2}&quot;;"/>
+            </desc>
+            <location/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template database="WITH CTE as (select _id,data1,last_time_contacted, times_contacted from raw_contacts_tb, data_tb as d2 where raw_contacts_tb._id==d2.raw_contact_id and d2.mimetype=='vnd.android.cursor.item/name') select data_tb.raw_contact_id, data_tb.data4, cte.data1, cte.last_time_contacted, cte.times_contacted from data_tb, cte where cte._id == data_tb.raw_contact_id and data_tb.data4 !='';" name="Huawei Calls" path="contact.db">
+    <column id="cte.last_time_contacted (int)" type="sqlcmd">
+        <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+    </column>
+    <column id="type (int)" type="textreplace">
+        <r replace="0" with="all"/>
+        <r replace="1" with="inbox"/>
+        <r replace="2" with="outgoing"/>
+        <r replace="3" with="missed"/>
+        <r replace="4" with="voicemail"/>
+        <r replace="5" with="rejected"/>
+        <r replace="6" with="blocked"/>
+    </column>
+</Template>
+
+<Contacts path="/contact.db" type="database">
+        <sql cmd="WITH CTE as (select _id,data1,last_time_contacted, times_contacted from raw_contacts_tb, data_tb as d2 where raw_contacts_tb._id==d2.raw_contact_id and d2.mimetype=='vnd.android.cursor.item/name') select data_tb.raw_contact_id, data_tb.data4, cte.data1, cte.last_time_contacted, cte.times_contacted from data_tb, cte where cte._id == data_tb.raw_contact_id and data_tb.data4 !='';">
+            <type text="Huawei Contact"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Times contacted: {%4}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>    
+            <message/>
+        </sql>
+</Contacts>
+</Items>

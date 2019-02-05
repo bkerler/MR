@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+	<Template table="Conversations" name="Skype Conversations" path="main.db">
+		<column id="is_bookmarked (int)" type="textreplace">
+			<r replace="1" with="yes"/>
+			<r replace="0" with="no"/>
+		</column>
+		<column id="live_is_muted (int)" type="textreplace">
+			<r replace="1" with="yes"/>
+			<r replace="0" with="no"/>
+		</column>
+		<column id="inbox_timestamp (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="creation_timestamp (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="last_activity_timestamp (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="consumption_horizon (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="history_horizon (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+	</Template>
+	<Template table="Chats" name="Skype Chats" path="main.db">
+		<column id="is_permanent (int)" type="textreplace">
+			<r replace="1" with="yes"/>
+			<r replace="0" with="no"/>
+		</column>
+		<column id="timestamp (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="activity_timestamp (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="last_change (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="first_unread_message (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+	</Template>
+	<Template table="Contacts" name="Skype Contacts" path="main.db">
+		<column id="is_permanent (int)" type="textreplace">
+			<r replace="1" with="yes"/>
+			<r replace="0" with="no"/>
+		</column>
+		<column id="profile_timestamp (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="avatar_timestamp (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="mood_timestamp (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="authreq_timestamp (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="lastonline_timestamp (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="lastused_timestamp (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+		<column id="lastused_networktime (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+	</Template>
+</Items>

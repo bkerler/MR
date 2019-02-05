@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.google.android.apps.maps/databases/gmm_storage.db" type="database">
+        <python run="android_google_map_storage.py">
+            <type text="Google Maps Directions" category="Locations"/>
+            <package>
+                <field addfields="Rowid:&quot;{%0}&quot;;"/>
+                <field addfields=" From: &quot;{%3},{%4}&quot;;"/>
+                <field addfields=" To: &quot;{%5},{%6}&quot;;"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Url: {%2};"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}" int=""/>
+                <field latitude="{%5}" longitude="{%6}" int=""/>
+            </location>
+        </python>
+</Timeline>
+</Items>

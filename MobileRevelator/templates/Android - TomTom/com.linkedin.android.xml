@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.linkedin.android/databases/linkedin.db" type="database">
+        <sql cmd="select rowid, subject, body, to_members, from_display_name, from_member_id, timestamp, folder, message_type, attachments from messages;">
+            <type text="LinkedIn" category="Messenger">
+                <field addfields="[Type:{%7},"/>
+                <field addfields="{%8}]"/>
+            </type>
+            <package>
+                <field addfields="Subject:&quot;{%1}&quot;;"/>
+                <field addfields="To:&quot;{%3}&quot;"/>
+            </package>
+            <timestamp field="{%6}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Attachment:&quot;{%9}&quot;;"/>
+            </desc>
+            <contact>
+                <field addfields="{%5}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%4}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%2}"/>
+            </message>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<PasswordXtract>
+	<Database>
+		<carver type="accounts.db"> <!-- AccountManager API -->
+			<fingerprint>empty;string;string;string</fingerprint>
+			<entry column="1" display="Username">
+				<regex/>
+			</entry>
+			<entry column="2" display="Description">
+				<regex><![CDATA[^([\p{L}]{2,4})[.]((?!/)[\p{L}\p{N}_$.][^/@]*)$]]></regex>
+			</entry>
+			<entry column="3" display="Password">
+				<regex/>
+			</entry>
+		</carver>
+		<carver type="webview.db"> <!-- WebView API -->
+			<fingerprint>empty;string;string;string</fingerprint>
+			<entry column="1" display="Description">
+				<regex><![CDATA[^(http|ftp)[s]?[://]?([a-zA-Z0-9.]*)$]]></regex>
+			</entry>
+			<entry column="2" display="Username">
+				<regex/>
+			</entry>
+			<entry column="3" display="Password">
+				<regex/>
+			</entry>
+		</carver>
+		<carver type="Login Data"> <!-- Chrome -->
+			<fingerprint>string;string;string;string;string;blob;string;string;int;int;int;int;int;int;blob;int;blob;int;string;string;string;int</fingerprint>
+			<entry column="0" display="Description">
+				<regex><![CDATA[^(http|ftp)[s]?://([a-zA-Z0-9.]*)(.*)$]]></regex>
+			</entry>
+			<entry column="3" display="Username">
+				<regex/>
+			</entry>
+			<entry column="5" display="Password">
+				<regex/>
+			</entry>
+			<entry column="10" display="Created">
+				<regex/>
+			</entry>
+		</carver>
+		<carver type="Web Data"> <!-- Chrome -->
+			<fingerprint>string;string;string;int;int;int</fingerprint>
+			<entry column="0" display="Description">
+				<regex><![CDATA[[\._]?(Password(.*)|pwd(.*)|passwd(.*))]]></regex>
+			</entry>
+			<entry column="1" display="Password">
+				<regex/>
+			</entry>
+			<entry column="3" display="Created">
+				<regex/>
+			</entry>
+		</carver>
+		<carver type="SyncData.sqlite3"> <!-- Chrome -->
+			<fingerprint>int;int;int;int;int;int;int;int;int;string;string;string;int;int;int;int;int;int;string;string;string;string;string;blob;blob;blob;blob;blob;blob;blob</fingerprint>
+			<entry column="18" display="Password">
+				<regex index="2"><![CDATA[[\._](password.*[|])(.*)]]></regex>
+			</entry>
+			<entry column="7" display="Created">
+				<regex/>
+			</entry>
+		</carver>
+		<carver type="prefs_db_1"> <!-- Facebook -->
+			<fingerprint>string;int;string</fingerprint>
+			<entry column="0" display="Description">
+				<regex><![CDATA[^/auth/user_data/fb_(token|session_key|session_secret)$]]></regex>
+			</entry>
+			<entry column="2" display="Password">
+				<regex/>
+			</entry>
+		</carver>
+		<carver type="settings.db"> <!-- Android System hotspot_password -->
+			<fingerprint>int;string;string</fingerprint>
+			<entry column="1" display="Description">
+				<regex><![CDATA[^hotspot_password$]]></regex>
+			</entry>
+			<entry column="2" display="Password">
+				<regex/>
+			</entry>
+		</carver>
+		<carver type="mail.db"> <!-- HTC Mail Database -->
+			<fingerprint>int;string;string;string;string;string;string;string;int;string;int;string;int;int;int;string;string;int;string;string;int;int;int;int;int;int;int;int;int;int;int;int;int;int;string;int;int;int;int;int;string;int;int;int;int;int;string;string;int;string;string;int;string;string;int;int;int;int;int;int;int;int;int;int;int;string;int;int;int;string</fingerprint>
+			<entry column="3" display="Username">
+				<regex/>
+			</entry>
+			<entry column="5" display="Password">
+				<regex/>
+			</entry>
+		</carver>
+		<carver type="webviewCookiesChromium.db"> <!-- Chromium Cookies Database -->
+			<fingerprint>empty;string;string;string;string;int;int;int;int</fingerprint>
+			<entry column="0" display="Created">
+				<regex/>
+			</entry>
+			<entry column="2" display="Description">
+				<regex><![CDATA[^(.*)token(.*)$]]></regex>
+			</entry>
+			<entry column="3" display="Password">
+				<regex/>
+			</entry>
+		</carver>
+		<carver type="mscAndroidClientConfigParams"> <!-- Aldi Talk-->
+			<fingerprint>empty;string;string;string</fingerprint>
+			<entry column="2" display="Description">
+				<regex><![CDATA[^(token)$]]></regex>
+			</entry>
+			<entry column="3" display="Password">
+				<regex/>
+			</entry>
+		</carver>	
+		<carver type="purchase_store.db"> <!-- Android Videos-->
+			<fingerprint>string;string;string</fingerprint>
+			<entry column="0" display="Username">
+				<regex><![CDATA[([^@]+[@|\x40][.-_a-zA-Z0-9]*[&]?.*?)]]></regex>
+			</entry>
+			<entry column="1" display="Password">
+				<regex><![CDATA[?!([\p{L}]{2,4})[.]((?!/)[\p{L}\p{N}_$.][^/@]*)$]]></regex>
+			</entry>
+		</carver>
+		<carver type="AceBrowser.db"> <!-- ACEBrowser-->
+			<fingerprint>int;string;string;string</fingerprint>
+			<entry column="1" display="Description">
+				<regex><![CDATA[^(http|ftp)[s]?[://]?([a-zA-Z0-9.]*)(.*)$]]></regex>
+			</entry>
+			<entry column="2" display="Username">
+				<regex/>
+			</entry>
+			<entry column="3" display="Password">
+				<regex/>
+			</entry>
+		</carver>			
+		<logical type="accounts.db">
+			<entry column="Name" display="Username">
+				<regex/>
+			</entry>
+			<entry column="Type" display="Description">
+				<regex/>
+			</entry>
+			<entry column="Password" display="Password">
+				<regex/>
+			</entry>
+		</logical>
+		<logical type="webview.db">
+			<entry column="Username" display="Username">
+				<regex/>
+			</entry>
+			<entry column="Host" display="Description">
+				<regex/>
+			</entry>
+			<entry column="Password" display="Password">
+				<regex/>
+			</entry>
+		</logical>
+		<logical type="Login Data">
+			<entry column="Username_Value" display="Username">
+				<regex/>
+			</entry>
+			<entry column="Action_URL" display="Description">
+				<regex/>
+			</entry>
+			<entry column="Password_Value" display="Password">
+				<regex/>
+			</entry>
+			<entry column="Date_Created" display="Created">
+				<regex/>
+			</entry>
+		</logical>
+		<logical type="Web Data"> <!--Chrome-->
+			<entry column="Name" display="Description">
+				<regex index="2"><![CDATA[(\.Password|_passwordText|_passwordConfirmText)(.*)]]></regex>
+			</entry>
+			<entry column="Value" display="Password">
+				<regex/>
+			</entry>
+			<entry column="Date_Created" display="Created">
+				<regex/>
+			</entry>
+		</logical>
+		<logical type="SyncData.sqlite3"> <!-- Chrome -->
+			<entry column="Non_Unique_Name" display="Password">
+				<regex index="2"><![CDATA[[\._](password.*[|])(.*)]]></regex>
+			</entry>
+			<entry column="Ctime" display="Created">
+				<regex/>
+			</entry>
+		</logical>
+		<logical type="prefs_db_1"> <!-- Facebook -->
+			<entry column="Key" display="Description">
+				<regex><![CDATA[^/auth/user_data/fb_(token|session_key|session_secret)$]]></regex>
+			</entry>
+			<entry column="Value" display="Token">
+				<regex/>
+			</entry>
+		</logical>
+		<logical type="prefs_db"> <!-- Facebook -->
+			<entry column="Key" display="Description">
+				<regex><![CDATA[^/auth/user_data/fb_(token|session_key|session_secret)$]]></regex>
+			</entry>
+			<entry column="Value" display="Token">
+				<regex/>
+			</entry>
+		</logical>
+		<logical type="fb.db"> <!-- Facebook -->
+			<entry column="Value" display="Token">
+				<regex index="4"><![CDATA[[<\":= ]{0,2}?(?<!/)((secret))([>:=\"]{1,3})([^<\r\"%&?\x0-\x20 ]*)]]></regex>
+			</entry>
+		</logical>
+		<logical type="history.db"> <!-- Downloadmanager App -->
+			<entry column="Url" display="Password">
+				<regex index="4"><![CDATA[[<\":= ]{0,2}?(?<!/)((psk=|userPassword|login_password|password_element|password_value|passwordText|passwordConfirmText|passwor[dt]|psw|kennwort|secret|encryptedpasswd|pwd))([>:=\"]{1,3})([^<\r\"%&?\x0-\x20 ]*)]]></regex>
+			</entry>
+		</logical>
+		<logical type="kcg.db"> <!-- King Cross App -->
+			<entry column="Value" display="Password">
+				<regex index="4"><![CDATA[[<\":= ]{0,2}?(?<!/)((psk=|userPassword|login_password|password_element|password_value|passwordText|passwordConfirmText|passwor[dt]|psw|kennwort|secret|encryptedpasswd|pwd))([>:=\"]{1,3})([^<\r\"%&?\x0-\x20 ]*)]]></regex>
+			</entry>
+		</logical>
+		<logical type="settings.db"> <!-- Android Providers -->
+			<entry column="Name" display="Description">
+				<regex><![CDATA[^(hotspot_password)$]]></regex>
+			</entry>
+			<entry name="Value" display="Password">
+				<regex/>
+			</entry>
+		</logical>
+		<logical type="EmailProvider.db"> <!-- Android Mail -->
+			<entry column="Address" display="Description">
+				<regex/>
+			</entry>
+			<entry column="Login" display="Username">
+				<regex/>
+			</entry>
+			<entry name="Password" display="Password">
+				<regex/>
+			</entry>
+		</logical>
+		<logical type="mail.db"> <!-- HTC Mail -->
+			<entry column="_Username" display="Username">
+				<regex/>
+			</entry>
+			<entry column="_Password" display="Password">
+				<regex/>
+			</entry>
+		</logical>
+		<logical type="webviewCookiesChromium.db"> <!-- Chrome Cookies-->
+			<entry column="Host_Key" display="Description">
+				<regex/>
+			</entry>
+			<entry column="Name" display="Password">
+				<regex><![CDATA[^(passwor[dt]|auth_token|twitter.accessToken|twitter.requestToken|twitter.tokenSecret|secret|csrftoken|session-token)$]]></regex>
+			</entry>
+			<entry column="Value" display="Token">
+				<regex/>
+			</entry>
+		</logical>
+		<logical type="mscAndroidClientConfigParams"> <!-- Aldi Talk-->
+			<entry column="Key" display="Description">
+				<regex><![CDATA[^(token)$]]></regex>
+			</entry>
+			<entry column="Value" display="Token">
+				<regex/>
+			</entry>
+		</logical>	
+		<logical type="purchase_store.db"> <!-- Android Videos-->
+			<entry column="User_Account" display="Username">
+				<regex><![CDATA[([^@]+[@|\x40][.-_a-zA-Z0-9]*[&]?.*?)]]></regex>
+			</entry>
+			<entry column="Sync_Snapshot_Token" display="Token">
+				<regex/>
+			</entry>
+		</logical>
+		<logical type="ACEBrowser.db"> <!-- ACE Browser-->
+			<entry column="Host" display="Description">
+				<regex/>
+			</entry>
+			<entry column="Username" display="Username">
+				<regex/>
+			</entry>
+			<entry column="Password" display="Password">
+				<regex/>
+			</entry>
+		</logical>	
+		<logical type="Other"> <!-- For other databases -->
+			<entry column="_password" display="Password">
+				<regex index="4"><![CDATA[[<\":= ]{0,2}?(?<!/)((hotspot_password|psk=|userPassword|login_password|password_element|password_value|passwordText|passwordConfirmText|passwor[dt]|psw|kennwort|secret|encryptedpasswd|pwd))([>:=\"]{1,3})([^<\r\"%&?\x0-\x20 ]*)]]></regex>
+			</entry>
+			<entry column="Value" display="Password">
+				<regex index="4"><![CDATA[[<\":= ]{0,2}?(?<!/)((hotspot_password|psk=|userPassword|login_password|password_element|password_value|passwordText|passwordConfirmText|passwor[dt]|psw|kennwort|secret|encryptedpasswd|pwd))([>:=\"]{1,3})([^<\r\"%&?\x0-\x20 ]*)]]></regex>
+			</entry>
+		</logical>
+	</Database>
+	<Text>
+		<carver>
+			<entry type="XML_WEB">
+				<data display="Password">		
+					<regex index="4"><![CDATA[[<\":= ]{0,2}?(?<!/)((psk=|keystore_encryption_bootstrap_token|encryption_bootstrap_token|access_token|chrome_to_mobile_oAuth2Token|CheckinTask_securityToken|fbAccessToken|deviceSharedSecret|twitter_consumer_secret|twitter_consumer_key|pref_login_consumer_key|pref_login_acces_token_secret|pref_login_acces_token_key|pref_login_consumer_secret|userPassword|login_password|password_element|password_value|passwordText|passwordConfirmText|passwor[dt]|psw|kennwort|secret|encryptedpasswd|pwd))([>:=\"]{1,3})([^<\r\"%&?\x0-\x20 ]*)]]></regex>
+				</data>
+				<!--<data type="Username" index="4">
+					<regex><![CDATA[[<\":= ]{0,2}?(?<!/)((login_email|email|user_name|username|handle))([>:=\"]{1,3})([^<\r\"]*)]]></regex>
+				</data>	-->
+			</entry>
+		</carver>
+		<logical>
+			<entry type="XML_WEB">
+				<data display="Password">		
+					<regex index="4"><![CDATA[[<\":= ]{0,2}?(?<!/)((psk=|keystore_encryption_bootstrap_token|encryption_bootstrap_token|access_token|chrome_to_mobile_oAuth2Token|CheckinTask_securityToken|fbAccessToken|deviceSharedSecret|twitter_consumer_secret|twitter_consumer_key|pref_login_consumer_key|pref_login_acces_token_secret|pref_login_acces_token_key|pref_login_consumer_secret|userPassword|login_password|password_element|password_value|passwordText|passwordConfirmText|passwor[dt]|psw|kennwort|secret|encryptedpasswd|pwd))([>:=\"]{1,3})([^<\r\"%&?\x0-\x20 ]*)]]></regex>
+				</data>
+				<!--<data type="Username" index="4">
+					<regex><![CDATA[[<\":= ]{0,2}?(?<!/)((login_email|email|user_name|username|handle))([>:=\"]{1,3})([^<\r\"]*)]]></regex>
+				</data>	-->
+			</entry>
+		</logical>
+	</Text>
+</PasswordXtract>

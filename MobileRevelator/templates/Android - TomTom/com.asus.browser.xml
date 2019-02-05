@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.asus.browser/databases/browser2.db" type="database">
+        <sql cmd="SELECT rowid, created, title, url FROM bookmarks;">
+            <type text="Browser Bookmarks" category="Browser"/>
+            <package field="{%2}"/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%3}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, date, search FROM searches;">
+            <type text="Browser Search"  category="Searches"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Search:&quot;{%2}&quot;"/>
+            </desc>            
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>    
+</Timeline>
+</Items>

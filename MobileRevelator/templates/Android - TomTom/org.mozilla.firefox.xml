@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="org.mozilla.firefox/files/mozilla*.default/browser.db" type="database">
+        <sql cmd="SELECT rowid, date, visits, title, url FROM history;">
+            <type text="Mozilla History" category="Browser">
+                <field addfields="[Visits:{%2}]"/>
+            </type>
+            <package>
+                <field addfields="&quot;{%3}&quot;"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%4}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, created, deleted, title, url FROM bookmarks;" type="database">
+            <type text="Mozilla Bookmarks" category="Browser">
+                <field addfields="[Deleted:{%2}]" replace="0=No;1=Yes"/>
+            </type>
+            <package>
+                <field addfields="&quot;{%3}&quot;"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%4}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, last_used, position, title, url FROM tabs;" type="database">
+            <type text="Mozilla Tabs" category="Browser">
+                <field addfields="[Position:{%2}]" replace="0=No;1=Yes"/>
+            </type>
+            <package>
+                <field addfields="&quot;{%3}&quot;"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%4}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="select thumbnails.rowid, thumbnails.url, history.visits, history.modified, data from thumbnails INNER JOIN history ON history.url=thumbnails.url;" type="database">
+            <type text="Mozilla Thumbnails" category="Browser">
+                <field addfields="[Visits:{%2}]" replace="0=No;1=Yes"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%1}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%4}"/>
+            </image>
+        </sql>
+        <sql cmd="SELECT rowid, date, visits, query FROM searchhistory;">
+            <type text="Mozilla Search History" category="Searches">
+                <field addfields="[Visits:{%2}]" replace="0=No;1=Yes"/>
+            </type>
+            <package>
+                <field addfields="&quot;{%3}&quot;"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

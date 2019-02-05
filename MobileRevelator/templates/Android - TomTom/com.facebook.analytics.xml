@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="app_analytics/normal*.json" type="raw">
+        <python run="android_facebook_batch.py">
+            <type text="Facebook App Analytics" category="Usage"/>
+            <filename>
+                <field addfields="{%5}"/>
+            </filename>
+            <package field="{%1}"/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%4}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}" replace="FACEBOOK:="/>
+            </contact>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </python>
+</Timeline>
+
+<Timeline path="databases/analytics_db2" type="database">
+        <python run="android_analytics.py">
+            <type text="Analytics_DB2" category="Usage"/>
+            <package extractname="true"/>
+            <timestamp field="{%1}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}"/>
+            </desc>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </python>
+</Timeline>
+</Items>

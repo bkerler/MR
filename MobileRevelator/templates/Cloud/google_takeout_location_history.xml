@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="Location History.json" type="raw">
+        <python run="googletakeout_locationhistory.py">
+            <type text="Google Takeout Location History" category="Locations"/>
+            <package>
+                <field addfields="Activity:{%7}"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Altitude:{%6};"/>
+                <field addfields="Velocity:{%5};"/>
+                <field addfields="Accuracy:{%4};"/>
+            </desc>
+            <location>
+                <field latitude="{%2}" longitude="{%3}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+</Items>

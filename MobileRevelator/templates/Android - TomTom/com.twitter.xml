@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.twitter.android/databases/*.db" type="database">
+        <python run="android_twitter.py">
+            <type text="Twitter (Android)" category="Messenger">
+                <field addfields=" - {%10}"/>
+            </type>
+            <package/>
+            <timestamp field="{%5}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="To_Username: &quot;{%3}&quot;;"/>
+                <field addfields="To_Name: &quot;{%4}&quot;;"/>
+                <field addfields="Source: &quot;{%7}&quot;;"/>
+            </desc>
+            <location>
+                <field latitude="{%8}" longitude="{%9}" int=""/>
+            </location>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%6}"/>
+            </message>
+            <image/>
+        </python>
+</Timeline>
+</Items>

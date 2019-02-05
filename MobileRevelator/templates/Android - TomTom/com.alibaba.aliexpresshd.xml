@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.alibaba.aliexpresshd/databases/AliExpress.db" type="database">
+        <sql cmd="select rowid, LAST_MSG_CONTENT, LAST_MSG_TIME, LAST_MSG_IS_OWN, SELLER_SEQ, SELLER_NAME, ORDER_ID from message;">
+            <type text="Alibaba Express Shop" category="Messenger">
+                <field addfields="[Type:{%3}]" replace="false=Incoming;true=Sent"/>
+            </type>
+            <package/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Order_Id:{%6};"/>
+            </desc>
+            <contact>
+                <field addfields="{%4}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%5}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%1}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>

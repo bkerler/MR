@@ -1,0 +1,1 @@
+python.exe whatsapp_xtract.py %1 -o Report\Bericht

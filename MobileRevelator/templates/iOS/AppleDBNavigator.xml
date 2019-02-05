@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+<Template database="select * from ZSEARCHATTRIBUTESENTRY, ZJOURNEYPOINT,ZLOCATION where (ZSEARCHATTRIBUTESENTRY.ZJOURNEYSEARCHFORM=ZJOURNEYPOINT.ZJOURNEYSEARCHFORM AND ZLOCATION.Z_PK=ZJOURNEYPOINT.ZLOCATION);" deletemissingfields="true" name="DB Navigator" path="HAFUserData.sqlite">
+        <column id="ZDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ZNAME (QString)"/>
+        <column id="ZJOURNEYPOINT (int)"/>
+</Template>
+</Items>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.infraware.*DocMasterThumbnails.db" type="database">
+        <sql cmd="SELECT rowid, filename, path, title, last_modified, thumbnail_data from Thumbnails;">
+            <type text="Infraware Office Media" category="Media"/>
+            <package field="{%3}"/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Path:&quot;{%2}/"/>
+                <field addfields="{%1}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%5}"/>
+            </image>
+        </sql>
+</Timeline>    
+
+<Timeline path="com.infraware.*InfrawareRecentFiles.db" type="database">
+        <sql cmd="SELECT rowid, filename, path, last_modified from RecentFiles;"> <!-- storagename -->
+            <type text="Infraware Office" category="Documents"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Path:&quot;{%2}/"/>
+                <field addfields="{%1}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

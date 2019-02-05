@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.google.android.gms/databases/herrevad" type="database">
+        <python run="android_herrevad.py">
+            <type text="Herrevad" category="Locations"/>
+            <package>
+                <field addfields="{%1}"/>
+            </package>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration field="{%7}"/>
+            <desc/>
+            <location>
+                <field addfields="{%3};"/>
+                <field addfields="Network_Type:{%2};"/>
+                <field addfields="latency_micros:{%5};"/>
+                <field addfields="bytes_uploaded:{%6};"/>
+                <field addfields="measurement_type:{%8}"/>
+                <field addfields="throughput_bps:{%9}"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </python>
+</Timeline>
+<Timeline path="com.google.android.gms/databases/icing_mmssms.db" type="database">
+        <sql cmd="SELECT rowid, date, address, type, body FROM mmssms;">
+            <type text="Google SMS" category="Messenger">
+                <field addfields="[type:{%3}]" replace="1=Received;2=Sent;3=Draft"/>
+            </type>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias/>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+        </sql>
+</Timeline>
+<Contacts path="com.google.android.gms/databases/icing_contacts.db" type="database">
+        <sql cmd="SELECT contacts.rowid, contacts.display_name, contacts.times_contacted, emails.email, contacts.nickname, phones.phone, postals.postal from contacts OUTER LEFT JOIN phones ON phones.contact_id=contacts.contact_id OUTER LEFT JOIN emails ON emails.contact_id=contacts.contact_id OUTER LEFT JOIN postals ON postals.contact_id=contacts.contact_id GROUP BY contacts.rowid;">
+            <type text="Google Contacts"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="Times contacted:{%2};"/>
+                <field addfields="Emails:&quot;{%3}&quot;;"/>
+                <field addfields="Nickname:&quot;{%4}&quot;;"/>
+                <field addfields="Postal:&quot;{%6}&quot;;"/>
+            </desc>
+            <contact>
+                <field addfields="{%5}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+<Contacts path="com.google.android.gms/databases/pluscontacts.db" type="database">
+        <sql cmd="SELECT rowid, name, gaia_id, given_name, family_name, last_modified from people;">
+            <type text="Google Plus Contacts"/>
+            <package/>
+            <timestamp field="{%5}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Given name:&quot;{%3}&quot;;"/>
+                <field addfields="Family name:&quot;{%4}&quot;;"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+</Items>

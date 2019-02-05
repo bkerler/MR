@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+   <Template table="Messages" deletemissingfields="true" name="WhatsApp" path="messages.db">
+      <column id="KeyRemoteJid (QString)"/>
+      <column id="KeyFromMe (int)" type="textreplace">
+         <r replace="1" with="sent"/>
+         <r replace="0" with="received"/>
+      </column>
+      <column id="Data (QString)"/>
+      <column id="TimestampLong (int)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+      <column id="DataFileName (QString)"/>
+      <column id="PushName (QString)"/>
+      <column id="MediaName (QString)"/>
+      <column id="MediaCaption (QString)"/>
+      <column id="MediaDurationSeconds (int)"/>
+      <column id="Latitude (double)"/>
+      <column id="Longitude (double)"/>
+      <column id="RemoteResource (QString)"/>
+      <column id="BinaryData (QByteArray)"/>
+   </Template>
+</Items>

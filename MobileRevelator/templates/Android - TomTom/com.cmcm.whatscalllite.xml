@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<Items>
+<Timeline path="com.cmcm.whatscalllite/databases/huanju.db" type="database">
+        <sql cmd="select rowid, date, direction, duration, phone from calls;">
+            <type text="WhatsCallLite calls" category="Calls">
+                <field addfields="[Type:{%2}]" replace="0=Outgoing;1=Ingoing"/>
+            </type>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration>
+				<field addfields="In Seconds:{%3};"/>
+			</duration>
+            <desc/>
+            <message/>
+            <contact_alias/>
+            <contact>
+                <field addfields="{%4}"/>
+            </contact>
+        </sql>
+</Timeline>
+<Timeline path="com.cmcm.whatscalllite/databases/call_marker.db" type="database">
+        <sql cmd="select rowid, timestamp, call_type, display_number, tag, location from call_log;">
+            <type text="WhatsCallLite calls" category="Calls">
+                <field addfields="[Type:{%2}]" replace="1=Outgoing;2=Incoming;3=Missed;"/>
+            </type>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <message/>
+            <contact_alias>
+                <field addfields="{%4}"/>
+            </contact_alias>
+            <contact>
+                <field addfields="{%3}"/>
+            </contact>
+            <location>
+                <field addfields="{%5}"/>
+            </location>
+        </sql>
+</Timeline>
+<Timeline path="com.cmcm.whatscalllite/databases/huanju.db" type="database">
+        <sql cmd="select messages.rowid, messages.uid, messages.direction, messages.time, messages.content,contacts_info.name, contacts_info.phone from messages LEFT OUTER JOIN contacts_info ON contacts_info.uid=messages.uid;">
+            <type text="WhatsCallLite calls" category="Messenger">
+                <field addfields="[Type:{%2}]" replace="0=Sent;1=Received"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc/>
+			<message>
+					 <field addfields="{%4}"/>
+            </message>
+            <contact_alias>
+					<field addfields="{%5}"/>
+			</contact_alias>
+            <contact>
+                <field addfields="{%6}"/>
+            </contact>
+        </sql>
+</Timeline>
+<Contacts path="com.cmcm.whatscalllite/databases/huanju.db" type="database">
+        <sql cmd="select rowid, name, phone from contacts_info;">
+            <type text="WhatsCallLite"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc/>
+            <message/>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+        </sql>
+</Contacts>
+</Items>

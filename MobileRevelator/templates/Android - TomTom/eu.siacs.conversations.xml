@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="eu.siacs.conversations/databases/history" type="database">
+        <python run="android_conversations.py">
+            <type text="Conversations Messages" category="Messenger">
+                <field addfields="[Type:{%1},"/>
+                <field addfields="Direction:{%5}]"/>
+            </type>
+            <package/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="RelativeFilePath:{%8}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%6}"/>
+            </message>
+            <image>
+                <field addfields="{%7}"/>
+            </image>
+        </python>
+</Timeline>
+
+<Timeline path="Conversations Images/*.jpg" type="raw">
+        <python run="android_thumbnail.py">
+            <type text="Conversations Images" category="Media"/>
+            <filename>
+                <field addfields="{%2}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%1}"/>
+            </image>
+        </python>
+</Timeline>
+
+<Contacts path="eu.siacs.conversations/databases/history" type="database">
+        <sql cmd="select rowid, jid, last_presence, last_time, groups from contacts;">
+            <type text="Conversations Contacts"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Last_Presence:{%2},"/>
+                <field addfields="Group:{%4}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias/>
+        </sql>
+</Contacts>
+</Items>

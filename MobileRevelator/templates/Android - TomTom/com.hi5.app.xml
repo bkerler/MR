@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.hi5.app/databases/tagged_*" type="database">
+        <sql cmd="select messages.rowid,(select users.display_name from users where users._id=messages.from_user_id),(select users.display_name from users where users._id=messages.to_user_id), messages.type, messages.content, messages.timestamp from messages left outer join users on from_user_id=users._id;">
+            <type text="hi5 Messages" category="Messenger">
+                <field addfields="[Type:{%3}]"/>
+            </type>
+            <package/>
+            <timestamp field="{%5}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias>
+                 <field addfields="From:{%1} "/>
+                 <field addfields="To:{%2}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>

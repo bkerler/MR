@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sec.android.app.myfiles/databases/FileCache.db" type="database">
+        <sql cmd="SELECT rowid, date, path, size FROM FileCache;">
+            <type text="Google MyFiles FileCache" category="Downloads"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Size:{%3};"/>
+                <field addfields="Path:{%2}/"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+    
+<Timeline path="com.sec.android.app.myfiles/databases/myfiles.db" type="database">
+        <sql cmd="SELECT rowid,date, name, size, _data FROM recent_files; SELECT rowid,date_modified, _display_name, _size, _data FROM recent_files;">
+            <type text="Google MyFiles Recent" category="Media"/>
+            <package field="{%2}"/>
+            <timestamp field="{%1}" format="yyyy-MM-dd hh:mm:ss.zzz"/>
+            <!--<timestamp field="{%1}" int="/1000"/>-->
+            <duration/>
+            <desc>
+                <field addfields="Size:{%3};"/>
+                <field addfields="Path:{%4}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid,date, _description, size, _data, name, _source FROM download_history;SELECT rowid,date_modified, _description, _size, _data, _display_name, _source FROM download_history;">
+            <type text="Google MyFiles Download History" category="Downloads"/>
+            <package field="&quot;{%2}&quot;"/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Size:{%3};"/>
+                <field addfields="Path:{%4}/"/>
+                <field addfields="{%5};"/>
+                <field addfields="Source:{%6}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

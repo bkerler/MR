@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="de.hafas.android.*/databases/hafas_android.db" type="database">
+        <python run="android_dbnavigator.py">
+            <type text="DB Navigator" category="Locations"/>
+            <package/>
+            <timestamp field="{%3}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="Train connection from:&quot;{%1}&quot;, "/>
+                <field addfields="to:&quot;{%2}&quot;"/>
+            </desc>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </python>
+</Timeline>
+</Items>

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sec.android.app.sbrowser/databases/media_history.db" type="database">
+        <sql cmd="SELECT rowid, VISIT_DATE, VIDEO_URL, TITLE, PAGE_URL, THUMBNAIL FROM MEDIAHISTORY;">
+            <type text="Samsung SBrowser Media" category="Media">
+                <field addfields="Video Url:&quot;{%2}&quot;"/>
+            </type>
+            <package>
+                <field addfields="&quot;{%3}&quot;"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%4}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+
+<Timeline path="com.sec.android.app.sbrowser/databases/SBrowser.db" type="database">
+        <sql cmd="SELECT rowid, CREATED, TITLE, URL FROM BOOKMARKS;">
+            <type text="Samsung SBrowser Bookmarks" category="Browser"/>
+            <package>
+                <field addfields="&quot;{%2}&quot;"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%3}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, DATE_MODIFIED, TAB_TITLE, TAB_URL, DEVICE_NAME, DEVICE_ID FROM TABS;"> <!-- SELECT rowid, DATE_MODIFIED, TAB_TITLE, TAB_URL, FAV_ICON, DEVICE_NAME, DEVICE_ID FROM TABS; -->
+            <type text="Samsung SBrowser Tabs" category="Browser"/>
+            <package>
+                <field addfields="&quot;{%2}&quot;"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Url:&quot;{%3}&quot;;"/>
+                <field addfields="Device name:&quot;{%4}&quot;;"/>
+                <field addfields="Device id:&quot;{%5}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <!-- <field addfields="{%4}"/> -->
+            </image>
+        </sql>
+</Timeline>
+
+<Timeline path="com.sec.android.app.sbrowser/app_sbrowser/Default/History" type="database">
+        <sql cmd="select visits.rowid, urls.url, urls.title, urls.visit_count, visits.visit_time from urls LEFT OUTER JOIN visits ON visits.url=urls.id;">
+            <type text="Samsung SBrowser History" category="Browser"/>
+            <package>
+                <field addfields="&quot;{%2}&quot;"/>
+            </package>
+            <timestamp field="{%4}" int="/1000000-11644473600"/>
+            <duration/>
+            <desc>
+                <field addfields="Url:&quot;{%1}&quot;;"/>
+                <field addfields="Visits:{%3};"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

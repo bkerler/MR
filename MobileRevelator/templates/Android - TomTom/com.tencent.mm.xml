@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.tencent.mm/MicroMsg*EnMicroMsg.db" prerun="wechat_decrypt.py" type="database">
+        <sql cmd="SELECT message.rowid, message.isSend, message.talker, rcontact.nickname, message.content, message.imgPath, message.createTime FROM message INNER JOIN rcontact ON rcontact.username = message.talker;">
+            <type text="WeChat message" category="Messenger">
+                <field addfields="[Type:{%1}]" replace="0=Received;1=Sent"/>
+            </type>
+            <package/>
+            <timestamp field="{%6}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%5}"/>
+            </desc>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+        </sql>
+        <sql cmd="SELECT rowid, uploadtime, realname, nickname, moblie from addr_upload2;">
+            <type text="WeChat contacts" category="Contacts"/>
+            <package/>
+            <timestamp field="{%1}"/>
+            <duration/>
+            <desc>
+                <field addfields="Mobile number: {%4}"/>
+            </desc>
+            <message/>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sonymobile.lifelog/databases/sessions.db" type="database">
+        <sql cmd="SELECT rowid, start_time, (end_time-start_time), json from sessions;">
+            <type text="Sony Lifelog [apps]" category="Usage"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration field="{%2}" int=""/>
+            <desc>
+                <field addfields="{%3}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template table="messages" name="Viber" path="viber_messages">
+        <column id="type (int)" type="textreplace">
+            <r replace="1" with="sent"/>
+            <r replace="0" with="recieved"/>
+        </column>
+        <column id="read (int)" type="textreplace">
+            <r replace="1" with="read"/>
+            <r replace="0" with="unread"/>
+        </column>
+        <column id="date (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+</Template>
+
+<Timeline path="com.viber.voip/databases/viber_data" type="database">
+        <sql cmd="select calls.rowid, phonebookcontact.display_name, calls.number, calls.date, calls.type, calls.duration from calls LEFT OUTER JOIN phonebookdata ON calls.number = phonebookdata.data2 LEFT OUTER JOIN phonebookcontact ON phonebookdata.contact_id = phonebookcontact.native_id;">
+            <type text="Viber Call" category="Calls">
+                <field addfields="[Type:{%4}]" replace="1=Incoming;2=Sent;3=Missed;4=Voicemail;5=Rejected;6=Blocked"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration field="{%5}"/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Timeline>
+
+<Timeline path="com.viber.voip/databases/viber_messages" type="database">
+        <sql cmd="select messages.rowid, participants_info.display_name, messages.address, messages.date, messages.type, messages.body, messages.extra_bucket_name, messages.description, messages.extra_duration, messages.msg_info from messages LEFT OUTER JOIN participants_info ON messages.address = participants_info.member_id;select messages.rowid, participants_info.display_name, messages.address, messages.date, messages.type, messages.body, messages.extra_bucket_name, messages.description, messages.extra_duration, messages.extra_bucket_name from messages LEFT OUTER JOIN participants_info ON messages.address = participants_info.number;select messages.rowid, participants_info.display_name, messages.user_id, messages.msg_date, messages.conversation_type, messages.body, messages.extra_bucket_name, messages.description, messages.extra_duration, messages.extra_bucket_name from messages LEFT OUTER JOIN participants_info ON messages.user_id = participants_info.number;">
+            <type text="Viber Messages" category="Messenger">
+                <field addfields="[Type:{%4}]" replace="0=Incoming;1=Sent"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="[Info:{%6};"/>
+                <field addfields="{%7};"/>
+                <field addfields="{%8};"/>
+                <field addfields="{%9}]"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%5} "/>
+            </message>
+        </sql>
+</Timeline>
+
+<Contacts path="com.viber.voip/databases/viber_data" type="database">
+        <sql cmd="select phonebookdata.rowid, phonebookdata.contact_id, phonebookdata.data2, phonebookdata.data5, phonebookcontact.display_name, phonebookcontact.joined_date from phonebookcontact, phonebookdata where phonebookcontact._id==phonebookdata.contact_id group by data2;">
+            <type text="Viber"/>
+            <package/>
+            <timestamp field="{%5}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Info:{%3}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%4}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+
+
+
+</Items>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.valvesoftware.android.steam.community/databases/SteamLocal.db" type="database">
+        <sql cmd="select  Messages.rowid, Personas.personaName, Messages.chatPartnerId, Messages.utcTime, Messages.messageText, Messages.isIncoming from Messages left outer join Personas on Messages.chatPartnerId = Personas.steamId;">
+            <type text="Steam Messages" category="Messenger">
+                <field addfields="[Type:{%5}]" replace="0=Sent;1=Incoming"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+	            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.nll.acr/databases/acr.db" type="database">
+        <sql cmd="select rowid, file, rec_date, size, duration, direction, note from acr_recordings;">
+            <type text="ACRCalls Call Recorder" category="Media"/>
+            <package/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Path:&quot;{%1}&quot;;"/>
+                <field addfields="Note:&quot;{%6}&quot;;"/>
+                <field addfields="Size:{%3};"/>
+                <field addfields="Duration:{%4}"/>
+                <field addfields="Direction:{%5}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+<Timeline path="/media/*/ACRCalls/*.mp4" type="raw">
+        <python run="android_filename.py">
+            <type text="ACRCalls Call Recorder" category="Media"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+</Items>

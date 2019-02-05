@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="de.telekom.mds.mbp/databases/fmc.db" type="database">
+        <sql cmd="SELECT rowid, sender_e164, recipient_e164, received, duration, attachment_path, type FROM messages;">
+            <type text="Voicemail" category="Calls">
+                <field addfields="[Type:{%6}]"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="From: {%1};"/>
+                <field addfields="To: {%2};"/>
+                <field addfields="Duration: {%4};"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias/>
+            <message>
+                <field addfields="{%5}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>

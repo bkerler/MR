@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.htc.album/databases/MMexternal.db" type="database">
+        <sql cmd="SELECT rowid, _data, date_modified, _display_name, _size, latitude, longitude, duration FROM audio_meta;">
+            <type text="HTC External Media" category="Media"/>
+            <package>
+                <field addfields="&quot;{%3}&quot;"/>
+            </package>
+            <timestamp field="{%2}" int=""/>
+            <duration field="{%7}" int="*1000"/>
+            <desc>
+                <field addfields="Path:&quot;{%1}&quot;;"/>
+                <field addfields="Size:&quot;{%4}&quot;;"/>
+            </desc>
+            <location>
+                <field latitude="{%5}" longitude="{%6}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, _data, date_modified, _display_name, _size, latitude, longitude FROM audio_meta where latitude!=0;">
+            <type text="HTC External Media" category="Locations"/>
+            <package>
+                <field addfields="&quot;{%3}&quot;"/>
+            </package>
+            <timestamp field="{%2}" int=""/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%5}" longitude="{%6}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

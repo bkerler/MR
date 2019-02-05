@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="de.orrs.deliveries/databases/deliveries.db" type="database">
+        <sql cmd="SELECT rowid, title, lastsaved, trackingid, provider FROM delivery;">
+            <type text="Orrs Deliveries [delivery]" category="Locations"/>
+            <package field="{%1}"/>
+            <timestamp field="{%2}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="[TrackingID: {%3};"/>
+                <field addfields="Provider: {%4}];"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

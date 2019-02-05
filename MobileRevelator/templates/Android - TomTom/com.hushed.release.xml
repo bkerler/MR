@@ -1,0 +1,23 @@
+<Items>
+<Timeline path="com.hushed.release/databases/hushed" type="database">
+        <sql cmd="SELECT rowid, type, twiliostatus, number, otherNumber, duration, url, text, timestamp FROM events;">
+            <type text="Hushed Burner Phone Number" category="Calls">
+                <field addfields="[Type:{%2}]"/>
+            </type>
+            <package/>
+            <timestamp field="{%8}" int="/1000"/>
+            <duration field="{%5}" int="*1000"/>
+            <desc>
+                <field addfields="Own number:{%3};"/>
+                <field addfields="Url:{%6};"/>
+            </desc>
+            <contact>
+                <field addfields="{%4}"/>
+            </contact>
+            <contact_alias/>
+            <message>
+                <field addfields="{%7}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>

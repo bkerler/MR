@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+    <Template table="ZGENERICASSET" database="SELECT ZTHUMBNAILINDEX, ZDATECREATED, ZMODIFICATIONDATE, ZSORTTOKEN, ZDIRECTORY, ZFILENAME, ZUNIFORMTYPEIDENTIFIER, ZCREATORBUNDLEID, ZORIGINALFILENAME, ZORIGINALWIDTH, ZORIGINALHEIGHT, ZORIGINALFILESIZE FROM ZGENERICASSET, ZADDITIONALASSETATTRIBUTES WHERE ZADDITIONALASSETATTRIBUTES.ZASSET == ZGENERICASSET.Z_PK AND ZTHUMBNAILINDEX!=-1;" name="Photos" path="Photos.sqlite">
+        <column id="ZDATECREATED (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ZMODIFICATIONDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ZSORTTOKEN (double)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+    </Template>
+    <Timeline path="Media/PhotoData/Photos.sqlite" type="database">
+        <sql cmd="SELECT ZGENERICASSET.ROWID, ZTHUMBNAILINDEX, ZDATECREATED, ZMODIFICATIONDATE, ZSORTTOKEN, ZDIRECTORY, ZFILENAME, ZUNIFORMTYPEIDENTIFIER, ZCREATORBUNDLEID, ZORIGINALFILENAME, ZORIGINALWIDTH, ZORIGINALHEIGHT, ZORIGINALFILESIZE FROM ZGENERICASSET, ZADDITIONALASSETATTRIBUTES WHERE ZADDITIONALASSETATTRIBUTES.ZASSET == ZGENERICASSET.Z_PK AND ZTHUMBNAILINDEX!=-1;">
+            <type text="Apple Thumbnail Database" category="Media"/>
+            <package field="{%8}"/>
+            <timestamp field="{%3}" int=""/>
+            <duration/>
+            <desc>
+                <field addfields="Thumbnailindex:&quot;{%1}&quot;;"/>
+                <field addfields="Directory:&quot;{%5}&quot;;"/>
+                <field addfields="Filename:&quot;{%6}&quot;"/>
+                <field addfields="Originalfilename:&quot;{%9}&quot;"/>
+                <field addfields="Width:{%10};"/>
+                <field addfields="Height:{%11};"/>
+                <field addfields="Filesize:{%12};"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

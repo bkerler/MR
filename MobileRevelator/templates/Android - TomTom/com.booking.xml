@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.booking/databases/history.db" type="database">
+        <sql cmd="SELECT rowid, address, checkin || ' ' || checkin_from, city, hotel_name, latitude, longitude FROM booked where latitude!=0;">
+            <type text="Booking.com Booked" category="Locations"/>
+            <package field="{%1}"/>
+            <timestamp field="{%2}" format="yyyy-MM-dd hh:mm"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%5}" longitude="{%6}"/>
+                <field addfields=";City=&quot;{%3}&quot;;"/>
+                <field addfields="Hotel_Name=&quot;{%4}&quot;;"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, address, checkin || ' ' || checkin_from, city, hotel_name, latitude, longitude FROM viewed where latitude!=0;">
+            <type text="Booking.com Viewed" category="Locations"/>
+            <package field="{%1}"/>
+            <timestamp field="{%2}" format="yyyy-MM-dd hh:mm"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%5}" longitude="{%6}"/>
+                <field addfields=";City=&quot;{%3}&quot;;"/>
+                <field addfields="Hotel_Name=&quot;{%4}&quot;;"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <python run="android_booking_searches.py">
+            <type text="Booking.com Searches" category="Searches"/>
+            <package/>
+            <timestamp field="{%1}"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}"/>
+                <field addfields=";City=&quot;{%2}&quot;;"/>
+                <field addfields="Location_Name=&quot;{%5}&quot;"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+</Items>

@@ -1,0 +1,22 @@
+<Items>
+<Timeline path="com.tnt.mobile/databases/tracking.db" type="database">
+        <sql cmd="SELECT rowid, consignmentKey, consignmentNumber, customerReference, deliveryTown, destinationCountry, originCountry, collectionDate, signatory FROM consignment;">
+            <type text="TNT Package Tracking" category="Tracking"/>
+            <package/>
+            <timestamp field="{%7}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="ConsignmentKey:{%1};"/>
+                <field addfields="ConsignmentNumber:{%2};"/>
+                <field addfields="CustomerReference:{%3};"/>
+                <field addfields="DeliveryTown:{%4};"/>
+                <field addfields="DestinationCountry:{%5};"/>
+                <field addfields="OriginCountry:{%6};"/>
+                <field addfields="Signatory:{%8};"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

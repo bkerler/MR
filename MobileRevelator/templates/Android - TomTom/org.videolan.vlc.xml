@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="org.videolan.vlc/databases/vlc_database" type="database">
+        <sql cmd="select rowid, _id, length, title, last_modified from media_table;">
+            <type text="VLC Media" category="Media"/>
+            <package/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="[Size:{%2}, "/>
+                <field addfields="Title:&quot;{%3}&quot;, "/>
+                <field addfields="Path:{%1}]"/>
+            </desc>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+        <sql cmd="select rowid, _id, title, last_modified from history_table;">
+            <type text="VLC History" category="Media"/>
+            <package/>
+            <timestamp field="{%3}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="[Title:&quot;{%3}&quot;, "/>
+                <field addfields="Path:{%1}]"/>
+            </desc>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

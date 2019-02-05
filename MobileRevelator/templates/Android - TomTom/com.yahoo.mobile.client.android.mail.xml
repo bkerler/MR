@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+
+<Timeline path="com.yahoo.mobile.client.android.mail/databases/mailsdk.db" type="database">
+    <sql cmd="SELECT rowid, subject, from_address, to_address, received_ms, snippet FROM messages;">
+        <type text="Yahoo E-Mail" category="EMails"/>       
+        <package>
+            <field addfields="Subject: {%1};"/>
+        </package>
+        <timestamp field="{%4}" int="/1000"/>
+        <duration/>
+        <desc>
+            <field addfields="From: {%2};"/>
+            <field addfields="To: {%3};"/>
+        </desc>
+        <contact/>
+        <contact_alias/>
+        <message>
+            <field addfields="{%5}"/>
+        </message>
+    </sql>
+</Timeline>
+</Items>

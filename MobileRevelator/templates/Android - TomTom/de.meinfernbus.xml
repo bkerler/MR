@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="de.meinfernbus/databases/mfb.db" type="database">
+        <sql cmd="SELECT rowid, trip_arrival_station_name, trip_arrival_station_address, trip_arrival_station_coordinate_lat, trip_arrival_station_coordinate_lng, trip_departure_station_name, trip_departure_station_address, trip_departure_station_coordinate_lat, trip_departure_station_coordinate_lng, trip_departure_timestamp FROM my_trips;">
+            <type text="Mein Fernbus [my_trips]" category="Locations"/>
+            <package/>
+            <timestamp field="{%9}" int=""/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}"/>
+                <field addfields=";Route to:{%1}"/>
+                <field addfields=", {%2}"/>
+                <field latitude="{%7}" longitude="{%8}"/>
+                <field addfields=";Route from:{%5}"/>
+                <field addfields=", {%6}"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

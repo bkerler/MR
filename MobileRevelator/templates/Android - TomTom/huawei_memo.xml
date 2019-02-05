@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="/Memo.db" type="database">
+        <sql cmd="SELECT rowid, title, modified from comhuaweiproviderNotePadbackupnote_items_new_tb;">
+            <type text="Huawei Memo" category="Documents"/>
+            <package/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Title:&quot;{%1}&quot;;" unhtml="1"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+    <Timeline path="messages.json" type="raw">
+            <python run="instagram_cloud.py" arguments="arguments={}\narguments[&quot;messages&quot;]=True\n">
+                <type text="Instagram Cloud Messages" category="Messenger"/>
+                <filename>
+                    <field addfields="{%12}"/>
+                </filename>
+                <package/>
+                <timestamp field="{%3}" format="yyyy-MM-ddThh:mm:ss"/>
+                <duration/>
+                <desc>
+                    <field addfields="Receipients:{%2};"/>
+                </desc>
+                <contact/>
+                <contact_alias>
+                    <field addfields="{%1}"/>
+                </contact_alias>
+                <message>
+                    <field addfields="{%4}"/>
+                </message>
+            </python>
+    </Timeline>
+    <Timeline path="comments.json" type="raw">
+            <python run="instagram_cloud.py" arguments="arguments={}\narguments[&quot;comments&quot;]=True\n">
+                <type text="Instagram Cloud Comments" category="Media"/>
+                <filename>
+                    <field addfields="{%12}"/>
+                </filename>
+                <package/>
+                <timestamp field="{%3}" format="yyyy-MM-ddThh:mm:ss"/>
+                <duration/>
+                <desc/>
+                <contact/>
+                <contact_alias>
+                    <field addfields="{%1}"/>
+                </contact_alias>
+                <message>
+                    <field addfields="Comment:&quot;{%9}&quot;;"/>
+                </message>
+            </python>
+    </Timeline>
+    <Timeline path="media.json" type="raw">
+            <python run="instagram_cloud.py" arguments="arguments={}\narguments[&quot;media&quot;]=True\n">
+                <type text="Instagram Cloud Media" category="Media"/>
+                <filename>
+                    <field addfields="{%12}"/>
+                </filename>
+                <package>
+                    <field addfields="Type:{%5};"/>
+                    <field addfields="Caption:&quot;{%7}&quot;"/>
+                </package>
+                <timestamp field="{%3}" format="yyyy-MM-ddThh:mm:ss"/>
+                <duration/>
+                <desc>
+                    <field addfields="Receipients:{%2};"/>
+                    <field addfields="Media_Path:&quot;{%6}&quot;;"/>
+                    <field addfields="Desc:{%11}"/>
+                </desc>
+                <contact/>
+                <contact_alias>
+                    <field addfields="{%1}"/>
+                </contact_alias>
+                <message>
+                    <field addfields="Comment:&quot;{%9}&quot;;"/>
+                    <field addfields="Like:&quot;{%10}&quot;"/>
+                </message>
+                <location>
+                    <field addfields="{%8}"/>
+                </location>
+            </python>
+    </Timeline>
+    <Contacts path="contacts.json" type="raw">
+        <python run="instagram_cloud.py" arguments="arguments={}\narguments[&quot;contacts&quot;]=True\n">
+            <type text="Instagram Cloud"/>
+            <filename>
+                <field addfields="{%12}"/>
+            </filename>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="First_name:&quot;{%13}&quot;;"/>
+                <field addfields="Last_name:&quot;{%14}&quot;;"/>
+            </desc>
+            <contact>
+                <field addfields="{%15}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%13} "/>
+                <field addfields="{%14}"/>
+            </contact_alias>
+            <message/>
+        </python>
+    </Contacts>
+</Items>
+

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.paltalk.chat.android/databases/paltalk-db" type="database">
+        <sql cmd="select rowid, NICKNAME, MESSAGE, IS_SENT, TIME from CHAT_MESSAGE;">
+            <type text="Paltalk" category="Messenger">
+                <field addfields="[Type:{%3}]" replace="1=Sent;0=Incoming"/>
+            </type>
+            <package/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias/>
+            <message>
+                <field addfields="{%2}"/>
+            </message>
+        </sql>
+</Timeline>
+
+<Contacts path="com.paltalk.chat.android/databases/paltalk-db" type="database">
+        <sql cmd="select DISTINCT rowid, UID, NICKNAME FROM CHAT_MESSAGE;">
+            <type text="Paltalk"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+</Items>

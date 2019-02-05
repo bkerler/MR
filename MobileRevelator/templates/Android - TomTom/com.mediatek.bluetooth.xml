@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.mediatek.bluetooth/databases/share.db" type="database">
+        <sql cmd="SELECT rowid, name, data, uri, peer_name, peer_addr, total, modified FROM share_tasks;">
+            <type text="Mediatek Bluetooth transfer" category="Bluetooth"/>
+            <package/>
+            <timestamp field="{%7}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="[Title:&quot;{%1}&quot;,"/>
+                <field addfields="Path:{%2},"/>
+                <field addfields="Uri:{%3},"/>
+                <field addfields="Size:{%6}]"/>
+            </desc>
+            <contact field="{%5}"/>
+            <contact_alias field="{%4}"/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

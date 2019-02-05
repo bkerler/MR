@@ -1,0 +1,111 @@
+#PrerunFilename="threema.db"
+import os
+import hashlib
+import struct
+import array
+import binascii
+import tempfile
+import shutil
+from Library import opencl
+
+def brute(opencl_ctx,passwordlist,deckey,key):
+    opencl_ctx.compile('pbkdf2_sha1')
+    results = opencl_ctx.run(passwordlist)
+    
+    digests=[]
+    for result in results:
+        dk=binascii.unhexlify(result)
+        td=b''
+        for i in range(0,32):
+            td+=bytes([key[i]^dk[i]])
+        digests.append(td)
+    
+    opencl_ctx.compile('sha1')
+    result=opencl_ctx.run(digests)
+
+    for i in range(0,len(result)):
+            hash=binascii.unhexlify(result[i])
+            if deckey[0:4]==hash[0:4]:
+                print("Threema key correctly decrypted:")
+                dbkey="x\""+binascii.hexlify(key).decode()+"\""
+                return passwordlist[i]
+
+    return b""
+
+def main():
+    #ctx.gui_setMainLabel("Threema: Extracting key");
+    #tmpdir = tempfile.mkdtemp()
+    #outkey = os.path.join(tmpdir, "key.dat")
+    outkey=os.path.join("ch.threema.app/files/","key.dat")
+    error=""
+    #if not ctx.fs_file_extract("/data/ch.threema.app/files/key.dat", outkey):
+    #    shutil.rmtree(tmpdir)
+    #    return "Error: Couldn't find key.dat for decryption."
+    
+    #ctx.gui_add_report_relevant_file("/data/ch.threema.app/files/key.dat")
+    with open(outkey,"rb") as rb:
+            ciphertable = array.array("b",[-107, 13, 38, 122, -120, -22, 119, 16, -100, 80, -25, 63, 71, -32, 105, 114, -38, -60, 57, 124, -103, -22, 126, 103, -81, -3, -35, 50, -38, 53, -9, 12])
+            ciphertable = bytearray(ciphertable)
+
+            keydata=rb.read()
+            stkey=struct.unpack('B 32s 8s 4s', keydata)
+            flag=stkey[0]
+            key=bytearray(stkey[1])
+            salt=stkey[2]
+            print(binascii.hexlify(salt))
+            hash=stkey[3]
+            z = len(key)
+            for i in range(0,32):
+                key[i]=key[i]^ciphertable[i]
+
+            deckey=hashlib.sha1(key).digest()
+            if deckey[0:4]==hash:
+                print("Threema key correctly decrypted:")
+                dbkey="x\""+binascii.hexlify(key).decode()+"\""
+                print(dbkey)
+                #ctx.gui_setMainLabel("Threema: Key extracted: " + dbkey)
+                print("Threema: Key extracted: " + dbkey)
+                #if not (ctx.fs_sqlcipher_decrypt(filename, filename + ".dec", dbkey)):
+                #    error="Error: Wrong key for decryption."
+            else:
+                print("Database is locked by password")
+                wordlistfile="E:\\wordlist\\BreachCleaned.txt"
+                #wordlistfile="pwlist.txt"
+                iterations=10000
+                debug=0
+                platform=0
+                info = opencl.opencl_information()
+                info.printplatforms()
+                opencl_ctx=opencl.pbkdf2_opencl(platform,salt,iterations,debug)
+                counter=0
+                with open(wordlistfile,'rb') as wo:
+                    pw=b""
+                    wordlist=[]
+                    while (True):
+                        pw = wo.readline().replace(b"\r",b"").replace(b"\n",b"")
+                        if (len(wordlist)>63 or pw==b""):
+                            if len(wordlist)>0:
+                                val=brute(opencl_ctx,wordlist,hash,key)
+                                if (val!=b''):
+                                    print("Password found:"+val.decode('utf-8'))
+                                    #ctx.gui_setMainLabel("Threema: Key extracted: " + dbkey)
+                                    #if not (ctx.fs_sqlcipher_decrypt(filename, filename + ".dec", dbkey)):
+                                    #    error="Error: Wrong key for decryption."
+                                    break
+                                if (counter%32000)==0:
+                                    print("Last tested password:"+wordlist[0].decode('utf-8'))
+                                    counter=0
+                            if pw==b'':
+                                break
+                            wordlist=[]
+                        else:
+                            wordlist.append(pw)
+                print("Done.")
+                
+    #os.remove(outkey)
+    if (error==""):
+        return "Threema: Decryption of database successful."
+    else:
+        return error
+
+main()

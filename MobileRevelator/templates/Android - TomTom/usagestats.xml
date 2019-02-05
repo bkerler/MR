@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="usagestats*" type="raw">
+        <python run="android_usagestats.py">
+            <type text="Usagestats Google" category="Usage">
+                <field addfields="{%1}"/>
+            </type>
+            <filename>
+                <field addfields="{%6}"/>
+            </filename>
+            <package>
+                <field addfields="{%2}"/>
+            </package>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration field="{%4}"/>
+            <desc>
+                <field addfields="{%5}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </python>
+</Timeline>
+</Items>

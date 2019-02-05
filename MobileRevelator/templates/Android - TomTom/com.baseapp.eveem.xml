@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.baseapp.eyeem/databases/geocodedata.db" type="database">
+        <sql cmd="SELECT rowid, key, city, countryCode, timeStamp from locations;">
+            <type text="Eyeem" category="Locations"/>
+            <package/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field addfields="{%1};"/>
+                <field addfields="City:{%2};"/>
+                <field addfields="CountryCode:{%3};"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        
+</Timeline>
+</Items>

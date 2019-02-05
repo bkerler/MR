@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+   <Template table="ThumbnailInfo" database="select  ThumbnailInfo.rowID,ThumbnailInfo.Format, ThumbnailInfo.Path,  ThumbnailInfo.Modified, ThumbnailInfoData.Data from ThumbnailInfo INNER JOIN ThumbnailInfoData ON ThumbnailInfo.rowID=ThumbnailInfoData.rowID WHERE ThumbnailInfo.Format=1;" name="Anna/Belle Thumbnails" path="[102830AB]thumbnail_v4.db">
+      <column id="Modified (QString)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1]/1000000-62168256024,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+   </Template>
+</Items>

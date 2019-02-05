@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.lexa.fakegps/databases/fakegps" type="database">
+        <sql cmd="SELECT rowid, name, lat, long FROM history;">
+            <type text="FakeGPS [history]" category="Locations"/>
+            <package>
+                <field addfields="Address:{%1}"/>
+            </package>
+            <timestamp/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%2}" longitude="{%3}"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, name, lat, long FROM favorites;">
+            <type text="FakeGPS [favorites]" category="Locations"/>
+            <package>
+                <field addfields="Address:{%1}"/>
+            </package>
+            <timestamp/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%2}" longitude="{%3}"/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

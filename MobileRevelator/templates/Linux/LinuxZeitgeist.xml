@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+   <Template database="SELECT datetime((timestamp/1000), 'unixepoch') as Datum, subj_uri as 'Einheitlicher Subjekt Bezeichner (URI)', subj_origin_uri as 'Einheitlicher Subjekt Quellbezeichner (Pfad)', subj_text as 'Subjektname (Dateiname)', subj_storage as 'Datenträgerbezeichnung', event_origin_uri as 'Quellbezeichnung für Subjekt', actor_uri as 'Aufrufendes Programm oder Event' FROM event_view;" name="Zeitgeist Database" path="activity.sqlite"/>
+</Items>

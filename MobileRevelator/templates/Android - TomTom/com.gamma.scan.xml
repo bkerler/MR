@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.gamma.scan/databases/barcode_scanner_history.db" type="database">
+        <sql cmd="select rowid, text, format, display, timestamp, details from history;">
+            <type text="Gamma Scan" category="Media"/>
+            <package>
+                <field addfields="Text:&quot;{%1}&quot;"/>
+            </package>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Format: {%2};"/>
+                <field addfields="Display: &quot;{%3}&quot;;"/>
+                <field addfields="Details: &quot;{%5}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

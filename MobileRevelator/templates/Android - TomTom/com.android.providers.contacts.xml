@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template database="SELECT contacts._id as _id, raw_contacts._id as name_raw_contact_id, raw_contacts.display_name as display_name, tbltemp.normalized_number as normalized_number, contacts.times_contacted as times_contacted, contacts.last_time_contacted as last_time_contacted FROM (contacts OUTER LEFT JOIN (SELECT normalized_number, raw_contact_id FROM phone_lookup group by min_match) as tbltemp ON contacts.name_raw_contact_id=tbltemp.raw_contact_id) OUTER LEFT JOIN  raw_contacts ON contacts.name_raw_contact_id=raw_contacts._id WHERE contacts.has_phone_number=1 and tbltemp.normalized_number is not null;" name="Contacts" path="contacts2.db">
+		<column id="date (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+		</column>
+	<column id="last_time_contacted (int)" type="sqlcmd">
+			<r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+	</column>
+</Template>
+
+<Timeline path="com.android.providers.contacts/databases/calllog.db" type="database">
+        <sql cmd="SELECT rowid, number, type, date, name, duration FROM calls;">
+            <type text="CallLog" category="Calls">
+                <field addfields="[Type:{%2}]" replace="1=Incoming;2=Sent;3=Missed;4=Voicemail;5=Rejected;6=Blocked"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration field="{%5}" int="*1000"/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%4}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Timeline>
+
+<Contacts path="com.android.providers.contacts/databases/contacts2.db" type="database">
+        <sql cmd="SELECT contacts._id as _id, raw_contacts._id as name_raw_contact_id, raw_contacts.display_name as display_name, tbltemp.normalized_number as normalized_number, contacts.times_contacted as times_contacted, contacts.last_time_contacted as last_time_contacted FROM (contacts OUTER LEFT JOIN (SELECT normalized_number, raw_contact_id FROM phone_lookup group by min_match) as tbltemp ON contacts.name_raw_contact_id=tbltemp.raw_contact_id) OUTER LEFT JOIN  raw_contacts ON contacts.name_raw_contact_id=raw_contacts._id WHERE contacts.has_phone_number=1 and tbltemp.normalized_number is not null;">
+            <type text="Android Contacts"/>
+            <package/>
+            <timestamp field="{%5}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Times contacted:{%4}"/>
+            </desc>
+            <contact>
+                <field addfields="{%3}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+        
+        <sql cmd="SELECT contacts._id as _id, sync1, raw_contacts._id as name_raw_contact_id, raw_contacts.display_name as display_name, tbltemp.normalized_number as normalized_number, contacts.times_contacted as times_contacted, contacts.last_time_contacted as last_time_contacted FROM (contacts OUTER LEFT JOIN (SELECT normalized_number, raw_contact_id FROM phone_lookup group by min_match) as tbltemp ON contacts.name_raw_contact_id=tbltemp.raw_contact_id) OUTER LEFT JOIN raw_contacts ON contacts.name_raw_contact_id=raw_contacts._id where sync1 LIKE '%whatsapp.net' group by sync1;">
+            <type text="Android Contacts - Whatsapp"/>
+            <package/>
+            <timestamp field="{%6}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Times contacted:{%5}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+        
+        <sql cmd="SELECT rowid, last_time_contacted, display_name, sync1 FROM raw_contacts;">
+            <type text="CallLog Last Contact"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%3}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+        
+        <sql cmd="select deleted_contacts.rowid, raw_contacts.display_name, raw_contacts.sync1, deleted_contacts.contact_deleted_timestamp from deleted_contacts INNER JOIN raw_contacts ON raw_contacts._id=deleted_contacts.contact_id;">
+            <type text="CallLog Deleted Contact"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+        
+</Contacts>
+</Items>

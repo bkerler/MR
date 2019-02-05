@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Contacts path="com.sonymobile.providers.topcontacts/databases/top_contacts.db" type="database">
+        <sql cmd="SELECT number, display_name, last_contact_time FROM top_contact;">
+            <type text="Sony Top_Contacts"/>
+            <package/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%0}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+</Items>

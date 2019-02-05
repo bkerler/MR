@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.imo.android.imoim*/databases/imofriends.db" type="database">
+        <sql cmd="select chats.rowid, friends.alias, friends.name, chats.last_message, chats.timestamp, chats.chat_type from chats INNER JOIN friends ON friends.buid=chats.buid;select messages.rowid, friends.name, friends.buid, messages.last_message, messages.timestamp, messages.message_type from messages LEFT OUTER JOIN friends ON friends.buid=messages.buid;">
+            <type text="Imo Messages" category="Messenger">
+                <field addfields="[Type:{%5}]" replace="0=Sent;1=Incoming;2=System"/>
+            </type>
+            <package/>
+            <timestamp field="{%4}" int="/1000000000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%3}"/>
+            </message>
+        </sql>
+        <sql cmd="select chats.rowid, friends.name, friends.buid, chats.last_message, chats.timestamp, chats.chat_type from chats INNER JOIN friends ON friends.buid=chats.buid;select chats_new.rowid, friends._alias_sl, friends.name, chats_new.last_message, chats_new.timestamp, chats_new.chat_type from chats_new LEFT OUTER JOIN friends ON friends.buid=chats_new.buid;">
+            <type text="Imo Messages New" category="Messenger">
+                <field addfields="[Type:{%5}]" replace="0=Sent;1=Incoming;2=System"/>
+            </type>
+            <package/>
+            <timestamp field="{%4}" int="/1000000000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%1}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%3}"/>
+            </message>
+        </sql>
+
+</Timeline>
+
+<Contacts path="com.imo.android.imoim*/databases/imofriends.db" type="database">
+        <sql cmd="select rowid, buid, alias || ' [' || _alias || ']', icon, '' from friends;select rowid, buid, _alias_sl, icon, times_contacted from friends;">
+            <type text="Imo Contacts"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <desc>
+                <field addfields="Icon:{%3};"/>
+                <field addfields="Times contacted:{%4}"/>
+            </desc>
+        </sql>
+        <sql cmd="select rowid, phone, name, uid, incoming_calls, outgoing_calls, times_contacted, last_contacted from imo_phonebook;">
+            <type text="Imo Phonebook"/>
+            <package/>
+            <timestamp field="{%7}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%3}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <desc>
+                <field addfields="Phone:{%1};"/>
+                <field addfields="Incoming calls:{%4};"/>
+                <field addfields="Outgoing calls:{%5};"/>
+                <field addfields="Times contacted:{%6}"/>
+            </desc>
+        </sql>
+</Contacts>
+</Items>

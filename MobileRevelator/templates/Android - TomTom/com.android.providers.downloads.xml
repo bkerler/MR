@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template table="downloads" name="Downloads" path="downloads.db">
+        <column id="lastmod (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="visibility (int)" type="textreplace">
+            <r replace="0" with="visible"/>
+            <r replace="1" with="visible notify completed"/>
+            <r replace="2" with="hidden"/>
+        </column>
+        <column id="destination (int)" type="textreplace">
+            <r replace="0" with="external"/>
+            <r replace="1" with="cache partition"/>
+            <r replace="2" with="cache partition purgable"/>
+            <r replace="3" with="cache partition noroaming"/>
+            <r replace="4" with="file uri"/>
+            <r replace="5" with="system cache partition"/>
+            <r replace="6" with="non downloadmanager"/>
+        </column>
+        <column id="allowed_network_types (int)" type="textreplace">
+            <r replace="-1" with="unknown"/>
+            <r replace="0" with="mobile"/>
+            <r replace="1" with="wifi"/>
+            <r replace="2" with="mobile_mms"/>
+            <r replace="3" with="mobile_supl"/>
+            <r replace="4" with="mobile_dun"/>
+            <r replace="5" with="mobile_hipri"/>
+            <r replace="6" with="wimax"/>
+            <r replace="7" with="bluetooth"/>
+            <r replace="8" with="dummy"/>
+        </column>
+        <column id="status (int)" type="textreplace">
+            <r replace="190" with="pending"/>
+            <r replace="192" with="running"/>
+            <r replace="192" with="running"/>
+            <r replace="193" with="paused by app"/>
+            <r replace="194" with="waiting to retry"/>
+            <r replace="195" with="waiting for network"/>
+            <r replace="196" with="queued for wifi"/>
+            <r replace="198" with="insufficient space"/>
+            <r replace="199" with="device not found"/>
+            <r replace="200" with="success"/>
+            <r replace="400" with="bad request"/>
+            <r replace="406" with="not acceptable"/>
+            <r replace="411" with="length required"/>
+            <r replace="412" with="precondition failed"/>
+            <r replace="488" with="file already exists"/>
+            <r replace="489" with="cannot resume"/>
+            <r replace="490" with="canceled"/>
+            <r replace="491" with="unknown error"/>
+            <r replace="492" with="file error"/>
+            <r replace="493" with="unhandled redirect"/>
+            <r replace="494" with="unhandled http code"/>
+            <r replace="495" with="http data error"/>
+            <r replace="496" with="http exception"/>
+            <r replace="497" with="too many redirects"/>
+        </column>
+        <column id="is_public_api (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+        <column id="allow_roaming (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+        <column id="is_visible_in_downloads_ui (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+        <column id="deleted (QString)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+</Template>
+
+<Timeline path="com.android.providers.downloads/databases/downloads.db" type="database">
+        <sql cmd="SELECT rowid, _data, uri, lastmod, notificationpackage, total_bytes FROM downloads;">
+            <type text="Android Downloads" category="Downloads"/>
+            <package field="{%4}"/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="[URI: &quot;{%2}&quot;,"/>
+                <field addfields="Path: {%1},"/>
+                <field addfields="Size: {%5}]"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

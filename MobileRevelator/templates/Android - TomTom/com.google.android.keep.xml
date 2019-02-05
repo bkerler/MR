@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.google.android.keep/databases/keep.db" type="database">
+        <sql cmd="select rowid, text, time_created from list_item;">
+            <type text="Google Keep Note" category="Documents"/>
+            <package/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message>
+                <field addfields="{%1}"/>
+            </message>
+            <image/>
+        </sql>
+        <sql cmd="select blob.rowid, blob_node.time_created, blob.file_name, blob.blob_size from blob LEFT OUTER JOIN blob_node ON blob_node.rowid=blob.blob_id;">
+            <type text="Google Keep Media" category="Media"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Filename:&quot;{%2}&quot;;"/>
+                <field addfields="Size:&quot;{%3}&quot;;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

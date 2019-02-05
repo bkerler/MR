@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.oneplus.gallery/databases/gallery.db" type="database">
+        <sql cmd="select album.rowid, album._display_name, album.date_added, media.address_latitude, media.address_longitude, media.address_country from album LEFT OUTER JOIN media ON album.rowid=media.media_id where media.address_latitude!=0;">
+            <type text="Oneplus Gallery" category="Locations"/>
+            <package>
+                <field addfields="Filename: &quot;{%1}&quot;"/>
+            </package>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="select album.rowid, album._display_name, album.date_added, media.address_latitude, media.address_longitude, media.address_country from album LEFT OUTER JOIN media ON album.rowid=media.media_id;">
+            <type text="Oneplus Gallery" category="Media"/>
+            <package>
+                <field addfields="Filename: &quot;{%1}&quot;"/>
+            </package>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>
+

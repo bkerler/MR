@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+
+<Timeline path="com.hancom.office.viewer*/databases/recent.db" type="database">
+        <sql cmd="select rowid, name, file_size, modify_date, file_path from recentfiles;">
+			<type text="Hancom Viewer" category="Media"/>
+			<package>
+				<field addfields="Filename: {%1}"/>
+			</package>
+            <timestamp field="{%3}" int="/1000"/>
+            <foregroundtime/>
+            <desc>
+                <field addfields="Path: {%4};"/>
+				<field addfields="Path: {%5}"/>
+            </desc>
+			<contact/>
+			<contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template database="select rowid,number,type,duration,date,ring_times from calls_tb;" name="Calls" path="calllog.db">
+    <column id="date (int)" type="sqlcmd">
+        <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+    </column>
+    <column id="type (int)" type="textreplace">
+        <r replace="0" with="all"/>
+        <r replace="1" with="inbox"/>
+        <r replace="2" with="outgoing"/>
+        <r replace="3" with="missed"/>
+        <r replace="4" with="voicemail"/>
+        <r replace="5" with="rejected"/>
+        <r replace="6" with="blocked"/>
+    </column>
+</Template>
+
+<Timeline path="/calllog.db" type="database">
+        <sql cmd="select rowid,number,type,duration,date,ring_times from calls_tb;">
+            <type text="Huawei CallLog" category="Calls">
+                <field addfields="[Type:{%2}]" replace="1=Incoming;2=Outgoing;3=Missed;4=Voicemail;5=Rejected;6=Blocked"/>
+            </type>
+            <package/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration field="{%3}" int="*1000"/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

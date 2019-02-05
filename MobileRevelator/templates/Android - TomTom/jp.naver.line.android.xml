@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="jp.naver.line.android/databases/naver_line" type="database">
+        <attach database="jp.naver.line.android/databases/call_history" alias="ch"/>
+        <sql cmd="SELECT chat.rowid, chat.last_from_mid, chat.last_message, chat.last_created_time, contacts.server_name FROM chat INNER JOIN contacts ON contacts.m_id = chat.last_from_mid;">
+            <type text="Line Chat [Type:Incoming]" category="Messenger"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%4}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%2}"/>
+            </message>
+        </sql>
+        <sql cmd="SELECT chat.rowid, chat.owner_mid, chat.last_message, chat.last_created_time FROM chat WHERE chat.owner_mid!='';">
+            <type text="Line Chat [Type:Outgoing]" category="Messenger"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias/>
+            <message>
+                <field addfields="{%2}"/>
+            </message>
+        </sql>
+        <sql cmd="SELECT ch.call_history.rowid, ch.call_history.caller_mid, ch.call_history.phone_number, ch.call_history.caller_name, ch.call_history.start_time, (ch.call_history.end_time-ch.call_history.start_time), contacts.server_name FROM ch.call_history INNER JOIN contacts ON contacts.m_id = ch.call_history.caller_mid;">
+            <type text="Line Calllog" category="Calls"/>
+            <package/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration field="{%5}"/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%6}"/>
+                <field addfields=";{%2}"/>
+                <field addfields=";{%3}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

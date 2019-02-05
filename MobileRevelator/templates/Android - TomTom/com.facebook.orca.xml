@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.facebook.orca/databases/call_log.sqlite" type="database">
+        <attach database="com.facebook.orca/databases/contacts_db2" alias="ca"/>
+        <sql cmd="SELECT person_summary.rowid, last_call_time, user_id, duration, direction, ca.contacts.display_name FROM person_summary LEFT OUTER JOIN ca.contacts ON ca.contacts.fbid=person_summary.user_id;SELECT person_summary.rowid, last_call_time, user_id, '', ca.contacts.display_name FROM person_summary LEFT OUTER JOIN ca.contacts ON ca.contacts.fbid=person_summary.user_id;">
+            <type text="Facebook Messenger Calls - Orca" category="Calls">
+                <field addfields="[Type:{%4}]" replace="1=Incoming;2=Sent"/>
+            </type>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration field="{%3}" int="*1000"/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%5}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Timeline>    
+
+<Timeline path="com.facebook.orca/databases/threads_db2" type="database">
+        <attach database="com.facebook.orca/databases/contacts_db2" alias="fb"/>
+        <sql cmd="SELECT messages.rowid, timestamp_ms, sender, text, attachments FROM messages WHERE timestamp_ms!=0;">
+            <type text="Facebook Messenger Chats - Orca" category="Messenger"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%4}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}" splitstart="user_key&quot;:&quot;FACEBOOK:" splitend="&quot;"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}" splitstart="name&quot;:&quot;" splitend="&quot;"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%3}"/>
+            </message>
+        </sql>
+        <python run="android_fb_orca_rtc.py">
+            <type text="Facebook Messenger RTC - Orca" category="Calls">
+                <field addfields="[Type:{%3}]" replace="1=Incoming;0=Sent"/>
+            </type>
+            <package/>
+            <timestamp field="{%6}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration field="{%5}" int="*1000"/>
+            <desc>
+                <field addfields="Answered:{%4}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message/>
+        </python>
+</Timeline>
+
+<Contacts path="com.facebook.orca/databases/contacts_db2" type="database">
+        <python run="android_facebook_contacts.py">
+            <type text="Facebook Messenger - Orca"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="First_name:&quot;{%3}&quot;;"/>
+                <field addfields="Last_name:&quot;{%4}&quot;;"/>
+                <field addfields="Huge_Picture_Url:&quot;{%6}&quot;;"/>
+                <field addfields="Numbers:&quot;{%7}&quot;;"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%5}"/>
+            </contact_alias>
+            <message/>
+        </python>
+</Contacts>
+<Contacts path="com.facebook.orca/databases/threads_db2" type="database">
+        <sql cmd="SELECT rowid, user_key, first_name, last_name, name, username, profile_pic_square, is_messenger_user, last_fetch_time from thread_users;SELECT rowid, user_key, first_name, last_name, name, '', profile_pic_square, is_messenger_user, last_fetch_time from thread_users;SELECT rowid, user_key, first_name, last_name, name, '', pic_square, '', '' from thread_users;">
+            <type text="Facebook Messenger - Orca - Threads"/>
+            <package/>
+            <timestamp field="{%8}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="FB user:&quot;{%5}&quot;;"/>
+                <field addfields="First_name:&quot;{%2}&quot;;"/>
+                <field addfields="Last_name:&quot;{%3}&quot;;"/>
+                <field addfields="Huge_Picture_Url:&quot;{%6}&quot;;"/>
+                <field addfields="Is_Messenger_User:{%7};" replace="0=no;1=yes"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}" splitstart="FACEBOOK:" splitend=""/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%4}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+</Items>

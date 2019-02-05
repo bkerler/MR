@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.samsung.android.app.snote/databases/Snote.db" type="database">
+        <sql cmd="select rowid, name, path, ModifiedTime from Files;">
+            <type text="Samsung SNote" category="Documents"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc field="{%2}"/>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

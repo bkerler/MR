@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+	<Template table="Message" name="Message" path="store.vol">
+		<column id="PR_MESSAGE_FLAGS (UInt32)" type="textreplace">
+		    <r replace="0" with="none"/>
+			<r replace="1" with="read"/>
+			<r replace="2" with="unmodified"/>
+			<r replace="3" with="read,unmodified"/>
+			<r replace="4" with="submit"/>
+			<r replace="8" with="unsent"/>
+			<r replace="16" with="hasattach"/>
+			<r replace="32" with="fromme"/>
+			<r replace="33" with="read,fromme"/>
+			<r replace="64" with="associated"/>
+			<r replace="128" with="resend"/>
+			<r replace="256" with="rn_pending"/>
+			<r replace="512" with="nrn_pending"/>
+		</column>
+		<column id="PR_CE_CONTEXT_FLAGS (UInt32)" type="textreplace">
+			<r replace="0" with="none"/>
+			<r replace="1" with="disable_reply"/>
+			<r replace="2" with="disable_forward"/>
+			<r replace="3" with="disable_reply,disable_forward"/>
+			<r replace="4" with="disable_delete"/>
+			<r replace="8" with="disable_move"/>
+			<r replace="16" with="disable_flag"/>
+			<r replace="32" with="disable_markread"/>
+		</column>
+		<column id="PR_PROOF_OF_DELIVERY_REQUESTED (UInt16)" type="textreplace">
+			<r replace="1" with="true"/>
+			<r replace="0" with="false"/>
+		</column>
+		<column id="PR_IMPORTANCE (UInt32)" type="textreplace">
+			<r replace="0" with="low"/>
+			<r replace="1" with="normal"/>
+			<r replace="2" with="high"/>
+		</column>
+		<column id="PR_SENSITIVITY (UInt32)" type="textreplace">
+			<r replace="0" with="low"/>
+			<r replace="1" with="normal"/>
+			<r replace="2" with="high"/>
+		</column>
+	</Template>
+</Items>

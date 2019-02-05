@@ -1,0 +1,122 @@
+<MR>
+<crypto name="CRAMFS (zlib)        " signature="453DCD2800"></crypto>
+<crypto name="SQLITE db            " signature="53514C69746520666F726D617420"></crypto>
+<crypto name="SQUASHFS (zlib/LZMA) " signature="68737173"></crypto>
+<crypto name="YAFFS                " signature="0300000001000000FFFF"></crypto>
+<crypto name="CRC-8                " signature="005ebce2613fdd83c29c"></crypto>
+<crypto name="CRC-16               " signature="000001CC01D8001401F0"></crypto>
+<crypto name="CRC-16 word          " signature="000001CC000001D800000014000001F00000"></crypto>
+<crypto name="CRC-16               " signature="0000C1C081C1400101C3"></crypto>
+<crypto name="CRC-16 word          " signature="0000C1C0000081C100004001000001C30000"></crypto>
+<crypto name="CRC-16 norm          " signature="00002110422063308440"></crypto>
+<crypto name="CRC-16 norm word     " signature="000021100000422000006330000084400000"></crypto>
+<crypto name="CRC-16 inv           " signature="0000891112239b322446"></crypto>
+<crypto name="CRC-16 inv word      " signature="000089110000122300009b32000024460000"></crypto>
+<crypto name="CRC-16 Samsung       " signature="000005800F800A001B801E00"></crypto>
+<crypto name="Crc Samsung Func     " signature="70B5FFFFFFFF00FF0BE00578140A1202"></crypto>
+<crypto name="CRC-30               " signature="00000000C7B9302049CA5120"></crypto>
+<crypto name="CRC30 Function       " signature="C7B93060"></crypto>
+<crypto name="CRC-32               " signature="00000000963007772C610EEEBA510999"></crypto>
+<crypto name="CRC32 Function       " signature="2083B8ED"></crypto>
+<crypto name="CRC-32 Xilinx        " signature="00000000B71DC1046E3B8209D926430D"></crypto>
+<crypto name="CRC32 Xilinx Function" signature="B71DC104"></crypto>
+<crypto name="BLOWFISH aInit       " signature="A60B31D1ACB5DF98DB72FD2F"></crypto>
+<crypto name="BLOWFISH pInit       " signature="886A3F24D308A3852E8A1913"></crypto>
+<crypto name="AES sbox1 MUGI/SCREAM" signature="637c777bf26b6fc53001672B"></crypto>
+<crypto name="AES sbox2            " signature="52096ad53036a538bf40A39E"></crypto>
+<crypto name="AES te               " signature="A56363C6847c7cf8997777ee"></crypto>
+<crypto name="AES 32-Bit           " signature="C66363A5F87C7C84F67B7B8D"></crypto>
+<crypto name="CAMELLIA SP          " signature="0070707000828282002c2c2c"></crypto>
+<crypto name="CAMELLIA S1          " signature="70822CECB327C0E5E4855735"></crypto>
+<crypto name="CAST256 t_m          " signature="9979825AA1D651D1A9332148"></crypto>
+<crypto name="CAST256 t_r          " signature="131B030B131B030B131B030B"></crypto>
+<crypto name="CAST SBOX            " signature="D440FB300BFFA09F2FCDEC6B"></crypto>
+<crypto name="CAVE                 " signature="D9235FE6CA6897B07BF20C34"></crypto>
+<crypto name="CAVE ibox            " signature="DDF3F7900BF51A48203C8404"></crypto>
+<crypto name="DES init perm        " signature="3A322A221A120A023C342C24"></crypto>
+<crypto name="DES final perm       " signature="280830103818402027072F0F"></crypto>
+<crypto name="DES sbox             " signature="0E040D01020F0B08030A060C"></crypto>
+<crypto name="DES RAW Spbox        " signature="000401010000000000000100"></crypto>
+<crypto name="GSM S7               " signature="360032003E00380016002200"></crypto>
+<crypto name="GSM S9               " signature="A700EF00A1007B0187014E01"></crypto>
+<crypto name="GSM COMP128 V1 t0    " signature="66B1BAA2029C704B3719080C"></crypto>
+<crypto name="GSM COMP128 V1 t1    " signature="130B50722B01455E27127F75"></crypto>
+<crypto name="GSM COMP128 V1 t2    " signature="34322C061531293B27331920"></crypto>
+<crypto name="GSM COMP128 V1 t3    " signature="01051D061901121711130009"></crypto>
+<crypto name="GSM COMP128 V1 t4    " signature="0F0C0A04010E0B0705000E07"></crypto>
+<crypto name="GSM COMP128 V2/V3 t0 " signature="AA2A5F8D6D1E47591A93E7CD"></crypto>
+<crypto name="GSM COMP128 V2/V3 t1 " signature="C5EB3C9762600364F8762A75"></crypto>
+<crypto name="RSA PKCS#1 EAY       " signature="842B0200956201"></crypto>
+<crypto name="RSA PKCS MD2/4/5 Digest" signature="3020300906052B0E03021A05"></crypto>
+<crypto name="RSA PKCS SHA1/RIPEND Digest" signature="3021300906052B0E03021A05"></crypto>
+<crypto name="RSA PKCS Tiger Digest" signature="3029300906052B0E03021A05"></crypto>
+<crypto name="RSA PKCS SHA224 Digest" signature="302d300d0609608648016503"></crypto>
+<crypto name="RSA PKCS SHA256 Digest" signature="3031300d0609608648016503"></crypto>
+<crypto name="RSA PKCS SHA384 Digest" signature="3041300d0609608648016503"></crypto>
+<crypto name="RSA PKCS SHA512 Digest" signature="3051300d0609608648016503"></crypto>
+<crypto name="RSA ASN1 EC2N         " signature="0402FE13C0537BBC11ACAA07"></crypto>
+<crypto name="GOST                  " signature="040A09020D08000E060B010C"></crypto>
+<crypto name="MARS SBOX             " signature="79c4d009e0ffc82884aa6c39"></crypto> 
+<crypto name="MD2 S                 " signature="292E43C9A2D87C013D3654A1"></crypto> 
+<crypto name="RC2 Pi Table          " signature="D978F9C419DDB5ED28E9FD79"></crypto>
+<crypto name="SAFER exp            " signature="012DE293BE6015AE780387A4"></crypto>
+<crypto name="SAFER log            " signature="8000B00960EFB9FD10129FE4"></crypto>
+<crypto name="SHA nokia            " signature="9979825AA1EBD96EDCBC1B8F"></crypto>
+<crypto name="SHA2 table           " signature="982f8a4291443771cffbc0b5"></crypto>
+<crypto name="SHA384 table         " signature="D89E05C15D9DBBCB07D57C36"></crypto>
+<crypto name="SHA512 table         " signature="08C9BCF367E6096A3BA7CA84"></crypto>
+<crypto name="SHARK table          " signature="E7309085D04B914153959BA5"></crypto>
+<crypto name="SHARK/SQUARE enc sbox" signature="B1CEC3955AADE7024D44FB91"></crypto>
+<crypto name="SHARK/SQUARE dec sbox" signature="35BE072E5369DB286FB7766B"></crypto>
+<crypto name="SKIPJACK             " signature="A3D70983F848F6F4B3211578"></crypto>
+<crypto name="SOSEMANUK            " signature="0000000012CF9FE12437976B"></crypto>
+<crypto name="TIGER Table          " signature="5E0CE9F77CB1AA02ECA843E2"></crypto>
+<crypto name="Whirlpool            " signature="D83078C0186018182646AF05"></crypto>
+<crypto name="ZDeflate             " signature="010102010301040105010601"></crypto>
+<crypto name="SHA1+MD4+MD5 init    " signature="0123456789ABCDEFFEDCBA9876543210"></crypto>
+<crypto name="SHA1+MD4+MD5 key1    " signature="F0E1D2C3"></crypto>
+<crypto name="SHA1+MD4+MD5 key2    " signature="78a46ad7"></crypto>
+<crypto name="SHA1+MD4+MD5 key3    " signature="56b7c7e8"></crypto>
+<crypto name="SHA2 init table      " signature="67E6096A"></crypto>
+<crypto name="SHA2 init table      " signature="85AE67BB"></crypto>
+<crypto name="RIPEMD128+160+MD4    " signature="9979825a"></crypto>
+<crypto name="MD5                  " signature="78a46ad7"></crypto>
+<crypto name="MD5                  " signature="6F2C7914"></crypto>
+<crypto name="TEA+RC5 init         " signature="B979379E"></crypto>
+<crypto name="TEA+RC5 key2         " signature="6351E1B7"></crypto> 
+<crypto name="TEA+RC5 key3         " signature="2037EFC6"></crypto>
+<crypto name="GZIP                 " signature="1F8B0800"></crypto>
+<crypto name="GZIP                 " signature="1F8B0801"></crypto>
+<crypto name="GZIP                 " signature="1F8B0802"></crypto>
+<crypto name="GZIP                 " signature="1F8B0803"></crypto>
+<crypto name="GZIP                 " signature="1F8B0804"></crypto>
+<crypto name="ZIP                  " signature="504B0304"></crypto>
+<crypto name="FAT16                " signature="4641543136"></crypto>
+<crypto name="FAT32                " signature="4641543332"></crypto>
+<crypto name="XSR3                 " signature="58535233"></crypto>
+<crypto name="XSR2                 " signature="58535232"></crypto>
+<crypto name="FAT MSWIN            " signature="EB??904D5357494E"></crypto>
+<crypto name="ENIGMA               " signature="05840808"></crypto>
+<crypto name="RUBY                 " signature="91606C45"></crypto>
+<crypto name="SEAL+MD4 key         " signature="9979825a"></crypto>
+<crypto name="SNEFRU               " signature="1B00F964"></crypto>
+<crypto name="Q128                 " signature="3226D9D6"></crypto>
+<crypto name="RC6                  " signature="F57B3FBB"></crypto> 
+<crypto name="HAVAL                " signature="886A3F24"></crypto>
+<crypto name="HAVAL                " signature="D308A385"></crypto>
+<crypto name="TIGER Init           " signature="87E1B2C3B4A596F0"></crypto>
+<crypto name="RIPEMDSHA            " signature="4EFD53A9"></crypto>
+<crypto name="RIPEMD256            " signature="E9766D7A"></crypto>
+<crypto name="RSA Public Key Magic " signature="52534131"></crypto>
+<crypto name="RSA Private Key Magic" signature="52534132"></crypto>
+<crypto name="HTC Radio Sec Table  " signature="1F001E011D160A"></crypto>
+<crypto name="RSA PUBLIC KEY       " signature="30818902818100"></crypto>
+<crypto name="Sober 128            " signature="3AC59669"></crypto>
+<crypto name="Sober 128 SBox       " signature="8718AAA35C435ED642C0650B"></crypto>
+<crypto name="Vest                 " signature="4F7046DAE18DF64159E85D26"></crypto>
+<crypto name="SOSEMANUK            " signature="0000000013CF9FE12637976B"></crypto>
+<crypto name="RABBIT               " signature="4DD3344DD3344DD3344DD334"></crypto>
+<crypto name="ARC4 output          " signature="0550D0E70640D0E70650C0E70050D2E5"></crypto>
+<crypto name="ARC4 init            " signature="802410E200006042413032E000106122"></crypto>
+<crypto name="QURAM MDuce          " signature="01000300000102000800070006000003"></crypto>
+</MR>

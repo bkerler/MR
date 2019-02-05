@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="/soundrecorder.db" type="database">
+        <sql cmd="SELECT rowid, date_added, file_size, _data, title, duration FROM comhuaweisoundrecorderbackupProvidernormal_record_table_tb;">
+            <type text="Huawei Soundrecorder" category="Media"/>
+            <package field="{%3}"/>
+            <timestamp field="{%1}" int=""/>
+            <duration field="{%5}"/>
+            <desc>
+                <field addfields="Title:{%4}"/>
+                <field addfields="Filesize:{%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

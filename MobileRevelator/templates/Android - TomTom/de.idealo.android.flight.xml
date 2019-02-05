@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="de.idealo.android.flight/databases/idealo_HISTORY_app.db" type="database">
+        <sql cmd="SELECT rowid, time, datetime(outboundDate/1000,'unixepoch'), datetime(returnDate/1000,'unixepoch'), outboundAirportStart, outboundAirportArrival from searchHistory;">
+            <type text="Idealo Flights" category="Documents"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="From:&quot;{%4}&quot;,"/>
+                <field addfields="{%2};"/>
+                <field addfields="To:&quot;{%5}&quot;,"/>
+                <field addfields="{%3};"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="phoneManager.db" type="database">
+        <sql cmd="select rowid, imsi, type, recordtime from comhuaweisystemmanagernetassistantdbtrafficTrafficDBProvidertrafficstatistics_tb;">
+            <type text="CallLog" category="Calls">
+                <field addfields="[Type:{%2}]" replace="1=Incoming;2=Outgoing;3=Missed;4=Voicemail;5=Rejected;6=Blocked"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="IMSI:{%1}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

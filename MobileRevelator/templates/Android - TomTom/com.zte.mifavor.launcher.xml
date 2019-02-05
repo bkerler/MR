@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.zte.mifavor.launcher/databases/cached/curWallpaper*.jpg" type="raw">
+        <python run="android_thumbnail.py">
+            <type text="ZTE Wallpaper" category="Media"/>
+            <filename>
+                <field addfields="{%2}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%1}"/>
+            </image>
+        </python>
+</Timeline>
+<Timeline path="com.zte.mifavor.launcher/databases/launcher.db" type="database">
+        <sql cmd="SELECT rowid, modified, title, uri, icon, iconPackage FROM favorites;">
+            <type text="ZTE Launcher" category="Usage"/>
+            <package>
+                <field addfields="{%5}"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Uri:&quot;{%3}&quot;;"/>
+                <field addfields="Title:&quot;{%2}&quot;;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%4}"/>
+            </image>
+        </sql>
+</Timeline>
+</Items>

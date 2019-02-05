@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.samsung.android.app.memo/databases/memo.db" type="database">
+        <sql cmd="SELECT rowid, accountName, createdAt, content, title from memo;">
+            <type text="Samsung Memo" category="Documents"/>
+            <package/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Memo:&quot;{%3}&quot;;" unhtml="1"/>
+                <field addfields="Title:&quot;{%4}&quot;;" unhtml="1"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

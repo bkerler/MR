@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sec.android.provider.logsprovider/databases/logs.db" type="database">
+        <sql cmd="SELECT rowid, number, type, date, name, duration FROM logs;">
+            <type text="CallLog_Samsung" category="Calls">
+                <field addfields="[type:{%2}]" replace="1=Incoming;2=Sent;3=Missed;4=Voicemail;5=Rejected;6=Blocked"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration field="{%5}" int="*1000"/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%4}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Timeline>
+<Contacts path="com.sec.android.provider.logsprovider/databases/logs.db" type="database">
+        <sql cmd="select rowid, number, date, name from logs group by number;">
+            <type text="LogProvider Samsung"/>
+            <package/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+</Items>

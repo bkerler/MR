@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.cleanmaster.mguard/databases/url_cache.db" type="database">
+        <sql cmd="SELECT rowid, last_query_time, host FROM non_black;">
+            <type text="Cleanmaster URL Cache"  category="Browser"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Host:&quot;{%2}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

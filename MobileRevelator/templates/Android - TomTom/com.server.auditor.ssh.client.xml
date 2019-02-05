@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.server.auditor.ssh.client/databases/ssh_connections.db" type="database">
+        <sql cmd="select rowid, title, username, host, port, password, history_type, created_at from last_connection;">
+            <type text="Terminus SSH/Telnet Client" category="IP Connections"/>
+            <package>
+                <field addfields="{%6}"/>
+            </package>
+            <timestamp field="{%7}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="Title:{%1};"/>
+                <field addfields="Host:{%3};"/>
+                <field addfields="Port:{%4};"/>
+                <field addfields="Username:{%2};"/>
+                <field addfields="Password:{%5};"/>
+                <field addfields="Type:{%6};"/>
+            </desc>
+            <location/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <filename/>
+            <deleted/>
+        </sql>
+</Timeline>
+</Items>

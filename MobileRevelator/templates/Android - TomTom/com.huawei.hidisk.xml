@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.huawei.hidisk/databases/FileManager.db" type="database">
+        <sql cmd="select rowid, file_name, file_path, last_access_date from tab_recent_doc;">
+            <type text="Huawei HiDisk" category="Media"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc field="{%2}"/>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.azarlive.android/databases/azar_chatlist" type="database">
+        <sql cmd="select rowid, userid, username, locationcountry, lastmessagesentbyme, message, date from chatlist;">
+            <type text="Azar Chatlist" category="Messenger">
+                <field addfields="[Type:{%4}]" replace="0=Incoming;1=Sent"/>
+            </type>
+            <package/>
+            <timestamp field="{%6}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="User Country:{%3}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%5}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.amazon.mShop.android.shopping/databases/history.db" type="database">
+        <sql cmd="SELECT rowid, asin, type, visit_date, email from history;">
+            <type text="Amazon Shopping History" category="Media"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Producttype: {%2};"/>
+                <field addfields="Product ASIN: {%1};"/>
+                <field addfields="Email: {%4};"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+        </sql>
+</Timeline>
+</Items>

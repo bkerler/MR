@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path=".estrongs/samefiles0.db" type="database">
+        <sql cmd="select rowid, fullpath, lastmodified, size, type from samefiles;">
+            <type text="EStrongs" category="Media">
+                <field addfields="[Type:{%4}]"/>
+            </type>
+            <package field="{%1}"/>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="[Size:{%3}]"/>
+            </desc>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

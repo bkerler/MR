@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template table="files" name="External Media files" path="external.db">
+        <column id="date_added (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="date_modified (int)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1],'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="media_type (int)" type="textreplace">
+            <r replace="0" with="none"/>
+            <r replace="1" with="image"/>
+            <r replace="2" with="audio"/>
+            <r replace="3" with="video"/>
+            <r replace="4" with="playlist"/>
+        </column>
+        <column id="is_drm (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+        <column id="is_ringtone (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+        <column id="is_alarm (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+        <column id="is_notification (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+        <column id="is_podcast (int)" type="textreplace">
+            <r replace="0" with="no"/>
+            <r replace="1" with="yes"/>
+        </column>
+</Template>
+
+<Timeline path="com.android.providers.media/databases/external.db" type="database">
+        <sql cmd="SELECT rowid,date_modified, _data, bucket_display_name FROM files;">
+            <type text="Android Media DB [Last modified]" category="Media"/>
+            <package field="{%3}"/>
+            <timestamp field="{%1}" int=""/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid,date_modified, _data, bucket_display_name FROM video;">
+            <type text="Android Media DB Video [Last modified]" category="Media"/>
+            <package field="{%3}"/>
+            <timestamp field="{%1}" int=""/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid,date_modified, _data, bucket_display_name FROM images;">
+            <type text="Android Media DB Images [Last modified]" category="Media"/>
+            <package field="{%3}"/>
+            <timestamp field="{%1}" int=""/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid,date_modified, _data FROM audio_meta;">
+            <type text="Android Media DB Audio_Meta [Last modified]" category="Media"/>
+            <package/>
+            <timestamp field="{%1}" int=""/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid,time,message FROM log;">
+            <type text="Android Media DB" category="Media"/>
+            <package text="Media Action"/>
+            <timestamp field="{%1}" format="yyyy-MM-dd hh:mm:ss.zzz"/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}" require="action"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

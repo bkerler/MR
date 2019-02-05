@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template database="select rowid, phone, name, date from comhuaweisystemmanagerHarassmentInterceptionDBProviderinterception_calls_tb;" name="Call Blacklist" path="harassment.db">
+    <column id="date (QString)" type="sqlcmd">
+        <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+    </column>
+    <column id="phone (QString)"/>
+    <column id="name (QString)"/>
+</Template>
+
+<Timeline path="harassment.db" type="database">
+        <sql cmd="select rowid, phone, name, date from comhuaweisystemmanagerHarassmentInterceptionDBProviderinterception_calls_tb;">
+            <type text="Huawei Blacklist" category="Calls"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+        <sql cmd="select rowid, message_type, phone, name, date, body from comhuaweisystemmanagerHarassmentInterceptionDBProviderinterception_messages_tb;">
+            <type text="Huawei SMS Blacklist" category="Messenger">
+                <field addfields="[type:{%3}]" replace="1=Received;2=Sent;3=Draft"/>
+            </type>
+            <package/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%5}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>

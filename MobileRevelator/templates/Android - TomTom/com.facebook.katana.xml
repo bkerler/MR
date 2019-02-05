@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Template table="threads" name="Facebook Threads_DB2" path="threads_db2">
+      <column id="timestamp_ms (int)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+      <column id="last_fetch_time_ms (int)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+	   <column id="single_recipient_thread (int)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+      <column id="unread (int)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+	  <column id="can_reply_to (int)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+	  <column id="is_subscribed (int)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+</Template>
+<Template table="messages" name="Facebook Threads_DB2" path="threads_db2">
+      <column id="timestamp_ms (int)" type="sqlcmd">
+         <r cmd="SELECT datetime([%1]/1000,'unixepoch','localtime') WHERE [%1]>0;"/>
+      </column>
+	   <column id="is_non_authoritative (int)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+      <column id="is_sent_internally (int)" type="textreplace">
+         <r replace="0" with="no"/>
+         <r replace="1" with="yes"/>
+      </column>
+</Template>
+
+<Timeline path="com.facebook.katana/databases/events_db" type="database">
+        <sql cmd="SELECT rowid, start_time_millis, facebook_id, name, description_text, location_full_address, location_latitude, location_longitude, location_name, uri FROM events;">
+            <type text="Facebook Events - Katana" category="Browser"/>
+            <package>
+                <field addfields="Description:&quot;{%4}&quot;;"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Name:&quot;{%3}&quot;;"/>
+                <field addfields="Uri:&quot;{%9}&quot;;"/>
+            </desc>
+            <location>
+                <field latitude="{%6}" longitude="{%7}" int=""/>
+                <field addfields=";Location_Name:&quot;{%8}&quot;;"/>
+                <field addfields="Location_Full_Address:&quot;{%5}&quot;;"/>
+            </location>
+
+            <contact>
+                <field addfields="{%2}" replace="FACEBOOK:="/>
+            </contact>
+            <contact_alias>
+            </contact_alias>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, start_time_millis, facebook_id, name, description_text, location_full_address, location_latitude, location_longitude, location_name, uri FROM events where location_latitude!=0;">
+            <type text="Facebook Events - Katana" category="Locations"/>
+            <package>
+                <field addfields="Description:&quot;{%4}&quot;;"/>
+            </package>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%6}" longitude="{%7}" int=""/>
+                <field addfields=";Location_Name:&quot;{%8}&quot;;"/>
+                <field addfields="Location_Full_Address:&quot;{%5}&quot;;"/>
+            </location>
+            <contact>
+                <field addfields="{%2}" replace="FACEBOOK:="/>
+            </contact>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <python run="android_facebook_event.py">
+            <type text="Facebook Events - Katana" category="Locations"/>
+            <filename/>
+            <package>
+                <field addfields="Event-Type:{%1}"/>
+            </package>
+            <timestamp field="{%5}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%6}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}" replace="FACEBOOK:="/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+        </python>
+</Timeline>
+<Timeline path="com.facebook.katana/databases/threads_db2" type="database">
+        <sql cmd="SELECT rowid, timestamp_ms, sender, text, attachments FROM messages;">
+            <type text="Facebook - Katana" category="Messenger"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%4}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}" splitstart="user_key&quot;:&quot;" splitend="&quot;"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}" splitstart="name&quot;:&quot;" splitend="&quot;"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%3}"/>
+            </message>
+        </sql>
+</Timeline>
+
+<Timeline path="com.facebook.katana/*/files/NewsFeed/*" type="raw">
+        <python run="android_facebook_newsfeed.py" arguments="arguments={}\narguments[&quot;user&quot;]=False\n">
+            <type text="Facebook Newsfeed - Katana" category="Messenger"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package>
+                <field addfields="{%2}"/>
+                <field addfields=": {%3}"/>
+            </package>
+            <timestamp field="{%7}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%8}"/>
+            </desc>
+            <contact>
+                <field addfields="{%4}" replace="FACEBOOK:="/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%5}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%6}"/>
+            </message>
+        </python>
+</Timeline>
+
+<Contacts path="com.facebook.katana/*/files/NewsFeed/*" type="raw">
+        <python run="android_facebook_newsfeed.py" arguments="arguments={}\narguments[&quot;user&quot;]=True\n">
+            <type text="Facebook Newsfeed - Katana"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package>
+                <field addfields="{%2}"/>
+                <field addfields=": {%3}"/>
+            </package>
+            <timestamp field="{%7}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%8}"/>
+            </desc>
+            <contact>
+                <field addfields="{%4}" replace="FACEBOOK:="/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%5}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%6}"/>
+            </message>
+        </python>
+</Contacts>
+
+<Contacts path="com.facebook.katana/databases/timeline_db" type="database">
+        <python run="android_facebook_timeline.py">
+            <type text="Facebook Timeline - Katana"/>
+            <filename/>
+            <package>
+                <field addfields="{%1}"/>
+            </package>
+            <timestamp field="{%5}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%6}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}" replace="FACEBOOK:="/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%3}"/>
+            </contact_alias>
+            <message/>
+        </python>
+</Contacts>
+
+<Contacts path="com.facebook.katana/databases/contacts_db2" type="database">
+        <python run="android_facebook_contacts.py">
+            <type text="Facebook - Katana"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="First_name:&quot;{%3}&quot;;"/>
+                <field addfields="Last_name:&quot;{%4}&quot;;"/>
+                <field addfields="Huge_Picture_Url:&quot;{%6}&quot;;"/>
+                <field addfields="Numbers:&quot;{%7}&quot;;"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}" replace="FACEBOOK:="/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%5}"/>
+            </contact_alias>
+            <message/>
+        </python>
+</Contacts>    
+
+</Items>

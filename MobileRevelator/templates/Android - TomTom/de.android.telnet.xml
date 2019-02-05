@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="NetworkSignal/Databases/CelltowerDatabase.db" type="database">
+        <sql cmd="select rowid, cellid, lac, mnc, mcc, latitude, longitude from celltowerdb;">
+            <type text="Network Signal Info" category="Locations"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="cellid:{%1};"/>
+                <field addfields="lac:{%2};"/>
+                <field addfields="mnc:{%3};"/>
+                <field addfields="mcc:{%4}"/>
+            </desc>
+            <location>
+                <field latitude="{%5}" longitude="{%6}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <filename/>
+            <deleted/>
+        </sql>
+</Timeline>
+</Items>

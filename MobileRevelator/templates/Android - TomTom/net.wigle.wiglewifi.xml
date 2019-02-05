@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="wiglewifi/wiglewifi.sqlite" type="database">
+        <sql cmd="select rowid, bssid, ssid, lasttime, lastlat, lastlon from network;">
+            <type text="WigleWifi Wifi" category="Locations"/>
+            <package>
+                <field addfields="{%2}"/>
+            </package>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="bssid:{%1};"/>
+                <field addfields="ssid:{%2}"/>
+            </desc>
+            <location>
+                <field latitude="{%4}" longitude="{%5}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <filename/>
+            <deleted/>
+        </sql>
+</Timeline>
+</Items>

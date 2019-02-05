@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.snapchat.android/databases/tcspahn.db" type="database">
+        <sql cmd="SELECT rowid, recipient, sender, timestamp, text, target_view FROM Chat;SELECT rowid, recipients, sender, timestamp, text, target_view FROM Chat;">
+            <type text="Snapchat" category="Messenger">
+                <field addfields="[Type:{%5}]"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="To: {%1}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias/>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+        </sql>
+</Timeline>
+<Timeline path="com.snapchat.android/files/mbgl-offline.db" type="database">
+         <python run="android_snapchat_mapbox.py">
+            <type text="Snapchat Mapbox" category="Locations"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Zoomlevel:{%4}"/>
+            </desc>
+            <location>
+                <field latitude="{%2}" longitude="{%3}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image/>
+            <deleted>
+                <field addfields="{%5}"/>
+            </deleted>
+        </python>
+</Timeline>
+<Contacts path="com.snapchat.android/databases/tcspahn.db" type="database">
+        <sql cmd="SELECT rowid, Username, DisplayName, PhoneNumber, isAddedAsFriend, AddedThemTimestamp from Friends;">
+            <type text="Snapchat"/>
+            <package/>
+            <timestamp field="{%5}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="AddedasFriend: {%4}" replace="1=yes;0=no"/>
+                <field addfields="PhoneNumber: {%3}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+
+</Items>

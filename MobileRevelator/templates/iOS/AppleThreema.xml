@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<Items>
+<Template database="Select ZMESSAGE.Z_PK as 'ZMESSAGE.Z_PK', ZCONVERSATION.Z_PK as 'ZCONVERSATION.Z_PK', ZVERIFICATIONLEVEL, ZCONTACT.Z_PK as 'ZCONTACT.Z_PK', ZIDENTITY, ZFIRSTNAME, ZLASTNAME, ZPUBLICNICKNAME, ZISOWN, ZTEXT, ZSENT, ZDATE, ZDELIVERED, ZDELIVERYDATE, ZREAD, ZREADDATE From (ZMESSAGE Left Join ZCONVERSATION On ZMESSAGE.ZCONVERSATION = ZCONVERSATION.Z_PK) Left Join ZCONTACT On ZCONVERSATION.ZCONTACT = ZCONTACT.Z_PK Order By ZVERIFICATIONLEVEL DESC, ZIDENTITY ASC, ZDATE ASC;" name="Threema Messages" path="ThreemaData.sqlite">
+        <column id="ZDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ZDELIVERYDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ZREADDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+</Template>
+
+<Template database="Select ZCONTACT.Z_PK as 'ZCONTACT.Z_PK', ZIDENTITY, ZFIRSTNAME, ZLASTNAME, ZPUBLICNICKNAME, ZVERIFICATIONLEVEL, ZCONVERSATION.Z_PK as 'ZCONVERSATION.Z_PK', ZUNREADMESSAGECOUNT, ZLASTMESSAGE, ZDATE From (ZCONTACT Left Join ZCONVERSATION On ZCONVERSATION.ZCONTACT = ZCONTACT.Z_PK) Left Join ZMESSAGE On ZLASTMESSAGE = ZMESSAGE.Z_PK Order By ZVERIFICATIONLEVEL DESC, ZIDENTITY ASC;" name="Threema Contacts" path="ThreemaData.sqlite">
+        <column id="ZDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ZDELIVERYDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ZREADDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+</Template>
+
+<Template database="Select ZMESSAGE.Z_PK as 'ZMESSAGE.Z_PK', ZIDENTITY, ZFIRSTNAME, ZLASTNAME, ZPUBLICNICKNAME, ZISOWN, ZREAD, ZTEXT, ZDATE, ZDELIVERYDATE, ZREADDATE, ZVERIFICATIONLEVEL From (ZMESSAGE Left Join ZCONVERSATION On ZMESSAGE.ZCONVERSATION = ZCONVERSATION.Z_PK) Left Join ZCONTACT On ZCONVERSATION.ZCONTACT = ZCONTACT.Z_PK Order By ZVERIFICATIONLEVEL DESC, ZIDENTITY ASC, ZDATE ASC;" name="Threema Messages kurz" path="ThreemaData.sqlite">
+        <column id="ZDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ZDELIVERYDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ZREADDATE (QString)" type="sqlcmd">
+            <r cmd="SELECT datetime([%1]+978307200,'unixepoch','localtime') WHERE [%1]>0;"/>
+        </column>
+        <column id="ZISOWN (int)" type="textreplace">
+            <r replace="1" with="sent"/>
+            <r replace="0" with="received"/>
+        </column>
+        <column id="ZREAD (int)" type="textreplace">
+            <r replace="1" with="read"/>
+            <r replace="0" with="unread"/>
+        </column>
+        
+</Template>
+</Items>
+
+    

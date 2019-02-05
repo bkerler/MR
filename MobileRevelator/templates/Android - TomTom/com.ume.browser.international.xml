@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.ume.browser.international/databases/browser2.db" type="database">
+        <sql cmd="SELECT rowid, created, '', title, url FROM bookmarks;">
+            <type text="UME Browser Bookmarks" category="Browser">
+                <field addfields="[Visits:{%2}]"/>
+            </type>
+            <package field="{%3}"/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%4}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, date, search FROM searches;">
+            <type text="UME Browser Search"  category="Searches"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Search:&quot;{%2}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="select rowid, url, title, visits, date from history;">
+            <type text="UME Browser History" category="Browser"/>
+            <package>
+                <field addfields="&quot;{%2}&quot;"/>
+            </package>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Url:{%1};"/>
+                <field addfields="Visits:{%3};"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

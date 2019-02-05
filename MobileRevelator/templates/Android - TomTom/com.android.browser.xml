@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.android.browser/databases/browser.db" type="database">
+        <sql cmd="SELECT rowid, date, visits, title, url FROM bookmarks;SELECT rowid, created, '', title, url FROM bookmarks;">
+            <type text="Browser Bookmarks" category="Browser">
+                <field addfields="[Visits:{%2}]"/>
+            </type>
+            <package field="{%3}"/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%4}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, date, searches FROM searches;SELECT rowid, date, search FROM searches;">
+            <type text="Browser Search"  category="Searches"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Search:&quot;{%2}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.android.mediacenter/databases/mediacenter.db" type="database">
+        <sql cmd="SELECT rowid, _data, date_modified FROM audio_meta;">
+            <type text="Android MediaCenter Audio Meta" category="Media"/>
+            <package/>
+            <timestamp field="{%2}" int=""/>
+            <duration/>
+            <desc field="{%1}"/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, _data, date_modified, title FROM audio_info;">
+            <type text="Android MediaCenter Audio Meta" category="Media"/>
+            <package>
+                <field addfields="Title: &quot;{%3}&quot;"/>
+            </package>
+            <timestamp field="{%2}" int=""/>
+            <duration/>
+            <desc field="{%1}"/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

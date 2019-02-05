@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.aricent.mtp/databases/external*.db" type="database">
+        <sql cmd="SELECT rowid, RefDateModified, FullPath, Name FROM Master;">
+            <type text="Aricent MTP [Last modified]" category="Media"/>
+            <package field="{%3}"/>
+            <timestamp field="{%1}" int=""/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

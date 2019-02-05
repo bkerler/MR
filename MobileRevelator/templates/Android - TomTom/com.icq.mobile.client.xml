@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.icq.mobile.client/databases/agent-dao" type="database">
+        <sql cmd="select MESSAGE_DATA.rowid,  MESSAGE_DATA.CONTACT_ID, ICQ_CONTACT_DATA.NAME, MESSAGE_DATA.TYPE, MESSAGE_DATA.CONTENT, MESSAGE_DATA.TIMESTAMP, MESSAGE_META.LOCAL_PATH, MESSAGE_DATA.GROUP_ID, MESSAGE_DATA.REQ_ID NOT NULL, MESSAGE_GROUP.TEXT from MESSAGE_DATA OUTER LEFT JOIN MESSAGE_META ON MESSAGE_META._id=MESSAGE_DATA.META OUTER LEFT JOIN ICQ_CONTACT_DATA ON ICQ_CONTACT_DATA.CONTACT_ID=MESSAGE_DATA.CONTACT_ID OUTER LEFT JOIN MESSAGE_GROUP ON MESSAGE_GROUP._id=MESSAGE_DATA.GROUP_ID;">
+            <type text="ICQ" category="Messenger">
+                <field addfields="[Type:{%8}]" replace="0=Incoming;1=Sent"/>
+            </type>
+            <package>
+                <field addfields="Group:{%7}"/>
+            </package>
+            <timestamp field="{%5}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Info:{%3};" replace="4=Call;21=File;6=Video;23=Video;5=Picture;1=Message;17=Audio;18=Media;8=Sticker;9=Status;20=Link"/>
+                <field addfields="Path:{%6};"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+        </sql>
+</Timeline>
+
+<Contacts path="com.icq.mobile.client/databases/agent-dao" type="database">
+        <sql cmd="select DISTINCT ICQ_CONTACT_DATA.rowid, ICQ_CONTACT_DATA.CONTACT_ID, ICQ_CONTACT_DATA.NAME, PHONE.NUMBER, ICQ_CONTACT_DATA.UPDATE_TIMESTAMP FROM ICQ_CONTACT_DATA OUTER LEFT JOIN PHONE ON PHONE.CONTACT_ID=ICQ_CONTACT_DATA.CONTACT_ID;">
+            <type text="ICQ"/>
+            <package/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Phonenumber: {%3}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%2}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Contacts>
+
+<Timeline path="com.icq.mobile.client/no_backup/snaps/*.mp4" type="raw">
+        <python run="android_filename.py">
+            <type text="ICQ Videos" category="Media"/>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+
+<Timeline path="com.icq.mobile.client/no_backup/*.j*g" type="raw">
+        <python run="android_thumbnail.py">
+            <type text="ICQ Pictures" category="Media"/>
+            <filename>
+                <field addfields="{%2}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%1}"/>
+            </image>
+        </python>
+</Timeline>
+
+<Timeline path="com.icq.mobile.client/no_backup/Screenshot*.p*g" type="raw">
+        <python run="android_thumbnail.py">
+            <type text="ICQ Screenshot" category="Media"/>
+            <filename>
+                <field addfields="{%2}"/>
+            </filename>
+            <package/>
+            <timestamp field="{%0}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact/>
+            <contact_alias/>
+            <message/>
+            <image>
+                <field addfields="{%1}"/>
+            </image>
+        </python>
+</Timeline>
+
+</Items>

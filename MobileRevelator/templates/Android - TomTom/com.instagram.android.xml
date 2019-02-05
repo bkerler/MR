@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.instagram.android/files/direct_thread_store.json" type="raw">
+        <python run="android_instagram.py">
+            <type text="Instagram" category="Messenger"/>
+            <filename>
+                <field addfields="{%10}"/>
+            </filename>
+            <package>
+                <field addfields="Thread Title:&quot;{%2}&quot;;"/>
+            </package>
+            <timestamp field="{%7}" int="/1000000"/>
+            <duration/>
+            <desc>
+                <field addfields="Thread_Id:&quot;{%1}&quot;;"/>
+                <field addfields="Content_Type:&quot;{%9}&quot;;"/>
+                <field addfields="To_Ids:&quot;{%5}&quot;;"/>
+                <field addfields="To_Aliases:&quot;{%6}&quot;;"/>
+            </desc>
+            <contact>
+                <field addfields="{%3}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%4}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%8}"/>
+            </message>
+            <image/>
+        </python>
+</Timeline>
+<Timeline path="com.instagram.android/databases/direct.db" type="database">
+        <python run="android_instagram.py">
+            <type text="Instagram" category="Messenger"/>
+            <package>
+                <field addfields="Thread Title:&quot;{%2}&quot;;"/>
+            </package>
+            <timestamp field="{%7}" int="/1000000"/>
+            <duration/>
+            <desc>
+                <field addfields="Thread_Id:&quot;{%1}&quot;;"/>
+                <field addfields="Content_Type:&quot;{%9}&quot;;"/>
+                <field addfields="To_Ids:&quot;{%5}&quot;;"/>
+                <field addfields="To_Aliases:&quot;{%6}&quot;;"/>
+            </desc>
+            <contact>
+                <field addfields="{%3}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%4}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%8}"/>
+            </message>
+            <image/>
+        </python>
+</Timeline>
+<Timeline path="com.instagram.android/cache/MainFeed.json.*" type="raw">
+        <python run="android_instagram.py" arguments="arguments={}\narguments[&quot;user&quot;]=False\n" >
+            <type text="Instagram Cache Posts" category="Messenger">
+                <field addfields="{%3}"/>
+            </type>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package>
+                <field addfields="{%4}"/>
+            </package>
+            <timestamp field="{%5}" int=""/>
+            <duration/>
+            <desc>
+                <field addfields="{%10}"/>
+            </desc>
+            <contact>
+                <field addfields="{%6}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%7}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%8}"/>
+            </message>
+            <image>
+                <field addfields="{%9}"/>
+            </image>
+            <location>
+                <field addfields="{%11}"/>
+            </location>
+        </python>
+</Timeline>
+<Contacts path="com.instagram.android/cache/MainFeed.json.*" type="raw">
+        <python run="android_instagram_cache.py" arguments="arguments={}\narguments[&quot;user&quot;]=True\n" >
+            <type text="Instagram">
+                <field addfields="{%3}"/>
+            </type>
+            <filename>
+                <field addfields="{%1}"/>
+            </filename>
+            <package>
+                <field addfields="{%4}"/>
+            </package>
+            <timestamp field="{%5}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%10}"/>
+            </desc>
+            <contact>
+                <field addfields="{%6}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%7}"/>
+            </contact_alias>
+            <message>
+                <field addfields="{%8}"/>
+            </message>
+            <image>
+                <field addfields="{%9}"/>
+            </image>
+            <location>
+                <field addfields="{%11}"/>
+            </location>
+        </python>
+</Contacts>
+</Items>

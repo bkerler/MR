@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="devian.tubemate.home/databases/suggestions.db" type="database">
+        <sql cmd="SELECT rowid, display1, query, date FROM suggestions;">
+            <type text="Tubemate [Search]" category="Searches"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Search:&quot;{%2}&quot;"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+
+<Timeline path="devian.tubemate.home/databases/tubemate.db" type="database">
+        <sql cmd="select rowid, path, total_size, vid, c_date from TB_FILE_INFO;">
+            <type text="Tubemate" category="Media"/>
+            <package/>
+            <timestamp field="{%4}" format="yyyy-MM-dd hh:mm"/>
+            <duration/>
+            <desc>
+                <field addfields="[Size:{%2}, "/>
+                <field addfields="Path:{%1}, "/>
+                <field addfields="VID:{%3}]"/>
+            </desc>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.sonymobile.photoanalyzer/databases/facerecognition.db" type="database">
+        <sql cmd="SELECT rowid, datetaken, _data from images_meta_status_ffffffff;">
+            <type text="Sony Photoanalyzer [datetaken]" category="Media"/>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%2}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

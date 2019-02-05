@@ -1,0 +1,16 @@
+<Items>
+<Timeline path="nl.tpp.mobile.android/databases/postnl.cache.sqlite" type="database">
+        <sql cmd="SELECT rowid, shipmentKey FROM shipments;">
+            <type text="Netherlands Post Package Tracking" category="Tracking"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="Shipment-ID:{%1}"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

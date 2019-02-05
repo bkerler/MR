@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="de.lieferheld.android/databases/apptimize.db" type="database">
+        <python run="android_lieferheld.py">
+            <type text="Lieferheld" category="Locations"/>
+            <package/>
+            <timestamp field="{%1}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="Location: {%2};"/>
+                <field addfields="Food: {%3};"/>
+            </desc>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </python>
+</Timeline>
+</Items>

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.google.android.apps.photos/databases/gphotos*.db" type="database">
+        <sql cmd="SELECT rowid, filename, remote_url, utc_timestamp, width, height, size_bytes, duration, latitude, longitude FROM remote_media;">
+            <type text="Android Photo Remote Media" category="Media"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration field="{%7}" int="*1000"/>
+            <desc>
+                <field addfields="[Remote_Url: {%2},"/>
+                <field addfields="Filename: {%1},"/>
+                <field addfields="Width: {%4},"/>
+                <field addfields="Height: {%5},"/>
+                <field addfields="Size: {%6}];"/>
+            </desc>
+            <location>
+                <field latitude="{%8}" longitude="{%9}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+<Timeline path="com.google.android.apps.photos/databases/gphotos*.db" type="database">
+        <sql cmd="SELECT rowid, filename,filepath, utc_timestamp, width, height, size_bytes, duration, latitude, longitude FROM local_media;">
+            <type text="Android Photo Local Media" category="Media"/>
+            <package/>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration field="{%7}" int="*1000"/>
+            <desc>
+                <field addfields="[Filepath: &quot;{%2}&quot;,"/>
+                <field addfields="Filename: &quot;{%1}&quot;,"/>
+                <field addfields="Width: {%4},"/>
+                <field addfields="Height: {%5},"/>
+                <field addfields="Size: {%6}];"/>
+            </desc>
+            <location>
+                <field latitude="{%8}" longitude="{%9}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+<Timeline path="com.google.android.apps.photos/databases/gphotos*.db" type="database">
+        <sql cmd="SELECT rowid, filepath, utc_timestamp, latitude, longitude FROM local_media where latitude!=0;">
+            <type text="Android Photo Local Media" category="Locations"/>
+            <package>
+                <field addfields="Filename: &quot;{%1}&quot;"/>
+            </package>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%3}" longitude="{%4}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+        <sql cmd="SELECT rowid, remote_url, filename, utc_timestamp, latitude, longitude FROM remote_media where latitude!=0;">
+            <type text="Android Photo Remote Media" category="Locations"/>
+            <package>
+                <field addfields="Filename: &quot;{%2}&quot;"/>
+                <field addfields="Url: &quot;{%1}&quot;"/>
+            </package>
+            <timestamp field="{%3}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <location>
+                <field latitude="{%4}" longitude="{%5}" int=""/>
+            </location>
+            <contact/>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Timeline>
+</Items>
+

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="org.thoughtcrime.securesms/databases/messages.db" type="database">
+        <python run="android_signal.py">
+            <type text="Signal Messages" category="Messenger">
+                <field addfields="[Type:{%6}]" replace="1=received;=sent"/>
+            </type>
+            <package/>
+            <timestamp field="{%3}" format="yyyy-MM-dd hh:mm:ss"/>
+            <duration/>
+            <desc>
+                <field addfields="Thread_Id: {%1};"/>
+                <field addfields="Read: {%5};" replace="1=True;0=False"/>
+                <field addfields="Reply_Path_Present: {%6};" replace="1=True"/>
+                <field addfields="Delivery_Receipt_Count: {%7};"/>
+                <field addfields="Date_Sent: {%4}"/>
+                <field addfields="Expires_In: {%10}"/>
+                <field addfields="Expire_Started: {%11}"/>
+            </desc>
+            <contact>
+                <field addfields="{%1}"/>
+            </contact>
+            <contact_alias/>
+            <message>
+                <field addfields="Subject:&quot;{%8}&quot;;"/>
+                <field addfields="{%9}"/>
+            </message>
+        </python>
+</Timeline>
+    
+<Contacts path="org.thoughtcrime.securesms/databases/whisper_directory.db" type="database">
+        <sql cmd="SELECT rowid, _id, number, relay, timestamp, voice FROM directory;">
+            <type text="Signal"/>
+            <package/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="Voice: {%5};" replace="1=True"/>
+                <field addfields="Relay: {%3}"/>
+            </desc>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias/>
+            <message/>
+        </sql>
+</Contacts>
+</Items>

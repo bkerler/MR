@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.pakdata.easypashto/databases/pashto_data.sqlite" type="database">
+        <sql cmd="SELECT rowid, word, freq FROM Words_freq;">
+            <type text="Pakdata Easy Pashto" category="Other"/>
+            <package/>
+            <timestamp/>
+            <duration/>
+            <desc>
+                <field addfields="Frequency: {%2}"/>
+            </desc>
+            <message>
+                <field addfields="{%1}"/>
+            </message>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

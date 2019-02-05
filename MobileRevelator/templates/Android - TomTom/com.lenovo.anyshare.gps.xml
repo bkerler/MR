@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+
+<Timeline path="com.lenovo.anyshare.gps/databases/history.db" type="database">
+        <sql cmd="SELECT history.rowid, history.content_id, history.timestamp, item.source_device_id, user.nickname, item.file_path, history.content_type FROM history LEFT OUTER JOIN item ON history.content_id = item.item_id LEFT OUTER JOIN user ON item.source_device_id=user.user_id;">
+        <type text="Lenovo SHAREit" category="Media"/>
+            <package>
+                <field addfields="Type: {%6}"/>
+            </package>
+            <timestamp field="{%2}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="{%5}"/>
+            </desc>
+            <contact>
+                <field addfields="{%3}"/>
+            </contact>
+            <contact_alias>
+                <field addfields="{%4}"/>
+            </contact_alias>
+            <message/>
+        </sql>
+</Timeline>
+</Items>

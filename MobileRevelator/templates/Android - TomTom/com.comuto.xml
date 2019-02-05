@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="com.comuto/databases/blablacar_db" type="database">
+        <sql cmd="select rowid, from_city, to_city, from_date, added_at from search;">
+            <type text="Blablacar Search" category="Locations"/>
+            <package/>
+            <timestamp field="{%4}" int="/1000"/>
+            <duration/>
+            <desc>
+                <field addfields="[From City:{%1} "/>
+                <field addfields="to City:{%2}]"/>
+            </desc>
+            <message/>
+            <contact_alias/>
+            <contact/>
+        </sql>
+</Timeline>
+</Items>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<Items>
+<Timeline path="finarea.MobileVoip/databases/SmsData" type="database">
+        <sql cmd="SELECT rowid, date, bnr, direction, sms FROM sms4;">
+            <type text="Finarea MobileVoip SMS" category="Messenger">
+                <field addfields="[type:{%3}]" replace="0=Received;1=Sent;2=Draft"/>
+            </type>
+            <package/>
+            <timestamp field="{%1}" int="/1000"/>
+            <duration/>
+            <desc/>
+            <contact>
+                <field addfields="{%2}"/>
+            </contact>
+            <contact_alias/>
+            <message>
+                <field addfields="{%4}"/>
+            </message>
+        </sql>
+</Timeline>
+</Items>
