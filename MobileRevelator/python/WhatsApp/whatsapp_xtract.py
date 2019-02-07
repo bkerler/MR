@@ -1,19 +1,24 @@
 # -*- coding: utf-8 -*-
-XTRACT_VERSION = "2.6.6"
-XTRACT_DATE = "Jan 12, 2017"
+XTRACT_VERSION = "2.6.7"
+XTRACT_DATE = "Feb 07, 2019"
 
 '''
-WhatsApp Xtract v2.66
+WhatsApp Xtract v2.67
 - WhatsApp Backup Messages Extractor for Android and iPhone
 
 Released on December 10th, 2011
 Last Update on June 1th, 2015
 
-Tested with Whatsapp (Android) 2.16.105
+Tested with Whatsapp (Android) 2.19.34
 Tested with Whatsapp (iPhone)  2.12.14
 ---
 
 Changelog:
+v2.67 (integrated by B.Knorr -  Feb 07, 2018)
+- fixed thumbs support on android
+- fixed pathes for video and audio files
+- minor fixes
+
 v2.66 (integrated by B.Kerler -  Jan 12, 2017)
 - fixed crypt5-crypt12 support
 
@@ -1761,7 +1766,7 @@ def outputfile_open(file_name, file_objectB):
         AppPNG = ""
         AppALT = "Messenger"
 
-    file_object = None;
+    file_object = None
 
     file_object = open(file_name,'wb')
 
@@ -1839,7 +1844,7 @@ def outputfile_open(file_name, file_objectB):
         outputfileAB(file_object, file_objectB, '<tr><td>To:</td><td>{}</td></tr>\n'.format(strtsTo).encode('utf-8'))
         outputfileAB(file_object, file_objectB, '</table></h3>\n'.encode('utf-8'))
 
-    return file_object;
+    return file_object
 
 
 def outputfileAB(*args):
@@ -1865,7 +1870,7 @@ def outputfileAB(*args):
     if not (file_objectB is None or file_objectB == ''):
         file_objectB.write(outputTEXT)
 
-    return;
+    return
 
 def outputfile_close(file_object):
 
@@ -1873,7 +1878,7 @@ def outputfile_close(file_object):
     file_object.write('</body></html>\n'.encode('utf-8'))
     file_object.close()
 
-    return;
+    return
 
 def GroupInfo (Cid):
     GroupAdmin = None
@@ -2386,7 +2391,7 @@ def main(argv):
 
         except sqlite3.DatabaseError:
 
-            integrity_status = "not ok";
+            integrity_status = "not ok"
 
 
         # Do we have integrity problems?
@@ -2436,9 +2441,9 @@ def main(argv):
                         if line != "CREATE UNIQUE INDEX messages_key_index on messages (key_remote_jid, key_from_me, key_id);\n" and \
                            line != "ROLLBACK; -- due to errors\n":
 
-                            f2.write(line);
+                            f2.write(line)
 
-                    f2.write(u"COMMIT;");
+                    f2.write(u"COMMIT;")
 
 
             # Make sure new fixed database file doesn't exist
@@ -2665,7 +2670,7 @@ def main(argv):
         GroupMembers = []
         try:
             if mode == ANDROID:
-                c1.execute("SELECT * FROM messages WHERE key_remote_jid=? ORDER BY _id ASC;", [chats.contact_id])
+                c1.execute("SELECT * FROM messages OUTER LEFT JOIN message_thumbnails ON message_thumbnails.key_id=messages.key_id WHERE messages.key_remote_jid=? ORDER BY _id ASC;", [chats.contact_id])
             elif mode == IPHONE:
                 c1.execute("SELECT * FROM ZWAMESSAGE WHERE ZCHATSESSION=? ORDER BY Z_PK ASC;", [chats.pk_cs])
             count_messages = 0
@@ -2751,7 +2756,7 @@ def main(argv):
 
                         # Thumbnail
                         try:
-                            thumbnaildata = msgs["raw_data"]
+                            thumbnaildata = msgs["thumbnail"]
                         except:
                             thumbnaildata = None
 
@@ -3327,7 +3332,7 @@ def main(argv):
 
         #No Output when no message width contact
         if i.contact_msg_count == 0:
-            continue;
+            continue
 
         #TimeFilter enable
         if have_tf:
@@ -3396,8 +3401,6 @@ def main(argv):
 
         # Close main file
         outputfile_close(main_file_group)
-
-    global content_type
 
     # creates a chat file for each chat session
     for i in chat_session_list:#
@@ -3748,6 +3751,7 @@ def main(argv):
                 if media_file_Typ == "iPHONE":
                     media_file_Typ = "Audio"
                 media_file_Path = MediaFilePath (linkaudio)
+                linkaudio = linkaudio[len(GetPath(outfile))+1:]
                 try:
                     #outputfileAB(chat_file, one_file, '<td class="text"><a onclick="media(this.href);return(false);" target="media" href="{0}">Audio (online)</a>&nbsp;|&nbsp;<a onclick="media(this.href);return(false);" target="media" href="{1}">Audio (offline)</a>{2}'.format(y.media_url, linkaudio, T_mduration).encode('utf-8'))
                     outputfileAB(chat_file, one_file, '<td class="text">{0}&nbsp{3}</br><a target="_blank" href="{2}">{1}</a>{4}'.format(media_file_Typ, media_file_Path, linkaudio, T_mduration, T_MediaCaption,T_MediaMsg).encode('utf-8'))
@@ -3775,12 +3779,13 @@ def main(argv):
                     T_mduration = ""
                     M_mduration = ""
                 else:
-                    T_mduration = " -  ({0} Sek.)".format(y.media_duration).encode('utf-8')
-                    M_mduration = "({0}&nbsp;Sek.)".format(y.media_duration).encode('utf-8')
+                    T_mduration = " -  ({0} Sek.)".format(y.media_duration)
+                    M_mduration = "({0}&nbsp;Sek.)".format(y.media_duration)
                 media_file_Typ = MediaFileType (linkvideo)
                 if media_file_Typ == "iPHONE":
                     media_file_Typ = "Video"
                 media_file_Path = MediaFilePath (linkvideo)
+                linkvideo = linkvideo[len(GetPath(outfile))+1:]
                 try:
                     #outputfileAB(chat_file, one_file, '<td class="text"><a onclick="media(this.href);return(false);" target="media" href="{0}"><img src="{1}" alt="Video"/></a>&nbsp;|&nbsp;<a onclick="media(this.href);return(false);" target="media" href="{2}">Video</a>{3}'.format(y.media_url, y.media_thumb, linkvideo, T_mduration).encode('utf-8'))
                     outputfileAB(chat_file, one_file, '<td class="text"><img src="{2}" alt="Video"/></a>&nbsp;|&nbsp;{0}&nbsp{4}</br><a target="_blank" href="{3}">{1}</a>{5}'.format(media_file_Typ, media_file_Path, y.media_thumb, linkvideo, T_mduration, T_MediaCaption, T_MediaMsg).encode('utf-8'))
@@ -3898,25 +3903,25 @@ def main(argv):
 
 
         # Close chat file
-        outputfile_close(chat_file);
+        outputfile_close(chat_file)
 
         # Close media file
-        outputfile_close(chat_media_file);
+        outputfile_close(chat_media_file)
 
         if have_groups and i.contact_id.find("@g.us") != -1:
             # Back-Link
             outputfileAB(chat_file_group, '<h3><a href="{0}">Return to GROUP index</a></h3>'.format( GetBase(main_file_name_group) ).encode( 'utf-8' ) )
 
             # Close chat file
-            outputfile_close(chat_file_group);
+            outputfile_close(chat_file_group)
 
 
     # Close one file
-    outputfile_close(one_file);
+    outputfile_close(one_file)
 
     if have_groups:
         # Close one file
-        outputfile_close(one_file_group);
+        outputfile_close(one_file_group)
 
     #End Out
 
