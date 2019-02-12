@@ -9,6 +9,14 @@ import binascii
 import tempfile
 import shutil
 from Crypto.Cipher import AES
+try:
+    AES.MODE_GCM
+except:
+    from Cryptodome.Cipher import AES
+    try:
+        AES.MODE_GCM
+    except:
+        print('Please install Crypto or Cryptodome with MODE_GCM support.')
 import gzip
 import zlib
 
