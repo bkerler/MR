@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# visual studio code
+.vscode
+
+# ignore binary data
+geo.db
+MTK_AllInOne_DA.bin

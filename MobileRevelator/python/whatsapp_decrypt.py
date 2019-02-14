@@ -16,7 +16,7 @@ except:
     try:
         AES.MODE_GCM
     except:
-        print('Please install Crypto or Cryptodome with MODE_GCM support.')
+        print('Please install PyCrypto or PyCryptodome with AES MODE_GCM support.')
 import gzip
 import zlib
 

@@ -2491,7 +2491,7 @@ def main(argv):
                 print('Warning: failed repairing database')
                 sys.exit(1)
 
-        msgstore.text_factory = lambda x: str(x.decode('utf_8_sig'))
+    msgstore.text_factory = lambda x: str(x.decode('utf_8_sig'))
 
     # gets metadata plist info (iphone only)
     if mode == IPHONE:
