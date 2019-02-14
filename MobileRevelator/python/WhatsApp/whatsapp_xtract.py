@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-XTRACT_VERSION = "2.6.7"
-XTRACT_DATE = "Feb 07, 2019"
+XTRACT_VERSION = "2.6.8"
+XTRACT_DATE = "Feb 14, 2019"
 
 '''
-WhatsApp Xtract v2.67
+WhatsApp Xtract v2.68
 - WhatsApp Backup Messages Extractor for Android and iPhone
 
 Released on December 10th, 2011
@@ -12,6 +12,10 @@ Last Update on June 1th, 2015
 Tested with Whatsapp (Android) 2.19.34
 Tested with Whatsapp (iPhone)  2.12.14
 ---
+
+Changelog:
+v2.68 (integrated by B.Knorr -  Feb 14, 2018)
+- fixed cross OS and Python 2/3 support
 
 Changelog:
 v2.67 (integrated by B.Knorr -  Feb 07, 2018)
@@ -282,6 +286,14 @@ def decryptwhatsapp(infile,outdir):
         print("Trying to decrypt Android database...")
         filename, file_extension = os.path.splitext(infile)
         from Crypto.Cipher import AES
+        try:
+            AES.MODE_GCM
+        except:
+            from Cryptodome.Cipher import AES
+            try:
+                AES.MODE_GCM
+            except:
+                print('Please install pyCrypto or pyCryptodome with AES MODE_GCM support.')
         import gzip
         import zlib
         decryptedfile = outdir+"/WhatsApp/Databases/"+infile[infile.find("msgstore"):infile.find(".db.crypt")] + ".db"
@@ -2144,7 +2156,7 @@ def main(argv):
     # parser options
     parser = ArgumentParser(description='Converts a Whatsapp database to HTML.')
     parser.add_argument(dest='infile',
-                       help="input 'msgstore.db'; 'msgstore.db.crypt' or 'msgstore.db.db' (Android) or 'ChatStorage.sqlite' (iPhone) file to scan",nargs='?',default='Report\com.whatsapp\databases\msgstore.db')
+                       help="input 'msgstore.db'; 'msgstore.db.crypt' or 'msgstore.db.db' (Android) or 'ChatStorage.sqlite' (iPhone) file to scan",nargs='?',default='Report/com.whatsapp/databases/msgstore.db')
     parser.add_argument('-w', '--wafile', dest='wafile',
                        help="optionally input 'wa.db' (Android) file to scan")
     parser.add_argument('-o', '--outfile',  dest='outfile',
@@ -2344,13 +2356,13 @@ def main(argv):
     if mode == ANDROID:
 
         # detect Application NEWhatsApp (Kiara)
-        if os.path.exists(GetPath(options.outfile)+"WhatsApp\\NEWhatsApp Images"):
+        if os.path.exists(GetPath(options.outfile)+"WhatsApp/NEWhatsApp Images"):
             print ("Database Source:     NEWhatsApp (Kiara)")
             APPLICATION = "KiraWA"
-        elif os.path.exists(GetPath(options.outfile)+"WhatsApp\\NEWhatsApp Video"):
+        elif os.path.exists(GetPath(options.outfile)+"WhatsApp/NEWhatsApp Video"):
             print ("Database Source:     NEWhatsApp (Kiara)")
             APPLICATION = "KiraWA"
-        elif os.path.exists(GetPath(options.outfile)+"WhatsApp\\NEWhatsApp Voice Notes"):
+        elif os.path.exists(GetPath(options.outfile)+"WhatsApp/NEWhatsApp Voice Notes"):
             print ("Database Source:     NEWhatsApp (Kiara)")
             APPLICATION = "KiraWA"
         else:
@@ -2479,7 +2491,7 @@ def main(argv):
                 print('Warning: failed repairing database')
                 sys.exit(1)
 
-    msgstore.text_factory = lambda x: str(x, 'utf_8_sig')
+        msgstore.text_factory = lambda x: str(x.decode('utf_8_sig'))
 
     # gets metadata plist info (iphone only)
     if mode == IPHONE:
@@ -3250,7 +3262,7 @@ def main(argv):
     print("Generating html files")
 
     if (GetPath(outfile)!=""):
-        copyDirectory("data",GetPath(outfile)+"/data")
+        copyDirectory(os.path.dirname(os.path.realpath(__file__))+"/data",GetPath(outfile)+"/data")
 
     #  output filename unify - on manually entcrypted .crypt5 Databses
     if outfile == "msgstore.db.db":
@@ -3745,8 +3757,8 @@ def main(argv):
                     T_mduration = ""
                     M_mduration = ""
                 else:
-                    T_mduration = "&nbsp;-&nbsp;({0} Sek.)".format(y.media_duration).encode('utf-8')
-                    M_mduration = "({0}&nbsp;Sek.)".format(y.media_duration).encode('utf-8')
+                    T_mduration = "&nbsp;-&nbsp;({0} Sek.)".format(y.media_duration)
+                    M_mduration = "({0}&nbsp;Sek.)".format(y.media_duration)
                 media_file_Typ = MediaFileType (linkaudio)
                 if media_file_Typ == "iPHONE":
                     media_file_Typ = "Audio"
@@ -3960,10 +3972,10 @@ have_groups = False
 db_owner = ""
 db_owner_name = ""
 
-FilePathDB = "databases\\"
-FilePathF = "files\\"
-FilePathSP = "shared_prefs\\"
-FilePathCrypt = "WhatsApp\\Databases\\"
+FilePathDB = "databases/"
+FilePathF = "files/"
+FilePathSP = "shared_prefs/"
+FilePathCrypt = "WhatsApp/Databases/"
 
 
 content_type          = None
