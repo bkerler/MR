@@ -41,11 +41,11 @@ import struct
 import sys
 
 try:
-    # Python 2
-    from StringIO import StringIO as BytesIO
-except ImportError:
     # Python 3+
     from io import BytesIO
+except ImportError:
+    # Python 2
+    from StringIO import StringIO as BytesIO
 
 try:
     import ftfy.bad_codecs
@@ -75,7 +75,7 @@ def log_debug(message, ident=0):
     :param message: Message to log
     :param ident: Number of indentation spaces
     """
-    _log.debug(" " * (ident * 2) + str(message))
+    #_log.debug(" " * (ident * 2) + str(message))
 
 
 def log_error(message, ident=0):
@@ -85,7 +85,7 @@ def log_error(message, ident=0):
     :param message: Message to log
     :param ident: Number of indentation spaces
     """
-    _log.error(" " * (ident * 2) + str(message))
+    #_log.error(" " * (ident * 2) + str(message))
 
 # ------------------------------------------------------------------------------
 

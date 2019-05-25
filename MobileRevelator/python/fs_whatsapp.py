@@ -76,7 +76,7 @@ def findwhatsapp():
 	
 def main():
     error=""
-    script=ctx.gui_getpythonscriptpath()+"/WhatsApp/whatsapp_xtract.py"
+    script=ctx.gui_getpythonscriptpath()+"/whatsapp.py"
     ctx.gui_setMainLabel("Getting Python Path")
     python=GetPythonPath("python.exe") #Windows
     if (python is None):

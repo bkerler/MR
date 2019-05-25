@@ -1,0 +1,8 @@
+.status { position: relative; background-color: rgb(255, 179, 79); border-radius: .4em; min-height: 3em; padding: 1em} 
+.status:after { content: ''; position: absolute; top: 0; left: 50%; width: 0; height: 0; border: 10px solid transparent; border-bottom-color: rgb(255, 179, 79); border-top: 0; margin-left: -10px; margin-top: -10px; }
+
+.outgoing { position: relative; float:right; background-color: rgb(199, 255, 154); border-radius: .4em; min-width: 66%; padding: 1em} 
+.outgoing:after { content: ''; position: absolute; right: 0; top: 50%; width: 0; height: 0; border: 10px solid transparent; border-left-color: rgb(199, 255, 154); border-right: 0; margin-top: -10px; margin-right: -10px; }
+
+.incoming { position: relative; float:left; background-color: rgb(217, 217, 255); border-radius: .4em; min-width: 66%; padding: 1em} 
+.incoming:after { content: ''; position: absolute; left: 0; top: 50%; width: 0; height: 0; border: 10px solid transparent; border-right-color: rgb(217, 217, 255); border-left: 0; margin-top: -10px; margin-left: -10px; }

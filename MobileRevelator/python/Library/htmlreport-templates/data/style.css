@@ -1,0 +1,105 @@
+body {
+    font-size: small
+}
+
+table, th, td, tr {
+    border-collapse: collapse;
+}
+
+.content td {
+    border: 1px solid #69899F;
+    padding: 0.25em;
+} 
+
+.content th {
+   border:2px solid rgb(0, 0, 0);
+   padding: 0.5em;
+}
+
+.chat {
+    max-width: 800px;
+}
+
+.status {
+	background-color: rgb(255, 179, 79);
+}
+
+.outgoing {
+    background-color: rgb(199, 255, 154)
+}
+
+.incoming {
+    background-color: rgb(255, 255, 255)
+}
+
+.clearfix {
+    clear: both;
+}
+
+.content_headline {
+    padding-bottom: 1em;
+}
+
+.content_message {
+    font-size: medium;
+}
+
+.content_timestamp {
+    text-align: right
+}
+
+.note {
+    color: white;
+    background-color: darkred;
+    margin: 3px;
+    border: 1px solid #FF0000
+}
+
+.avatar_thumb_mini {
+    max-width:36px; 
+    height:auto;
+    padding-right: 0.25em
+}
+
+.avatar_thumb_micro {
+    max-width:16px; 
+    height:auto;
+    padding-right: 0.25em
+}
+
+.avatar_thumb {
+    max-width:96px; 
+    height:auto;
+}
+
+.contact_name {
+    font-weight: bold
+}
+
+.contact_platform_id {
+    font-family: monospace
+}
+
+.contact_status {
+    font-size: x-small
+}
+
+.timestamp {
+    font-family: monospace
+}
+
+.clickable {
+    border: 2px solid blue;
+    padding: 2px;
+    overflow: auto;
+    display: inline-block;
+}
+
+.emoji {
+    font-size: xx-large;
+}
+
+.STICKER {
+    max-width:96px; 
+    height:auto;
+}
