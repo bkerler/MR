@@ -15,6 +15,7 @@
 ### Windows
 [Download MR 2.2.7 64Bit Windows](https://revskills.de/MR_64Bit_Windows.exe)
 - Just install. Scripts will be added to "User Documents/MobileRevelator"
+- Please note that when analyzing mobile filesystems, Windows will not support dangling symbolic links, which could lead to many files being assigned 0 bytes. 
 
 ### Linux
 
@@ -40,6 +41,7 @@ This program requires libssl 1.0.0 and OpenSSL 1.0.2. It will not run with updat
 - Template/Plugins are stored in "~/Documents/MobileRevelator"
 - If the AppImage is not executable by default, use `chmod +x MR_x86_64_Linux.appimage` to make it executable.
 - If the app crashes, run `export QT_NO_FT_CACHE=1` first.
+- The latest version of Kali Linux will not support package installations over http, so the above solution will not work. 
 
 ## Examples
 
