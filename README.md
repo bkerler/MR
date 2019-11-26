@@ -19,9 +19,8 @@ Download MR 2.2.7 64Bit Windows
 - Just install. Scripts will be added to "User Documents/MobileRevelator"
 
 ### Linux
-
-Download MR 2.2.7 64Bit Linux
-
+=======
+[Download MR 2.2.7 64Bit Linux](https://github.com/bkerler/MR/releases/tag/2.2.7)
 - Templates and Plugins are in the "~/Documents/MobileRevelator" folder
 - Use the chmod command to enable execution. 
   - "chmod +x Mobile_Revelator-x86_64.AppImage"
