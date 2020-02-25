@@ -14,7 +14,7 @@
 
 ### Windows
 
-[Download MR 2.2.7 64Bit Windows](http://revskills.de/MR_64Bit_Windows.exe)
+[Download MR 2.2.7 64Bit Windows](https://revskills.de/MR_64Bit_Windows.exe)
 - Just install. Scripts will be added to "User Documents/MobileRevelator"
 
 ### Linux
