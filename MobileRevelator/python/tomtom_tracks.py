@@ -93,7 +93,7 @@ def converttrackchunks(db,fsname):
         points=ctx.sqlite_get_data(conn,i,2).data()
         #print(id)
         for i in range(0,len(points),0x28):
-            lat, lon, unknown, year, month, day, hour, min, sec, msec = struct.unpack("<IIIIIIIIII",points[i:i+0x28])
+            lat, lon, unknown, year, month, day, hour, min, sec, msec = struct.unpack("<iiiiiiiiii",points[i:i+0x28])
             from_latitude=int(lat)/100000
             from_longitude=int(lon)/100000
             fromloc=ctx.getlocation(from_latitude,from_longitude)
